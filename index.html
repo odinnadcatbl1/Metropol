@@ -11,6 +11,15 @@
 </head>
 <body>
 
+<svg style="display: none;"> <!-- display: none - чтобы данные иконки не были видны -->
+    <symbol id="arrow-right" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;"> 
+    <!-- открываем нашу иконку в редакторе кода и берём оттуда path и viewBox - вставляем выше-->
+    <g>
+        <path d="M11.3081 9.22481C11.5521 8.98073 11.9479 8.98073 12.1919 9.22481L15.5253 12.5581C15.7694 12.8022 15.7694 13.1979 15.5253 13.442L12.1919 16.7754C11.9479 17.0194 11.5521 17.0194 11.3081 16.7754C11.064 16.5313 11.064 16.1356 11.3081 15.8915L14.1995 13.0001L11.3081 10.1087C11.064 9.86461 11.064 9.46888 11.3081 9.22481Z"/>
+    </g>
+    </symbol>
+</svg>
+
 <div class="page__root">
     <!--HEADER-->
     <header class="header">
@@ -47,46 +56,63 @@
             </div> <!--.header__top-->
             
             <hr>
-            
+
             <div class="row"> 
                 <div class="col">
                     <div class="header__bottom">
-                            <div class="header__logo">
-                                <img src="/images/metropol-logo.svg" alt="" class="metropol__logo">
-                            </div>
-                            
-                            <div class="search__form">
-                                    
-                                <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
-                                
-                                <a class="search__button" href="#">
-                                    <img class="search__icon" src="/images/icons/search-icon.svg" alt="" class="search__icon">
-                                </a>
-                                
-                                                    
-                            </div>
-                            
+                        <div class="header__logo">
+                            <img src="/images/metropol-logo.svg" alt="" class="metropol__logo">
+                        </div>
+                        
+                        <div class="search__form">
+                            <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
+                            <a class="search__button" href="#">
+                                <img class="search__icon" src="/images/icons/search-icon.svg" alt="" class="search__icon">
+                            </a>   
+                        </div>
+                        
+                        <div class="header__mail">
+                            <a class="contacts" href = "mailto:..."><img class="info__icons" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                        </div>
 
-                            <div class="header__mail">
-                                <a class="contacts" href = "mailto:..."><img class="info__icons" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
-                            </div>
+                        <div class="header__phone">
+                            <a class="contacts" href = "tel:..."><img class="info__icons" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
+                        </div>
+                        
+                        <div class="call">
+                            <a href="#" class="call__link">Заказать звонок</a>
+                        </div>
+                </div> <!--.header__bottom-->
+            </div>
+        </div> <!--.header__bottom row-->
+    </header>
+        <!--INTRO-->
+        <div class="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="intro__title">
+                            Добро пожаловать 
+                            <p>в магазины алкоголя Метрополь в Казани</p>
+                        </div>
+                        
+                        <div class="intro__subtitle">
+                            Купить настоящий алкоголь в Казани по низкой цене предлагает сеть магазинов Метрополь. У нас большой ассортимент алкогольной продукции — водка, вино, коньяк, виски, портвейн, текила, ром и конечно же херес. Наши магазины алкоголя — это место, где к спиртным напиткам относятся, как к искусству! Все предлагаемые товары от проверенных производителей, отличаются высоким качеством, соответствующим всем мировым стандартам, и являются на 100% оригинальным продуктом.
+                        </div>
 
-                            <div class="header__phone">
-                                <a class="contacts" href = "tel:..."><img class="info__icons" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
-                            </div>
-                            
-                            <div class="call">
-                                <a href="#" class="call__link">Заказать звонок</a>
-                            </div>
+                        <div class="intro__btn__box">
+                            <a class="intro__btn" href="#">
+                                Перейти к каталогу
+                                <img src="/images/icons/arrow-right.svg" alt="" class="arrow__right">
+                            </a>
+                        </div>
                     </div>
-
-                   
                 </div>
             </div>
+        </div>
 
             
-        </div>
-    </header>
+    
 </div>
 
 </body>
