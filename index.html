@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,13 +31,13 @@
                         <div class="header__nav">
                                                 
                             <nav class="nav">
-                                <a class="nav__link" href="#">Водка</a>
-                                <a class="nav__link" href="#">Виски</a>
-                                <a class="nav__link" href="#">Коньяк <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a>
-                                <a class="nav__link" href="#">Ром</a>
-                                <a class="nav__link" href="#">Текила</a>
-                                <a class="nav__link" href="#">Вино <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a>
-                                <a class="nav__link" href="#">Шампанское</a>
+                                <div class="nav__link"><a href="#">Водка</a></div>
+                                <div class="nav__link"><a href="#">Виски</a></div>
+                                <div class="nav__link"><a href="#">Коньяк <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a></div>
+                                <div class="nav__link"><a href="#">Ром</a></div>
+                                <div class="nav__link"><a href="#">Текила</a></div>
+                                <div class="nav__link"><a href="#">Вино <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a></div>
+                                <div class="nav__link"><a href="#">Шампанское</a></div>
                             </nav>
 
                         </div>
@@ -46,9 +46,9 @@
                     <div class="col-md-3"> 
                         <div class="header__info">
                             <nav class="nav">
-                                <a class="nav__link" href="#">Каталог</a>
-                                <a class="nav__link" href="#">Акции</a>
-                                <a class="nav__link" href="#">Контакты</a>
+                                <div class="nav__link"><a href="#">Каталог</a></div>
+                                <div class="nav__link"><a href="#">Акции</a></div>
+                                <div class="nav__link"><a href="#">Контакты</a></div>
                             </nav>
                         </div>
                     </div>
@@ -64,12 +64,12 @@
                             <img src="/images/metropol-logo.svg" alt="" class="metropol__logo">
                         </div>
                         
-                        <div class="search__form">
+                        <form class="search__form">
                             <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
-                            <a class="search__button" href="#">
-                                <img class="search__icon" src="/images/icons/search-icon.svg" alt="" class="search__icon">
-                            </a>   
-                        </div>
+                            <button class="search__button" href="#">
+                                <img class="search__icon" src="/images/icons/search-icon.svg" alt="">
+                            </button>   
+                        </form>
                         
                         <div class="header__mail">
                             <a class="contacts" href = "mailto:..."><img class="info__icons" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
@@ -82,9 +82,10 @@
                         <div class="call">
                             <a href="#" class="call__link">Заказать звонок</a>
                         </div>
-                </div> <!--.header__bottom-->
-            </div>
-        </div> <!--.header__bottom row-->
+                    </div> <!--.header__bottom-->
+                </div>
+            </div> <!--.header__bottom row-->
+        </div>
     </header>
         <!--INTRO-->
         <div class="intro">
@@ -160,16 +161,143 @@
                                     <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
                                 </div>
 
-                                <hr class="card__hr">
 
                                 <div class="card__price">
-                                    409
+                                    <div class="price__num">
+                                        409
+                                    </div>
+                                    
                                     <div class="price__value">
-                                        руб
+                                        руб.
+                                    </div>
+                                </div>
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                                
+
+
+                            </div>
+                        </div>  <!--./catalog-items-->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="catalog__items">
+                            <div class="catalog__item">
+                                <div class="card__options">
+                                    <div class="card__option">
+                                        Водка
+                                    </div>
+
+                                    <div class="card__option">
+                                        500мл
                                     </div>
                                 </div>
 
-                                <a class="card__button">Подробнее</a>
+                                <div class="card__image">
+                                    <img src="/images/vodka.svg" alt="">
+                                </div>
+
+                                <div class="card__describe">
+                                    <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
+                                </div>
+
+
+                                <div class="card__price">
+                                    <div class="price__num">
+                                        409
+                                    </div>
+                                    
+                                    <div class="price__value">
+                                        руб.
+                                    </div>
+                                </div>
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                                
+
+
+                            </div>
+                        </div>  <!--./catalog-items-->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="catalog__items">
+                            <div class="catalog__item">
+                                <div class="card__options">
+                                    <div class="card__option">
+                                        Водка
+                                    </div>
+
+                                    <div class="card__option">
+                                        500мл
+                                    </div>
+                                </div>
+
+                                <div class="card__image">
+                                    <img src="/images/vodka.svg" alt="">
+                                </div>
+
+                                <div class="card__describe">
+                                    <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
+                                </div>
+
+
+                                <div class="card__price">
+                                    <div class="price__num">
+                                        409
+                                    </div>
+                                    
+                                    <div class="price__value">
+                                        руб.
+                                    </div>
+                                </div>
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                                
+
+
+                            </div>
+                        </div>  <!--./catalog-items-->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="catalog__items">
+                            <div class="catalog__item">
+                                <div class="card__options">
+                                    <div class="card__option">
+                                        Водка
+                                    </div>
+
+                                    <div class="card__option">
+                                        500мл
+                                    </div>
+                                </div>
+
+                                <div class="card__image">
+                                    <img src="/images/vodka.svg" alt="">
+                                </div>
+
+                                <div class="card__describe">
+                                    <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
+                                </div>
+
+
+                                <div class="card__price">
+                                    <div class="price__num">
+                                        409
+                                    </div>
+                                    
+                                    <div class="price__value">
+                                        руб.
+                                    </div>
+                                </div>
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                                
 
 
                             </div>
@@ -177,6 +305,7 @@
                     </div>
                 </div> <!--./row-->
 
+                
 
 
 
