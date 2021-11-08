@@ -8,7 +8,7 @@
         url('/images/fonts/SegoeUI/regular/Segoe UI.svg#-CirceCirceCirce') format('svg');
     font-weight: 400;
     font-style: normal;
-} */
+}  */
 
 .page-root{
 	display: -webkit-box;
@@ -329,3 +329,23 @@ hr {
     border-radius: 50%;
     cursor: pointer;
 }
+
+.card__options {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+}
+
+.card__option {
+    font-size: 16px;
+    background-color: #ECECEC;
+    border-radius: 8px;
+    height: 40px;
+    width: 80px;
+    margin-left: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
