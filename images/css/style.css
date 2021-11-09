@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
     font-family: 'Segoe UI';
     src: url('/images/fonts/SegoeUI/regular/Segoe UI.eot');
     src: url('/images/fonts/SegoeUI/regular/Segoe UI.eot?#iefix') format('embedded-opentype'),
@@ -9,7 +9,31 @@
     font-weight: 400;
     font-style: normal;
 }
-*/
+
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.eot');
+    src: url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.woff') format('woff'),
+        url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.ttf') format('truetype'),
+        url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.svg#-CirceCirceCirce') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.eot');
+    src: url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.woff') format('woff'),
+        url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.ttf') format('truetype'),
+        url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.svg#-CirceCirceCirce') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
 
 .page-root{
 	display: -webkit-box;
@@ -84,8 +108,6 @@ hr {
 
 .nav {
     display: flex;
-    font-size: 14px;
-    font-weight: 700;
 }
 
 .nav__link {
@@ -93,6 +115,7 @@ hr {
     font-size: 14px;
     line-height: 1.3;
     font-weight: 600;
+    font-style: normal;
     text-decoration: none; /* убираем подчеркивание ссылок снизу*/ 
     opacity: 1; 
     transition: color 0.1s linear;
@@ -160,6 +183,7 @@ hr {
     transition: 0.4s;
     line-height: 40px;
     width: 400px;
+    font-weight: 400;
     
 }
 
@@ -176,19 +200,23 @@ hr {
 .header__mail,
 .header__phone {
     margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .contacts {
+    display: flex;
     padding: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
+    font-style:normal;
+    align-items: center;
 }
 
 .info__icons {
-    padding: 0;
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 .contacts:hover {
@@ -198,17 +226,20 @@ hr {
 }
 
 .call {
+    margin-left: 0;
     display: flex;
     align-items: center;
-    margin-left: 26px;
+    padding: 0;
+
 }
 
 .call__link {
     color: #FEED00;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: underline;
-    margin-bottom: 5px;
+    margin-left: 10px;
 }
 
 .call__link:hover {
@@ -406,9 +437,11 @@ hr {
     font-size: 48px;
     line-height: 64px;
     justify-content: center;
-    color: #55BE4C;
+    color: #0099CC;
     align-items: baseline;
 }
+
+
 
 .price__value {
     font-size: 18px;
@@ -428,8 +461,96 @@ hr {
     font-size: 16px;
     line-height: 21px;
     color: #fff;
-    background-color: #55BE4C;
+    background-color: #0099CC;
     padding: 13px 53px;
     border-radius: 8px;
 }
+
+.card__button:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    cursor: pointer;
+    color: #fff;
+}
+
+.green {
+    color: #55BE4C;
+}
+
+.btn--green {
+    background-color: #55BE4C;
+}
+
+.blue {
+    color: #59D0E0;
+}
+
+.btn--blue {
+    background-color: #59D0E0;
+}
+
+/*SLIDER=========*/
+
+.catalog__slider {
+    min-width: none;
+}
+ /* Слайдер */ 
+ .slick-slider{
+    min-width: 0;
+ }
+
+ /* Слайдер запущен */ 
+.slick-slider.slick-initialized{}
+
+/* Слайдер с точками */ 
+.slick-slider.slick-dotted{}	
+
+/* Ограничивающая оболочка */ 
+.slick-list {
+    overflow: hidden;
+}
+
+ /* Лента слайдов */
+ .slick-track{
+    display: flex;
+ }
+
+/* Слайд */ 
+.slick-slide{} 
+
+/* Слайд активный (показывается) */ 
+.slick-slide.slick-active{} 
+
+/* Слайд основной */ 
+.slick-slide.slick-current{} 
+
+/* Слайд по центру */ 
+.slick-slide.slick-center{} 
+
+/* Клонированный слайд */ 
+.slick-slide.slick-cloned{}
+
+/* Стрелка */ 
+.slick-arrow{} 
+
+/* Стрелка влево */ 
+.slick-arrow.slick-prev{} 
+
+/* Стрелка вправо */ 
+.slick-arrow.slick-next{} 
+
+/* Стрелка не активная */ 
+.slick-arrow.slick-disabled{}
+
+/* Точки (булиты) */ 
+.slick-dots{} 
+.slick-dots li{} 
+
+/* Активная точка */ 
+.slick-dots li.slick-active{} 
+
+/* Элемент точки */ 
+.slick-dots li button{} 
+
+
 
