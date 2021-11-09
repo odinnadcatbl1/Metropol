@@ -13,82 +13,74 @@
 </head>
 <body>
 
-<svg style="display: none;"> <!-- display: none - чтобы данные иконки не были видны -->
-    <symbol id="arrow-right" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;"> 
-    <!-- открываем нашу иконку в редакторе кода и берём оттуда path и viewBox - вставляем выше-->
-    <g>
-        <path d="M11.3081 9.22481C11.5521 8.98073 11.9479 8.98073 12.1919 9.22481L15.5253 12.5581C15.7694 12.8022 15.7694 13.1979 15.5253 13.442L12.1919 16.7754C11.9479 17.0194 11.5521 17.0194 11.3081 16.7754C11.064 16.5313 11.064 16.1356 11.3081 15.8915L14.1995 13.0001L11.3081 10.1087C11.064 9.86461 11.064 9.46888 11.3081 9.22481Z"/>
-    </g>
-    </symbol>
-</svg>
+    <div class="page__root">
+        <!--HEADER-->
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <div class="row">
 
-<div class="page__root">
-    <!--HEADER-->
-    <header class="header">
-        <div class="container">
-            <div class="header__top">
-                <div class="row">
+                        <div class="col-md-9">
+                            <div class="header__nav">
+                                                    
+                                <nav class="nav">
+                                    <div class="nav__link"><a href="#">Водка</a></div>
+                                    <div class="nav__link"><a href="#">Виски</a></div>
+                                    <div class="nav__link"><a href="#">Коньяк <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a></div>
+                                    <div class="nav__link"><a href="#">Ром</a></div>
+                                    <div class="nav__link"><a href="#">Текила</a></div>
+                                    <div class="nav__link"><a href="#">Вино <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a></div>
+                                    <div class="nav__link"><a href="#">Шампанское</a></div>
+                                </nav>
 
-                    <div class="col-md-9">
-                        <div class="header__nav">
-                                                
-                            <nav class="nav">
-                                <div class="nav__link"><a href="#">Водка</a></div>
-                                <div class="nav__link"><a href="#">Виски</a></div>
-                                <div class="nav__link"><a href="#">Коньяк <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a></div>
-                                <div class="nav__link"><a href="#">Ром</a></div>
-                                <div class="nav__link"><a href="#">Текила</a></div>
-                                <div class="nav__link"><a href="#">Вино <img src="/images/icons/arrow-down.svg" alt="" class="arrow__down"></a></div>
-                                <div class="nav__link"><a href="#">Шампанское</a></div>
-                            </nav>
-
-                        </div>
-                    </div>        
-                        
-                    <div class="col-md-3"> 
-                        <div class="header__info">
-                            <nav class="nav">
-                                <div class="nav__link"><a href="#">Каталог</a></div>
-                                <div class="nav__link"><a href="#">Акции</a></div>
-                                <div class="nav__link"><a href="#">Контакты</a></div>
-                            </nav>
+                            </div>
+                        </div>        
+                            
+                        <div class="col-md-3"> 
+                            <div class="header__info">
+                                <nav class="nav">
+                                    <div class="nav__link"><a href="#">Каталог</a></div>
+                                    <div class="nav__link"><a href="#">Акции</a></div>
+                                    <div class="nav__link"><a href="#">Контакты</a></div>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div> <!--.header__top-->
-            
-            <hr>
+                </div> <!--.header__top-->
+                
+                <hr>
 
-            <div class="row"> 
-                <div class="col">
-                    <div class="header__bottom">
-                        <div class="header__logo">
-                            <img src="/images/metropol-logo.svg" alt="" class="metropol__logo">
-                        </div>
-                        
-                        <form class="search__form">
-                            <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
-                            <button class="search__button">
-                                <img class="search__icon" src="/images/icons/search-icon.svg" alt="">
-                            </button>   
-                        </form>
-                        
-                        <div class="header__mail">
-                            <a class="contacts" href = "mailto:..."><img class="info__icons" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
-                        </div>
+                <div class="row"> 
+                    <div class="col">
+                        <div class="header__bottom">
+                            <div class="header__logo">
+                                <img src="/images/metropol-logo.svg" alt="" class="metropol__logo">
+                            </div>
+                            
+                            <form class="search__form">
+                                <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
+                                <button class="search__button">
+                                    <img class="search__icon" src="/images/icons/search-icon.svg" alt="">
+                                </button>   
+                            </form>
+                            
+                            <div class="header__mail">
+                                <a class="contacts" href = "mailto:..."><img class="info__icons" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                            </div>
 
-                        <div class="header__phone">
-                            <a class="contacts" href = "tel:..."><img class="info__icons" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
-                        </div>
-                        
-                        <div class="call">
-                            <a href="#" class="call__link">Заказать звонок</a>
-                        </div>
-                    </div> <!--.header__bottom-->
-                </div>
-            </div> <!--.header__bottom row-->
-        </div>
-    </header>
+                            <div class="header__phone">
+                                <a class="contacts" href = "tel:..."><img class="info__icons" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
+                            </div>
+                            
+                            <div class="call">
+                                <a href="#" class="call__link">Заказать звонок</a>
+                            </div>
+                        </div> <!--.header__bottom-->
+                    </div>
+                </div> <!--.header__bottom row-->
+            </div>
+        </header>
+
         <!--INTRO-->
         <div class="intro">
             <div class="container">
@@ -2013,8 +2005,59 @@
 
 
             </div> <!--./container-->
-        </div> <!--./catalog-->
+        </div> <!--./last catalog-->
             
+    
+
+
+        <!--PROMOTIONS-->
+        <div class="promotions">
+            <div class="container">
+                <div class="promotions__title">
+                    Актуальные акции
+                </div>
+                
+                <div class="promotions__inner">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="promotions__item">
+                                <div class="promotions__img"><img src="/images/promotions-1.jpg" alt=""></div>
+                                <div class="promotions__subtitle">Скидка 7% на свадьбу</div>
+                                <div class="promotions__text">
+                                    <p>Особое предложение для молодожёнов. Подробности по телефону +7 (966) 240-85-85</p>
+                                </div>
+                                <div class="promotions__button-box">
+                                    <a href="#" class="promotions__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="promotions__item">
+                                <div class="promotions__img"><img src="/images/promotions-2.jpg" alt=""></div>
+                                <div class="promotions__subtitle">Акция “Вино для своих”</div>
+                                <div class="promotions__text">
+                                    <p>Особое предложение для покупок по промокоду 
+                                        «вино для своих».
+                                         Подробности по телефону +7 (966) 240-85-85</p>
+                                </div>
+                                <div class="promotions__button-box">
+                                    <a href="#" class="promotions__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     
 </div> <!-- ./page__root -->
 

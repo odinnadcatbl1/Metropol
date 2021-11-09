@@ -314,6 +314,7 @@ hr {
     margin-top: 100px;
 }
 
+
 .catalog__title {
     display: flex;
     justify-content: space-between;
@@ -464,11 +465,12 @@ hr {
     background-color: #0099CC;
     padding: 13px 53px;
     border-radius: 8px;
+    transition: opacity 0.15s linear;
 }
 
 .card__button:hover {
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.7;
     cursor: pointer;
     color: #fff;
 }
@@ -554,3 +556,72 @@ hr {
 
 
 
+/*PROMOTIONS================*/
+
+.promotions {
+    margin-top: 100px;
+}
+
+.promotions__title {
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #333333;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.promotions__item {
+    border: 1px solid #D8D8D8;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.promotions__img {
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid #F3F3F3;
+    border-radius: 14px;
+}
+
+.promotions__subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.1;
+    margin-top: 24px;
+}
+
+.promotions__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.promotions__button-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0;
+}
+.promotions__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #fff;
+    background-color: #0099CC;
+    border-radius: 12px;
+    width: 100%;
+    padding: 17px;
+    transition: opacity 0.15s linear;
+}
+
+.promotions__button:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+}
