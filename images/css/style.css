@@ -140,13 +140,17 @@ hr {
     color: #0099CC;
 }
 
+.nav__sub-box {
+    padding: 10px 0 0 0;
+    z-index: 10;
+}
 
 .nav__sub {
     color: #fff;
     display: none;
     position: absolute;
     z-index: 10;
-    top: 110%;
+    top: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     border: 1px solid #fff;
     border-radius: 10px;
@@ -192,7 +196,7 @@ hr {
     margin-left: 30px;
     background: none;
     height: 40px;
-    width: 25%;
+    width: 33%;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
     opacity: 0.8;
@@ -291,11 +295,12 @@ hr {
 
 .intro {
     display: flex;
-    height: 820px;
+    height: 100%;
     padding-top: 210px; /*чтобы интро начиналось на таком расстояние(размер шапки), т.к. шапка поверх всего*/
     background: #000 url("/images/intro-bg.jpg") center no-repeat; /*/ пока картинка не загрузилась - чтобы видеть фоновый цвет*/
 	background-size: cover; 
     color: #fff;
+    padding-bottom: 140px;
 }
 
 .intro__title {
@@ -420,7 +425,6 @@ hr {
     border: 1px solid #D8D8D8;
     border-radius: 14px;
     padding: 18px 18px 30px;
-    width: 25%;
     margin: 0 15px;
 }
 
@@ -536,7 +540,7 @@ hr {
 
 /*SLIDER=========*/
 
-.catalog__slider {
+.js-catalog__slider {
     min-width: none;
     display: flex;
     width: 100%;
@@ -544,11 +548,11 @@ hr {
 }
 
 
-.catalog__slider .slick-slider {
+.js-catalog__slider .slick-slider {
     margin: 0 15px;
 }
 
-.catalog__slider .slick-list {
+.js-catalog__slider .slick-list {
     margin: 0 -15px;
 }
 
@@ -595,7 +599,7 @@ hr {
 .slick-slide.slick-cloned{}
 
 /* Стрелка */ 
-.catalog__slider .slick-arrow{
+.js-catalog__slider .slick-arrow{
     border: 0;
     font-size: 0;
     position: absolute;
@@ -606,13 +610,13 @@ hr {
 } 
 
 /* Стрелка влево */ 
-.catalog__slider .slick-arrow.slick-prev{
+.js-catalog__slider .slick-arrow.slick-prev{
     right: 7%;
     background: url(/images/icons/catalog__left.svg) no-repeat;
 } 
 
 /* Стрелка вправо */ 
-.catalog__slider .slick-arrow.slick-next{
+.js-catalog__slider .slick-arrow.slick-next{
     right: 0;
     background: url(/images/icons/catalog__right.svg) no-repeat;
 } 
@@ -642,14 +646,18 @@ hr {
 }
 
 .promotions__item {
+    display: flex;
     border: 1px solid #D8D8D8;
     border-radius: 14px;
     padding: 20px;
     height: 100%;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    flex-direction: column;
 }
 
 .promotions__img {
-    height: 220px;
+    height: 50%;
     overflow: hidden;
     border: 1px solid #F3F3F3;
     border-radius: 14px;
@@ -676,7 +684,7 @@ hr {
     width: 100%;
     justify-content: center;
     text-align: center;
-    margin: 10px 0;
+    margin-top: auto;
 }
 
 .promotions__button {
@@ -704,6 +712,7 @@ hr {
     background: #F8F8F8;
     background-size: cover;
     padding-bottom: 200px;
+    padding-top: 100px;
 }
 
 .reviews .container {
@@ -752,23 +761,23 @@ hr {
     color: #666666;
 }
 
-.reviews__slider {
+.js-reviews__slider {
     min-width: 0;
     display: flex;
     min-width: none;
     position: relative;
 }
 
-.reviews__slider .slick-slider {
+.js-reviews__slider .slick-slider {
     margin: 0 15px;
 }
 
-.reviews__slider .slick-list {
+.js-reviews__slider .slick-list {
     margin: 0 -15px;
 }
 
 /* Стрелка */ 
-.reviews__slider .slick-arrow{
+.js-reviews__slider .slick-arrow{
     font-size: 0;
     position: absolute;
     z-index: 10;
@@ -779,18 +788,18 @@ hr {
 } 
 
 /* Стрелка влево */ 
-.reviews__slider .slick-arrow.slick-prev{
+.js-reviews__slider .slick-arrow.slick-prev{
     left: 0;
     background: url(/images/icons/reviews-left.svg) no-repeat;
 } 
 
 /* Стрелка вправо */ 
-.reviews__slider .slick-arrow.slick-next{
+.js-reviews__slider .slick-arrow.slick-next{
     right: 0;
     background: url(/images/icons/reviews-right.svg) no-repeat
 } 
 
-.reviews__slider .slick-dots {
+.js-reviews__slider .slick-dots {
     position: absolute;
     display: flex;
     align-items: center;
@@ -800,19 +809,19 @@ hr {
     width: 98.7179%;
 }
 
-.reviews__slider .slick-dots li{
+.js-reviews__slider .slick-dots li{
     list-style: none;
 } 
 
 /* Активная точка */ 
-.reviews__slider .slick-dots li.slick-active button{
+.js-reviews__slider .slick-dots li.slick-active button{
     width: 16px;
     height: 16px;
     background-color: #0099CC;
 } 
 
 /* Элемент точки */ 
-.reviews__slider .slick-dots li button{
+.js-reviews__slider .slick-dots li button{
     border: 0;
     box-shadow: 0;
     font-size: 0;
@@ -826,7 +835,7 @@ hr {
 
 /*YANDEX_MAP=========================*/
 
-.map {
+.map-box {
     margin-top: 100px;
 }
 
@@ -837,7 +846,7 @@ hr {
     padding: 30px 0;
 }
 
-.footer .container {
+.footer__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -949,3 +958,5 @@ hr {
 	.intro__title {
 		font-size: 30px;
 	}
+
+}
