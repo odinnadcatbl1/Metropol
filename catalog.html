@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="images/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="images/css/catalog.css">
+    <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
+    <script src="images/slick/slick.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/images/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+    <script src="/images/js/main.js"></script>
+    <title>Каталог</title>
+</head>
+<body>
+    <div class="page__root">
+        <!--HEADER-->
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="header__nav">
+                                                    
+                                <nav class="nav">
+                                    <div class="nav__link"><a href="#">Водка</a></div>
+                                    <div class="nav__link"><a href="#">Виски</a></div>
+                                    <div class="nav__link menu__link"><a href="#">Коньяк <img class="js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                        <div class="nav__sub-box">
+                                            <div class="nav__sub">
+                                                <div class="sub__link"><a href="#">Армянский коньяк</a></div>
+                                                <div class="sub__link"><a href="#">Российский коньяк</a></div>
+                                                <div class="sub__link"><a href="#">Французский коньяк</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav__link"><a href="#">Ром</a></div>
+                                    <div class="nav__link"><a href="#">Текила</a></div>
+                                    <div class="nav__link menu__link"><a href="#">Вино <img class="js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                        <div class="nav__sub-box">
+                                            <div class="nav__sub">
+                                                <div class="sub__link"><a href="#">Белое вино</a></div>
+                                                <div class="sub__link"><a href="#">Красное вино</a></div>
+                                                <div class="sub__link"><a href="#">Розовое вино</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav__link"><a href="#">Шампанское</a></div>
+                                </nav>
+
+                            </div>
+                        </div>        
+                            
+                        <div class="col-md-4"> 
+                            <div class="header__info">
+                                <nav class="nav">
+                                    <div class="nav__link"><a href="/catalog.html">Каталог</a></div>
+                                    <div class="nav__link"><a href="#">Акции</a></div>
+                                    <div class="nav__link"><a href="#">Контакты</a></div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--.header__top-->
+                
+                <hr>
+
+                <div class="row"> 
+                    <div class="col">
+                        <div class="header__bottom">
+                            <div class="header__logo">
+                                <img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img">
+                            </div>
+                            
+                            <form class="search__form">
+                                <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
+                                <button class="search__button">
+                                    <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
+                                </button>   
+                            </form>
+                            
+                            <div class="header__mail">
+                                <a class="contacts" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                            </div>
+
+                            <div class="header__phone">
+                                <a class="contacts" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
+                            </div>
+                            
+                            <div class="call">
+                                <a href="#" class="call__link">Заказать звонок</a>
+                            </div>
+                        </div> <!--.header__bottom-->
+                    </div>
+                </div> <!--.header__bottom row-->
+            </div>
+
+            <div class="burger-box">
+                <button class="burger" type="button">
+                    <span class="burger__item">Menu</span>
+                </button>
+            </div>
+        </header>
+
+    
+        <!--breadcrumb-->
+        <div class="breadcrumb">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumb-box">
+                    <ul class="breadcrumb__list">
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Каталог</a></li>
+                        <li><span aria-current="page">Виски</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!--./breadcrumb-->
+
+        <!--content-->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="catalog">
+                            <div class="catalog__title">
+                                Каталог напитков
+                            </div>
+                            <div class="catalog__inner">
+                                <div class="catalog__type-box">
+                                    <a class="catalog__type">
+                                        <div class="catalog__name">Вино</div>
+                                        <div class="catalog__arrow"><img src="/images/icons/arrow-down-catalog.svg" alt=""></div>
+                                    </a>
+
+                                    <div class="catalog__item-box">
+                                        <div class="catalog__item">
+                                            <div class="catalog__item-name">Белое вино</div>
+                                            <a class="catalog__item-link" href="#">развернуть</a>
+                                            <!-- <a class="catalog__item-link-2">свернуть</a> -->
+                                        </div>
+                                    
+                                        <div class="catalog__subitem-box">
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое полусладкое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое полусухое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое сладкое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое сухое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            
+                                        </div> <!--./catalog__subitem-box-->
+                                    </div> <!--./catalog__item-box-->
+
+
+                                </div> <!--./catalog__type-box-->
+
+                                <div class="catalog__type-box">
+                                    <a class="catalog__type" href="#">
+                                        <div class="catalog__name">Вино</div>
+                                        <div class="catalog__arrow"><img src="/images/icons/arrow-down-catalog.svg" alt=""></div>
+                                    </a>
+
+                                    <div class="catalog__item-box">
+                                        <div class="catalog__item">
+                                            <div class="catalog__item-name">Белое вино</div>
+                                            <a class="catalog__item-link" href="#">развернуть</a>
+                                            <!-- <a class="catalog__item-link-2">свернуть</a> -->
+                                        </div>
+                                    
+                                        <div class="catalog__subitem-box">
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое полусладкое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое полусухое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое сладкое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое сухое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            
+                                        </div> <!--./catalog__subitem-box-->
+                                    </div> <!--./catalog__item-box-->
+
+
+                                </div> <!--./catalog__type-box-->
+
+
+                                <div class="catalog__type-box">
+                                    <a class="catalog__type" href="#">
+                                        <div class="catalog__name">Вино</div>
+                                        <div class="catalog__arrow"><img src="/images/icons/arrow-down-catalog.svg" alt=""></div>
+                                    </a>
+
+                                    <div class="catalog__item-box">
+                                        <div class="catalog__item">
+                                            <div class="catalog__item-name">Белое вино</div>
+                                            <a class="catalog__item-link" href="#">развернуть</a>
+                                            <!-- <a class="catalog__item-link-2">свернуть</a> -->
+                                        </div>
+                                    
+                                        <div class="catalog__subitem-box">
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое полусладкое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое полусухое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое сладкое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            <a class="catalog__subitem" href="#">
+                                                <div class="catalog__subitem-name">Вино белое сухое <img src="/images/icons/arrow-right-catalog.svg" alt=""></div>
+                                            </a>
+                                            
+                                        </div> <!--./catalog__subitem-box-->
+                                    </div> <!--./catalog__item-box-->
+
+
+                                </div> <!--./catalog__type-box-->
+
+                            </div> <!--./catalog__inner-->
+                        </div> <!--./catalog-->
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="description">
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                123
+                            </div>
+                            <div class="col-md-4">
+                                123
+                            </div>
+                            <div class="col-md-4">
+                                123
+                            </div>
+                            <div class="col-md-4">
+                                123
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!--./page__root-->
+</body>
+</html>

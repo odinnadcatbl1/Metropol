@@ -56,7 +56,7 @@
                         <div class="col-md-4"> 
                             <div class="header__info">
                                 <nav class="nav">
-                                    <div class="nav__link"><a href="#">Каталог</a></div>
+                                    <div class="nav__link"><a href="/catalog.html">Каталог</a></div>
                                     <div class="nav__link"><a href="#">Акции</a></div>
                                     <div class="nav__link"><a href="#">Контакты</a></div>
                                 </nav>
@@ -122,7 +122,7 @@
                         </div>
 
                         <div class="intro__btn__box">
-                            <a class="intro__btn" href="#">
+                            <a class="intro__btn" href="/catalog.html">
                                 <div class="intro__btn__text">Перейти к каталогу</div>
                                 <div class="intro__btn__icon">
                                 <img src="/images/icons/arrow-right.svg" alt="" class="arrow__right js-svg-img">
@@ -149,7 +149,7 @@
 
                 <div class="js-catalog__slider">
         
-                    <div class="catalog__item js-title-height">
+                    <div class="catalog__item">
                         <div class="card__options">
                             <div class="card__option">Водка</div>
                             <div class="card__option">500мл</div>
@@ -173,7 +173,7 @@
                         </div>
                     </div> <!-- ./catalog__item-->
 
-                    <div class="catalog__item js-title-height">
+                    <div class="catalog__item">
                         <div class="card__options">
                             <div class="card__option">Водка</div>
                             <div class="card__option">500мл</div>
@@ -197,7 +197,7 @@
                         </div>
                     </div> <!-- ./catalog__item-->
 
-                    <div class="catalog__item js-title-height">
+                    <div class="catalog__item">
                         <div class="card__options">
                             <div class="card__option">Водка</div>
                             <div class="card__option">500мл</div>
@@ -221,7 +221,7 @@
                         </div>
                     </div> <!-- ./catalog__item-->
 
-                    <div class="catalog__item js-title-height">
+                    <div class="catalog__item">
                         <div class="card__options">
                             <div class="card__option">Водка</div>
                             <div class="card__option">500мл</div>
@@ -245,7 +245,7 @@
                         </div>
                     </div> <!-- ./catalog__item-->
 
-                    <div class="catalog__item js-title-height">
+                    <div class="catalog__item">
                         <div class="card__options">
                             <div class="card__option">Водка</div>
                             <div class="card__option">500мл</div>
@@ -1369,10 +1369,10 @@
         var myMap = new ymaps.Map("map", {
             // Координаты центра карты.
             // Порядок по умолчнию: «широта, долгота».
-            center: [55.76, 37.64],
+            center: [55.83, 49.108795],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
-            zoom: 12,
+            zoom: 14,
             // Элементы управления
             // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
             controls: [
@@ -1408,7 +1408,7 @@
 
         // Добавление метки
         // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
-        var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+        var myPlacemark = new ymaps.Placemark([55.83, 49.090], {
             // Хинт показывается при наведении мышкой на иконку метки.
             hintContent: 'Содержимое всплывающей подсказки',
             // Балун откроется при клике по метке.

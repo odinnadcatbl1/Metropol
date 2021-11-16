@@ -55,7 +55,4 @@ $(document).ready(function(){
         dots: true,
     });
 
-
-    $('.js-title-height').matchHeight();
-
 });

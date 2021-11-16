@@ -141,7 +141,7 @@ hr {
 }
 
 .nav__sub-box {
-    padding: 10px 0 0 0;
+    padding: 0 0 0 0;
     z-index: 10;
 }
 
@@ -422,10 +422,14 @@ hr {
 
 
 .catalog__item {
+    display: flex;
     border: 1px solid #D8D8D8;
     border-radius: 14px;
     padding: 18px 18px 30px;
     margin: 0 15px;
+    height: 100%;
+    height: calc(100% - 30px);
+    flex-direction: column;
 }
 
 
@@ -471,14 +475,16 @@ hr {
     justify-content: center;
     align-items: center; 
     text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid #C4C4C4;
+    margin-bottom: 20px;
 }
 
 
 
 .card__price {
-    margin-top: 20px;
     display: flex;
     font-style: normal;
     font-weight: bold;
@@ -487,6 +493,8 @@ hr {
     justify-content: center;
     color: #0099CC;
     align-items: baseline;
+    margin-top: auto;
+    margin-bottom: 20px;    
 }
 
 
@@ -500,7 +508,7 @@ hr {
 
 .card__button-box {
     display: flex;
-    margin-top: 20px;
+    margin-top: auto;
     justify-content: center;
 }
 
