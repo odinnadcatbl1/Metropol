@@ -487,3 +487,110 @@ hr {
 .catalog__item-box:hover .catalog__subitem-box {
     display: block; /*не выходит при наведении ТОЛЬКО на ссылку*/
 }
+
+
+/*POPULAR DRINKS*/
+
+.popular__drink {
+    margin-top: 20px;
+}
+
+.drink {
+    height: 100%;
+    margin-top: 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 18px 35px 18px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.drink:first-child {
+    margin-top: 0;
+}
+
+.drink__image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+
+.drink__name {
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #333333;
+    text-align: start;
+}
+
+.drink__options {
+    display: flex;
+    margin-top: 20px;
+    justify-content: start;
+}
+
+.drink__size {
+    display: flex;
+    background-color: #ECECEC;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    padding: 5px 9px;
+   
+}
+
+.drink__price {
+    display: flex;
+    background-color: #0099CC;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 5px 9px;
+    margin-left: 5px;
+}   
+
+/*DRINK__COUNTRY*/
+
+.drink__country {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country {
+    display: flex;
+    background-color: #ECECEC;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.country__active {
+    background-color: #0099CC;
+    color: #fff;
+    font-weight: 700;
+}
+
+/*drink__kind*/
+
+.drink__kind {
+    margin-top: 35px;
+}
