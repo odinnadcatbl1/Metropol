@@ -292,16 +292,17 @@ hr {
 
 
 /*INTRO==============*/
-
 .intro {
     display: flex;
     height: 100%;
     padding-top: 210px; /*чтобы интро начиналось на таком расстояние(размер шапки), т.к. шапка поверх всего*/
-    background: #000 url("/images/intro-bg.jpg") center no-repeat; /*/ пока картинка не загрузилась - чтобы видеть фоновый цвет*/
+    background: #000 url("/images/intro-bg.jpg") center no-repeat; 
 	background-size: cover; 
     color: #fff;
     padding-bottom: 140px;
+    background-attachment: fixed;
 }
+
 
 .intro__title {
     font-size: 54px;
@@ -548,19 +549,18 @@ hr {
 
 /*SLIDER=========*/
 
-.js-catalog__slider {
+.catalog__slider {
     min-width: none;
     display: flex;
-    width: 100%;
     position: relative;
 }
 
 
-.js-catalog__slider .slick-slider {
+.catalog__slider .slick-slider {
     margin: 0 15px;
 }
 
-.js-catalog__slider .slick-list {
+.catalog__slider .slick-list {
     margin: 0 -15px;
 }
 
@@ -607,7 +607,7 @@ hr {
 .slick-slide.slick-cloned{}
 
 /* Стрелка */ 
-.js-catalog__slider .slick-arrow{
+.catalog__slider .slick-arrow{
     border: 0;
     font-size: 0;
     position: absolute;
@@ -618,13 +618,13 @@ hr {
 } 
 
 /* Стрелка влево */ 
-.js-catalog__slider .slick-arrow.slick-prev{
+.catalog__slider .slick-arrow.slick-prev{
     right: 7%;
     background: url(/images/icons/catalog__left.svg) no-repeat;
 } 
 
 /* Стрелка вправо */ 
-.js-catalog__slider .slick-arrow.slick-next{
+.catalog__slider .slick-arrow.slick-next{
     right: 0;
     background: url(/images/icons/catalog__right.svg) no-repeat;
 } 
@@ -723,10 +723,6 @@ hr {
     padding-top: 100px;
 }
 
-.reviews .container {
-    min-width: 0;
-}
-
 .reviews__item {
     margin-top: 50px;
     background-color: #fff;
@@ -769,23 +765,23 @@ hr {
     color: #666666;
 }
 
-.js-reviews__slider {
+.reviews__slider {
     min-width: 0;
     display: flex;
     min-width: none;
     position: relative;
 }
 
-.js-reviews__slider .slick-slider {
+.reviews__slider .slick-slider {
     margin: 0 15px;
 }
 
-.js-reviews__slider .slick-list {
+.reviews__slider .slick-list {
     margin: 0 -15px;
 }
 
 /* Стрелка */ 
-.js-reviews__slider .slick-arrow{
+.reviews__slider .slick-arrow{
     font-size: 0;
     position: absolute;
     z-index: 10;
@@ -796,18 +792,18 @@ hr {
 } 
 
 /* Стрелка влево */ 
-.js-reviews__slider .slick-arrow.slick-prev{
+.reviews__slider .slick-arrow.slick-prev{
     left: 0;
     background: url(/images/icons/reviews-left.svg) no-repeat;
 } 
 
 /* Стрелка вправо */ 
-.js-reviews__slider .slick-arrow.slick-next{
+.reviews__slider .slick-arrow.slick-next{
     right: 0;
     background: url(/images/icons/reviews-right.svg) no-repeat
 } 
 
-.js-reviews__slider .slick-dots {
+.reviews__slider .slick-dots {
     position: absolute;
     display: flex;
     align-items: center;
@@ -817,19 +813,19 @@ hr {
     width: 98.7179%;
 }
 
-.js-reviews__slider .slick-dots li{
+.reviews__slider .slick-dots li{
     list-style: none;
 } 
 
 /* Активная точка */ 
-.js-reviews__slider .slick-dots li.slick-active button{
+.reviews__slider .slick-dots li.slick-active button{
     width: 16px;
     height: 16px;
     background-color: #0099CC;
 } 
 
 /* Элемент точки */ 
-.js-reviews__slider .slick-dots li button{
+.reviews__slider .slick-dots li button{
     border: 0;
     box-shadow: 0;
     font-size: 0;
@@ -845,6 +841,11 @@ hr {
 
 .map-box {
     margin-top: 100px;
+}
+
+#map {
+    width: 100%; 
+    height: 400px;
 }
 
 /*FOOTER=============================*/
