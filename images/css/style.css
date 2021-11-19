@@ -397,10 +397,6 @@ hr {
     border-radius: 14px;
 }
 
-.catalog__buttons {
-    display: flex;
-}
-
 .catalog__left,
 .catalog__right {
     border: 2px solid #fff;
