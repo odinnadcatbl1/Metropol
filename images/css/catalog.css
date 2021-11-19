@@ -399,16 +399,16 @@ hr {
     margin-bottom: 20px;
 }
 
-.catalog__inner {
+.filter__inner {
     border-radius: 10px;
     overflow: hidden;
 }
 
-.catalog__item-box {
+.filter__item-box {
     background-color: #FAFAFA;
 }
 
-.catalog__type {
+.filter__type {
     display: flex;
     justify-content: space-between;
     padding: 12px 20px;
@@ -417,34 +417,34 @@ hr {
     cursor: pointer;
 }
 
-.catalog__name {
+.filter__name {
     font-size: 16px;
     line-height: 100%;
     font-weight: 600;
     color: #333333;
 }
 
-.catalog__item-box {
+.filter__item-box {
     display: flex;
     flex-direction: column;
     display: none;
 }
 
-.catalog__item {
+.filter__item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 12px 20px;
 }
 
-.catalog__item-name {
+.filter__item-name {
     font-size: 14px;
     line-height: 100%;
     font-weight: 400;
     color: #333333;
 }
 
-.catalog__item-link {
+.filter__item-link {
     font-size: 12px;
     color: #0099CC;
     font-weight: 400;
@@ -452,12 +452,12 @@ hr {
     text-decoration: underline;
 }
 
-.catalog__item-link:hover {
+.filter__item-link:hover {
     text-decoration: none;
     cursor: pointer;
 }
 
-/* .catalog__item-link-2 {
+/* .filter__item-link-2 {
     font-size: 12px;
     color: #666666;
     font-weight: 400;
@@ -466,12 +466,12 @@ hr {
     display: none;
 } */
 
-.catalog__subitem-box {
+.filter__subitem-box {
     padding: 5px 20px;
     display: none;
 }
 
-.catalog__subitem-name {
+.filter__subitem-name {
     font-family: "Segoe UI", sans-serif;
     font-size: 12px;
     line-height: 100%;
@@ -480,11 +480,11 @@ hr {
     margin: 7px 0;
 }
 
-.catalog__type-box:hover .catalog__item-box {
+.filter__type-box:hover .filter__item-box {
     display: flex; 
 }
 
-.catalog__item-box:hover .catalog__subitem-box {
+.filter__item-box:hover .filter__subitem-box {
     display: block; /*не выходит при наведении ТОЛЬКО на ссылку*/
 }
 
@@ -683,4 +683,54 @@ hr {
 }
 
 
-/**/
+/*CATALOG*/
+
+.catalog__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100%;
+    color: #333333;
+}
+
+.catalog__subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #666666;
+}
+
+.catalog__subtitle ol {
+    margin: 10px 0;
+}
+
+
+.selects {
+    display: flex;
+}
+
+.sort {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #333333;
+}
+
+.sort:last-child {
+    margin-left: 30px;
+}
+
+.select {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #666666;
+    background-color: #fff;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #EFEFEF;
+    border-radius: 8px;
+}
+
+.option {
+    color: #333333;
+}
