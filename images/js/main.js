@@ -34,6 +34,25 @@ $(document).ready(function(){
 	}
 
 
+    let header = $(".jsHeader"); // селектор jsHeader
+    let scrollPos = $(window).scrollTop(); // позиция скролла от верха окна
+
+    // чтобы следить за событием скролла, загрузки и изменения размеров окна страницы: 
+    $(window).on("scroll load resize", function () {
+        
+        headerHeight = header.innerHeight();
+        scrollPos = $(this).scrollTop();
+
+        if(scrollPos > headerHeight + 50) {
+            header.addClass("fixed"); // добавляем класс fixed
+        } else {
+            header.removeClass("fixed"); // добавляем класс fixed
+        }
+
+
+    });
+
+
     let catalogSlider = $(".js-catalog__slider");
 
     catalogSlider.slick({

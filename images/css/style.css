@@ -80,6 +80,22 @@ body {
     position: absolute;
 }
 
+.header.fixed {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px #A2A2A280 solid;
+}
+
+.header--catalog.fixed {
+    position: fixed;
+    background: #fff;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px #A2A2A280 solid;
+}
+
 .header__top {
     align-items: center; /*расположим элементы внутри него по центру (по горизонтали)*/
     padding: 16px 0 0; /* внутренний отступ сверху и снизу*/
