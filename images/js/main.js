@@ -55,4 +55,7 @@ $(document).ready(function(){
         dots: true,
     });
 
+
+	$('.js-descr-height').matchHeight();
+
 });
