@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="images/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="images/noui-slider/nouislider.min.css">
     <link rel="stylesheet" href="images/css/style.css">
     <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
     <script src="images/slick/slick.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="/images/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+    <script src="/images/noui-slider/nouislider.min.js"></script>
     <script src="/images/js/main.js"></script>
     <title>Каталог</title>
 </head>
@@ -301,12 +303,12 @@
                                     <label class="country__label" for="Greece">Греция</label>
                                 </div>
                                 <div class="country__checkbox">
-                                    <input class="country__input" type="checkbox" id="Dagestan">
-                                    <label class="country__label" for="Dagestan">Грузия</label>
+                                    <input class="country__input" type="checkbox" id="Georgia">
+                                    <label class="country__label" for="Georgia">Грузия</label>
                                 </div>
                                 <div class="country__checkbox">
-                                    <input class="country__input" type="checkbox" id="Abhazia">
-                                    <label class="country__label" for="Abhazia">Дагестан</label>
+                                    <input class="country__input" type="checkbox" id="Dagestan">
+                                    <label class="country__label" for="Dagestan">Дагестан</label>
                                 </div>
                                 <div class="country__checkbox">
                                     <input class="country__input" type="checkbox" id="Dominican">
@@ -370,7 +372,7 @@
                                 </div>
                             </div> <!--./drink__country-->
 
-                            <div class="drink__kind">
+                            <div class="drink__filter">
                                 <div class="filter__title">Вид</div>
                                 <div class="filter__checkbox">
                                     <input class="filter__input" id="wine" type="checkbox">
@@ -388,30 +390,24 @@
                                 </div>
                             </div> <!--./drink__kind-->
 
-                            <div class="drink__salary">
+                            <div class="drink__filter">
                                 <div class="filter__title">Цена</div>
-                                <div class="filter__checkbox">
-                                    <input class="filter__input" id="price-1" type="checkbox">
-                                    <label class="filter__label" for="price-1">До 300</label>
-                                </div>
-
-                                <div class="filter__checkbox">
-                                    <input class="filter__input" id="price-2" type="checkbox">
-                                    <label class="filter__label" for="price-2">От 300 до 500</label>
-                                </div>
-
-                                <div class="filter__checkbox">
-                                    <input class="filter__input" id="price-3" type="checkbox">
-                                    <label class="filter__label" for="price-3">От 500 до 700</label>
-                                </div>
-
-                                <div class="filter__checkbox">
-                                    <input class="filter__input" id="price-4" type="checkbox">
-                                    <label class="filter__label" for="price-4">От 700 и выше</label>
+                                <div class="filter-price__slider js-filter-price__slider"></div>
+                                <div class="filter-price__inputs">
+                                    <label class="filter-price__label">
+                                        <span class="filter-price-text">От</span>
+                                        <input type="number" min="0" max="999999" class="filter-price__input" placeholder="0" id="price-input-1">
+                                        <span class="filter-price-text">₽</span>
+                                    </label>
+                                    <label class="filter-price__label">
+                                        <span class="filter-price-text">До</span>
+                                        <input type="number" min="0" max="9999" class="filter-price__input" placeholder="9999" id="price-input-2">
+                                        <span class="filter-price-text">₽</span>
+                                    </label>
                                 </div>
                             </div> <!--./drink__salary-->
 
-                            <div class="drink__sugar">
+                            <div class="drink__filter">
                                 <div class="filter__title">Сахар</div>
                                 <div class="filter__checkbox">
                                     <input class="filter__input" id="sugar-1" type="checkbox">
@@ -444,7 +440,7 @@
                                 </div>
                             </div> <!--./drink__sugar-->
 
-                            <div class="drink__grape">
+                            <div class="drink__filter">
                                 <div class="filter__title">Виноград</div>
                                 <div class="filter__checkbox">
                                     <input class="filter__input" id="grape-1" type="checkbox">
@@ -467,7 +463,7 @@
                                 </div>
                             </div> <!--./drink__grape-->
 
-                            <div class="drink__capacity">
+                            <div class="drink__filter">
                                 <div class="filter__title">Объем</div>
                                 <div class="filter__checkbox">
                                     <input class="filter__input" id="capacity-1" type="checkbox">
@@ -513,7 +509,7 @@
                                 <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
                                 <li>Бурбон – особый кукурузный виски американского производства.</li>
                                 </ol>
-                                Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.</p>
+                                Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
                                 </p>
                             </div>
                             

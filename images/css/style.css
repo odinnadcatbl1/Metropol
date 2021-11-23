@@ -1,59 +1,63 @@
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/images/fonts/SegoeUI/regular/Segoe UI.eot');
-    src: url('/images/fonts/SegoeUI/regular/Segoe UI.eot?#iefix') format('embedded-opentype'),
-        url('/images/fonts/SegoeUI/regular/Segoe UI.woff2') format('woff2'),
-        url('/images/fonts/SegoeUI/regular/Segoe UI.woff') format('woff'),
-        url('/images/fonts/SegoeUI/regular/Segoe UI.ttf') format('truetype'),
-        url('/images/fonts/SegoeUI/regular/Segoe UI.svg#-CirceCirceCirce') format('svg');
+    font-family: "Segoe UI";
+    src: url("/images/fonts/SegoeUI/regular/Segoe UI.eot");
+    src: url("/images/fonts/SegoeUI/regular/Segoe UI.eot?#iefix")
+            format("embedded-opentype"),
+        url("/images/fonts/SegoeUI/regular/Segoe UI.woff2") format("woff2"),
+        url("/images/fonts/SegoeUI/regular/Segoe UI.woff") format("woff"),
+        url("/images/fonts/SegoeUI/regular/Segoe UI.ttf") format("truetype"),
+        url("/images/fonts/SegoeUI/regular/Segoe UI.svg#-CirceCirceCirce")
+            format("svg");
     font-weight: 400;
     font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.eot');
-    src: url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
-        url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.woff') format('woff'),
-        url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.ttf') format('truetype'),
-        url('/images/fonts/SegoeUI/bold/SegoeUI-Bold.svg#-CirceCirceCirce') format('svg');
+    font-family: "Segoe UI";
+    src: url("/images/fonts/SegoeUI/bold/SegoeUI-Bold.eot");
+    src: url("/images/fonts/SegoeUI/bold/SegoeUI-Bold.eot?#iefix")
+            format("embedded-opentype"),
+        url("/images/fonts/SegoeUI/bold/SegoeUI-Bold.woff") format("woff"),
+        url("/images/fonts/SegoeUI/bold/SegoeUI-Bold.ttf") format("truetype"),
+        url("/images/fonts/SegoeUI/bold/SegoeUI-Bold.svg#-CirceCirceCirce")
+            format("svg");
     font-weight: 700;
     font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.eot');
-    src: url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.woff') format('woff'),
-        url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.ttf') format('truetype'),
-        url('/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.svg#-CirceCirceCirce') format('svg');
+    font-family: "Segoe UI";
+    src: url("/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.eot");
+    src: url("/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.eot?#iefix")
+            format("embedded-opentype"),
+        url("/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.woff")
+            format("woff"),
+        url("/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.ttf")
+            format("truetype"),
+        url("/images/fonts/SegoeUI/semibold/SegoeUI-SemiBold.svg#-CirceCirceCirce")
+            format("svg");
     font-weight: 600;
     font-style: normal;
 }
 
-
-.page-root{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	min-height: 100vh;
+.page-root {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body {
-    margin: 0;/* по умолчанию есть отступы по 8px, убираем их */
-    font-family:'Segoe UI', sans-serif;
+    margin: 0; /* по умолчанию есть отступы по 8px, убираем их */
+    font-family: "Segoe UI", sans-serif;
     font-size: 14px;
     /*сглазим шрифты*/
     -webkit-font-smoothing: antialiased;
     background-color: #fff;
-
 }
 
 /* Container ============ */
@@ -77,7 +81,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    position: absolute;
+    position: fixed;
 }
 
 .header.fixed {
@@ -85,21 +89,12 @@ body {
     background: rgba(0, 0, 0, 0.8);
     height: auto;
     padding-bottom: 15px;
-    border-bottom: 1px #A2A2A280 solid;
-}
-
-.header--catalog.fixed {
-    position: fixed;
-    background: #fff;
-    height: auto;
-    padding-bottom: 20px;
-    border-bottom: 2px #A2A2A280 solid;
+    border-bottom: 1px #a2a2a280 solid;
 }
 
 .header__top {
     align-items: center; /*расположим элементы внутри него по центру (по горизонтали)*/
     padding: 16px 0 0; /* внутренний отступ сверху и снизу*/
-    
 }
 
 .header .container {
@@ -110,11 +105,9 @@ hr {
     width: 100%;
     padding: 0;
     border-style: inset;
-    border-width: 1px;   
-    color: #C4C4C4; /* добавили полоску*/
+    border-width: 1px;
+    color: #c4c4c4; /* добавили полоску*/
 }
-
-
 
 /* Navigation =========== */
 
@@ -128,7 +121,6 @@ hr {
 
 .nav {
     display: flex;
-
 }
 
 .nav__link {
@@ -136,24 +128,23 @@ hr {
     font-size: 14px;
     line-height: 1.3;
     font-weight: 600;
-    text-decoration: none; /* убираем подчеркивание ссылок снизу*/ 
-    opacity: 1; 
+    text-decoration: none; /* убираем подчеркивание ссылок снизу*/
+    opacity: 1;
     transition: color 0.1s linear;
-    
 }
 
 .nav__link a {
     color: #fff;
-
 }
 
-.nav__link:first-child { /*псевдокласс - первый элемент*/
+.nav__link:first-child {
+    /*псевдокласс - первый элемент*/
     margin-left: 0px;
 }
 
 .nav__link a:hover {
     text-decoration: none;
-    color: #0099CC;
+    color: #0099cc;
 }
 
 .nav__sub-box {
@@ -190,12 +181,9 @@ hr {
     cursor: pointer;
 }
 
-
-
-.nav__link.menu__link:hover .nav__sub{
+.nav__link.menu__link:hover .nav__sub {
     display: block;
 }
-
 
 /*Info ===========*/
 
@@ -206,17 +194,16 @@ hr {
     align-items: center;
 }
 
-
 .search__form {
     display: flex;
     margin-left: 30px;
     background: none;
     height: 40px;
     width: 33%;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #cccccc;
     border-radius: 8px;
     opacity: 0.8;
-    padding: 0 18px;; 
+    padding: 0 18px;
 }
 
 .search__button {
@@ -226,7 +213,6 @@ hr {
     justify-content: end;
     align-items: center;
     padding: 0;
-    
 }
 
 .search__txt {
@@ -242,7 +228,6 @@ hr {
     line-height: 40px;
     width: 400px;
     font-weight: 400;
-    
 }
 
 .search__button:hover > .search__icon {
@@ -254,13 +239,11 @@ hr {
     border: 2px solid #fff;
 }
 
-
 .header__mail,
 .header__phone {
     margin-left: 30px;
     display: flex;
     align-items: center;
-
 }
 
 .contacts {
@@ -270,7 +253,7 @@ hr {
     font-weight: 600;
     text-decoration: none;
     color: #fff;
-    font-style:normal;
+    font-style: normal;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -294,7 +277,7 @@ hr {
 }
 
 .call__link {
-    color: #FEED00;
+    color: #feed00;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -302,23 +285,21 @@ hr {
 }
 
 .call__link:hover {
-    color: #FEED00;
+    color: #feed00;
     text-decoration: none;
 }
-
 
 /*INTRO==============*/
 .intro {
     display: flex;
     height: 100%;
     padding-top: 210px; /*чтобы интро начиналось на таком расстояние(размер шапки), т.к. шапка поверх всего*/
-    background: #000 url("/images/intro-bg.jpg") center no-repeat; 
-	background-size: cover; 
+    background: url("/images/intro-bg.jpg") center no-repeat;
+    background-size: cover;
     color: #fff;
     padding-bottom: 140px;
     background-attachment: fixed;
 }
-
 
 .intro__title {
     font-size: 54px;
@@ -334,7 +315,7 @@ hr {
 }
 
 .intro__btn__box {
-    margin-top: 45px;   
+    margin-top: 45px;
 }
 
 .intro__btn {
@@ -345,7 +326,7 @@ hr {
     font-size: 18px;
     line-height: 1.3;
     font-weight: 600;
-    background-color: #0099CC;
+    background-color: #0099cc;
     transition: color 0.1s linear;
     transition: padding 0.1s linear;
 
@@ -362,19 +343,17 @@ hr {
 
 .intro__btn:hover {
     text-decoration: none;
-    background-color: #007EA8;
+    background-color: #007ea8;
     color: #fff;
     padding: 0 10px 0 17px;
     border: 2px solid #fff;
 }
-
 
 /*CATALOG==============*/
 
 .catalog {
     margin-top: 100px;
 }
-
 
 .catalog__title {
     display: flex;
@@ -391,7 +370,6 @@ hr {
     font-weight: 700;
     text-decoration: none;
 }
-
 
 .catalog__name {
     text-decoration: underline;
@@ -435,7 +413,7 @@ hr {
 
 .catalog__item {
     display: flex;
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     border-radius: 14px;
     padding: 18px 18px 30px;
     margin: 0 15px;
@@ -454,13 +432,13 @@ hr {
     font-size: 16px;
     line-height: 1.3;
     color: #666666;
-    background-color: #ECECEC;
+    background-color: #ececec;
     border-radius: 8px;
     height: 40px;
     width: 80px;
     margin-left: 8px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding: 0;
 }
 
@@ -472,7 +450,7 @@ hr {
     display: flex;
     margin-top: 36px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .card__describe {
@@ -483,12 +461,12 @@ hr {
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid #C4C4C4;
+    border-bottom: 1px solid #c4c4c4;
     margin-bottom: 20px;
 }
 
@@ -517,13 +495,11 @@ hr {
     font-size: 48px;
     line-height: 64px;
     justify-content: center;
-    color: #0099CC;
+    color: #0099cc;
     align-items: baseline;
     margin-top: auto;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
-
-
 
 .price__value {
     font-size: 18px;
@@ -543,7 +519,7 @@ hr {
     font-size: 16px;
     line-height: 21px;
     color: #fff;
-    background-color: #0099CC;
+    background-color: #0099cc;
     padding: 13px 53px;
     border-radius: 8px;
     transition: opacity 0.15s linear;
@@ -557,19 +533,19 @@ hr {
 }
 
 .green {
-    color: #55BE4C;
+    color: #55be4c;
 }
 
 .btn--green {
-    background-color: #55BE4C;
+    background-color: #55be4c;
 }
 
 .blue {
-    color: #59D0E0;
+    color: #59d0e0;
 }
 
 .btn--blue {
-    background-color: #59D0E0;
+    background-color: #59d0e0;
 }
 
 /*SLIDER=========*/
@@ -580,7 +556,6 @@ hr {
     position: relative;
 }
 
-
 .catalog__slider .slick-slider {
     margin: 0 15px;
 }
@@ -589,50 +564,51 @@ hr {
     margin: 0 -15px;
 }
 
- /* Слайдер */ 
- 
- .slick-slider{}
- /* Слайдер запущен */ 
-.slick-slider.slick-initialized{}
+/* Слайдер */
 
-/* Слайдер с точками */ 
-.slick-slider.slick-dotted{}	
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
 
-/* Ограничивающая оболочка */ 
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+
+/* Ограничивающая оболочка */
 .slick-list {
     overflow: hidden;
     padding-bottom: 2px;
-
 }
 
- /* Лента слайдов */
- .slick-track{
+/* Лента слайдов */
+.slick-track {
     display: flex;
- }
+}
 
-/* Слайд */ 
-.slick-slide{}
- 
+/* Слайд */
+.slick-slide {
+}
 
-
-/* Слайд активный (показывается) */ 
+/* Слайд активный (показывается) */
 .slick-active {
+}
 
-} 
+/* Слайд основной */
+.slick-slide.slick-current {
+}
 
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
 
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
 
-/* Слайд основной */ 
-.slick-slide.slick-current{} 
-
-/* Слайд по центру */ 
-.slick-slide.slick-center{} 
-
-/* Клонированный слайд */ 
-.slick-slide.slick-cloned{}
-
-/* Стрелка */ 
-.catalog__slider .slick-arrow{
+/* Стрелка */
+.catalog__slider .slick-arrow {
     border: 0;
     font-size: 0;
     position: absolute;
@@ -640,26 +616,23 @@ hr {
     width: 50px;
     height: 50px;
     top: -14%;
-} 
+}
 
-/* Стрелка влево */ 
-.catalog__slider .slick-arrow.slick-prev{
+/* Стрелка влево */
+.catalog__slider .slick-arrow.slick-prev {
     right: 7%;
     background: url(/images/icons/catalog__left.svg) no-repeat;
-} 
+}
 
-/* Стрелка вправо */ 
-.catalog__slider .slick-arrow.slick-next{
+/* Стрелка вправо */
+.catalog__slider .slick-arrow.slick-next {
     right: 0;
     background: url(/images/icons/catalog__right.svg) no-repeat;
-} 
+}
 
-
-/* Стрелка не активная */ 
-.slick-arrow.slick-disabled{}
-
-
-
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
 
 /*PROMOTIONS================*/
 
@@ -680,7 +653,7 @@ hr {
 
 .promotions__item {
     display: flex;
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     border-radius: 14px;
     padding: 20px;
     height: 100%;
@@ -692,7 +665,7 @@ hr {
 .promotions__img {
     height: 50%;
     overflow: hidden;
-    border: 1px solid #F3F3F3;
+    border: 1px solid #f3f3f3;
     border-radius: 14px;
 }
 
@@ -725,7 +698,7 @@ hr {
     font-weight: 600;
     line-height: 100%;
     color: #fff;
-    background-color: #0099CC;
+    background-color: #0099cc;
     border-radius: 12px;
     width: 100%;
     padding: 17px;
@@ -738,11 +711,10 @@ hr {
     opacity: 0.7;
 }
 
-
 /*REVIEWS==============*/
 
 .reviews {
-    background: #F8F8F8;
+    background: #f8f8f8;
     background-size: cover;
     padding-bottom: 200px;
     padding-top: 100px;
@@ -759,7 +731,7 @@ hr {
 .reviews__author {
     display: flex;
     flex-wrap: wrap;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     border-radius: 14px;
     padding: 20px;
     align-items: center;
@@ -772,7 +744,6 @@ hr {
     border-radius: 50%;
     justify-content: center;
 }
-
 
 .reviews__author-name {
     font-size: 18px;
@@ -805,8 +776,8 @@ hr {
     margin: 0 -15px;
 }
 
-/* Стрелка */ 
-.reviews__slider .slick-arrow{
+/* Стрелка */
+.reviews__slider .slick-arrow {
     font-size: 0;
     position: absolute;
     z-index: 10;
@@ -814,19 +785,19 @@ hr {
     height: 30px;
     top: 110%;
     border: 0;
-} 
+}
 
-/* Стрелка влево */ 
-.reviews__slider .slick-arrow.slick-prev{
+/* Стрелка влево */
+.reviews__slider .slick-arrow.slick-prev {
     left: 0;
     background: url(/images/icons/reviews-left.svg) no-repeat;
-} 
+}
 
-/* Стрелка вправо */ 
-.reviews__slider .slick-arrow.slick-next{
+/* Стрелка вправо */
+.reviews__slider .slick-arrow.slick-next {
     right: 0;
-    background: url(/images/icons/reviews-right.svg) no-repeat
-} 
+    background: url(/images/icons/reviews-right.svg) no-repeat;
+}
 
 .reviews__slider .slick-dots {
     position: absolute;
@@ -838,29 +809,28 @@ hr {
     width: 98.7179%;
 }
 
-.reviews__slider .slick-dots li{
+.reviews__slider .slick-dots li {
     list-style: none;
-} 
+}
 
-/* Активная точка */ 
-.reviews__slider .slick-dots li.slick-active button{
+/* Активная точка */
+.reviews__slider .slick-dots li.slick-active button {
     width: 16px;
     height: 16px;
-    background-color: #0099CC;
-} 
+    background-color: #0099cc;
+}
 
-/* Элемент точки */ 
-.reviews__slider .slick-dots li button{
+/* Элемент точки */
+.reviews__slider .slick-dots li button {
     border: 0;
     box-shadow: 0;
     font-size: 0;
     width: 12px;
     height: 12px;
-    background-color: #E8E8E8;
+    background-color: #e8e8e8;
     border-radius: 50%;
     margin: 0 8px;
-} 
-
+}
 
 /*YANDEX_MAP=========================*/
 
@@ -892,9 +862,6 @@ hr {
     line-height: 1.4;
 }
 
-
-
-
 /*Burger ========*/
 
 .burger-box {
@@ -902,74 +869,73 @@ hr {
     padding: 20px;
 }
 
-
 .burger {
-	padding: 9px 2px; /*чтобы бургер нажимался по всех своей ширине и высоте*/
-	background: none;
-	border: 0;
-	cursor: pointer; /*чтобы менялся вид курсора при наведении*/
-
+    padding: 9px 2px; /*чтобы бургер нажимался по всех своей ширине и высоте*/
+    background: none;
+    border: 0;
+    cursor: pointer; /*чтобы менялся вид курсора при наведении*/
 }
 
 .burger__item {
-	display: block;
-	width: 30px;
-	height: 3px;
-	background-color: #fff;
-	/*делаем так, чтобы слово Menu не показывалось*/
-	font-size: 0;
-	color: transparent;
-	/*position: relative, чтобы создать полоски снизу и сверху*/
-	position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    /*делаем так, чтобы слово Menu не показывалось*/
+    font-size: 0;
+    color: transparent;
+    /*position: relative, чтобы создать полоски снизу и сверху*/
+    position: relative;
 }
 
 /*с помощью псевдомассивов before и after создадим ещё две полоски в бургер-меню*/
 .burger__item:before,
 .burger__item:after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	
-	background-color: #fff;
-	position: absolute;
-	left: 0;
-	z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
 }
 
 .burger__item:before {
-	top: -8px; /*position: absolute, поэтому top ОТНОСИТЕЛЬНО burger__item*/
+    top: -8px; /*position: absolute, поэтому top ОТНОСИТЕЛЬНО burger__item*/
 }
 
 .burger__item:after {
-	bottom: -8px;
+    bottom: -8px;
 }
-
-
-
-
-
-
 
 /*=======================================================*/
 /*CATALOG.HTML*/
 
 .page__root--catalog {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
 }
 
 .header--catalog {
-    background-color: #fff;;
+    background-color: #fff;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    padding-bottom: 15px;
+    height: auto;
+}
 
+.header--catalog.fixed {
+    position: fixed;
+    background: #fff;
+    height: auto;
+    border-bottom: 2px #a2a2a280 solid;
 }
 
 .header__top--catalog {
     align-items: center; /*расположим элементы внутри него по центру (по горизонтали)*/
     padding: 16px 0 0; /* внутренний отступ сверху и снизу*/
-    
 }
 
 .header .container {
@@ -980,11 +946,9 @@ hr {
     width: 100%;
     padding: 0;
     border-style: inset;
-    border-width: 1px;   
-    color: #C4C4C4; /* добавили полоску*/
+    border-width: 1px;
+    color: #c4c4c4; /* добавили полоску*/
 }
-
-
 
 /* Navigation =========== */
 
@@ -998,7 +962,6 @@ hr {
 
 .nav {
     display: flex;
-
 }
 
 .nav__link--catalog {
@@ -1006,23 +969,23 @@ hr {
     font-size: 14px;
     line-height: 1.3;
     font-weight: 400;
-    text-decoration: none; /* убираем подчеркивание ссылок снизу*/ 
-    opacity: 1; 
+    text-decoration: none; /* убираем подчеркивание ссылок снизу*/
+    opacity: 1;
     transition: color 0.1s linear;
-    
 }
 
 .nav__link--catalog a {
     color: #333333;
 }
 
-.nav__link--catalog:first-child { /*псевдокласс - первый элемент*/
+.nav__link--catalog:first-child {
+    /*псевдокласс - первый элемент*/
     margin-left: 0px;
 }
 
 .nav__link--catalog a:hover {
     text-decoration: none;
-    color: #0099CC;
+    color: #0099cc;
 }
 
 .nav__sub--catalog {
@@ -1044,11 +1007,10 @@ hr {
     color: #333333;
 }
 
-
 /*Info ===========*/
 
 .search__txt--catalog {
-    color: #A2A2A2;   
+    color: #a2a2a2;
 }
 
 .contacts--catalog {
@@ -1062,12 +1024,11 @@ hr {
 }
 
 .call__link--catalog {
-    color: #0099CC;
-
+    color: #0099cc;
 }
 
 .call__link--catalog:hover {
-    color: #0099CC;
+    color: #0099cc;
     text-decoration: none;
 }
 
@@ -1078,46 +1039,44 @@ hr {
     padding: 20px;
 }
 
-
 .burger--catalog {
-	padding: 9px 2px; /*чтобы бургер нажимался по всех своей ширине и высоте*/
-	background: none;
-	border: 0;
-	cursor: pointer; /*чтобы менялся вид курсора при наведении*/
-
+    padding: 9px 2px; /*чтобы бургер нажимался по всех своей ширине и высоте*/
+    background: none;
+    border: 0;
+    cursor: pointer; /*чтобы менялся вид курсора при наведении*/
 }
 
 .burger__item--catalog {
-	display: block;
-	width: 30px;
-	height: 3px;
-	background-color: #000;
-	/*делаем так, чтобы слово Menu не показывалось*/
-	font-size: 0;
-	color: transparent;
-	/*position: relative, чтобы создать полоски снизу и сверху*/
-	position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    /*делаем так, чтобы слово Menu не показывалось*/
+    font-size: 0;
+    color: transparent;
+    /*position: relative, чтобы создать полоски снизу и сверху*/
+    position: relative;
 }
 
 /*с помощью псевдомассивов before и after создадим ещё две полоски в бургер-меню*/
 .burger__item--catalog:before,
 .burger__item--catalog:after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	
-	background-color: #fff;
-	position: absolute;
-	left: 0;
-	z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
 }
 
 .burger__item--catalog:before {
-	top: -8px; /*position: absolute, поэтому top ОТНОСИТЕЛЬНО burger__item*/
+    top: -8px; /*position: absolute, поэтому top ОТНОСИТЕЛЬНО burger__item*/
 }
 
 .burger__item--catalog:after {
-	bottom: -8px;
+    bottom: -8px;
 }
 
 /*breadcrumbs*/
@@ -1160,7 +1119,6 @@ hr {
     content: "/";
 }
 
-
 .breadcrumb__list li:first-child::before {
     content: "";
 }
@@ -1185,7 +1143,7 @@ hr {
 }
 
 .filter__item-box {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
 }
 
 .filter__type {
@@ -1193,7 +1151,7 @@ hr {
     justify-content: space-between;
     padding: 12px 20px;
     background-color: #fff;
-    border-bottom: 1.5px solid rgba(196,196,196,0.3);
+    border-bottom: 1.5px solid rgba(196, 196, 196, 0.3);
     cursor: pointer;
     transform: none;
 }
@@ -1226,7 +1184,7 @@ hr {
 
 .filter__item-link {
     font-size: 12px;
-    color: #0099CC;
+    color: #0099cc;
     font-weight: 400;
     line-height: 100%;
     text-decoration: underline;
@@ -1271,10 +1229,9 @@ hr {
     display: block;
 }
 
-.filter__type.active .filter__arrow{
+.filter__type.active .filter__arrow {
     transform: rotate(180deg);
     transition: 0.2s ease;
-    
 }
 
 /*POPULAR DRINKS*/
@@ -1304,8 +1261,6 @@ hr {
     margin-right: 10px;
 }
 
-
-
 .drink__name {
     display: flex;
     font-size: 14px;
@@ -1323,7 +1278,7 @@ hr {
 
 .drink__size {
     display: flex;
-    background-color: #ECECEC;
+    background-color: #ececec;
     border-radius: 6px;
     font-size: 12px;
     line-height: 100%;
@@ -1332,12 +1287,11 @@ hr {
     justify-content: center;
     color: #666666;
     padding: 5px 9px;
-   
 }
 
 .drink__price {
     display: flex;
-    background-color: #0099CC;
+    background-color: #0099cc;
     border-radius: 6px;
     font-size: 12px;
     line-height: 100%;
@@ -1347,7 +1301,7 @@ hr {
     color: #fff;
     padding: 5px 9px;
     margin-left: 5px;
-}   
+}
 
 /*DRINK__COUNTRY*/
 
@@ -1369,7 +1323,7 @@ hr {
 
 .country__label {
     display: flex;
-    background-color: #ECECEC;
+    background-color: #ececec;
     color: #666666;
     font-size: 14px;
     font-weight: 400;
@@ -1384,17 +1338,16 @@ hr {
 }
 
 .country__input:checked + .country__label {
-    background-color: #0099CC;
+    background-color: #0099cc;
     color: #fff;
     font-weight: 700;
-    padding: 12px 20px;
+    padding: 12px 18px;
 }
 
-/*drink__kind*/
+/*drink__filter*/
 
-.drink__kind {
-    margin-top: 35px;
-    margin-bottom: -9px;
+.drink__filter {
+    margin-top: 40px;
 }
 
 .filter__checkbox {
@@ -1422,7 +1375,7 @@ hr {
     display: block;
     width: 24px;
     height: 24px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #eeeeee;
     background-color: #fff;
     border-radius: 6px;
     position: absolute;
@@ -1449,28 +1402,6 @@ hr {
     opacity: 1;
 }
 
-
-/*drink__salary*/
-.drink__salary {
-    margin-top: 40px;
-}
-
-
-/*.drink__sugar*/
-.drink__sugar {
-    margin-top: 40px;
-}
-
-/*.drink__grape*/
-.drink__grape {
-    margin-top: 40px
-}
-
-/*.drink__capacity*/
-.drink__capacity {
-    margin-top: 40px;
-}
-
 .filter__button-box {
     margin-top: 40px;
 }
@@ -1480,10 +1411,97 @@ hr {
     font-weight: 600;
     line-height: 100%;
     color: #fff;
-    background-color: #0099CC;
+    background-color: #0099cc;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
+}
+
+/*PRICE SLIDER*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.filter-price__inputs {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-price__label {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    border: 2px solid #efefef;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.filter-price-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    padding: 10px 5px;
+}
+
+.filter-price__input {
+    border: 1px solid #efefef;
+    border-radius: 8px;
+    width: 100%;
+    background: #fff;
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+}
+
+/* .filter-price__input:focus {
+    border: 1px solid #0099cc;
+    box-shadow: none;
+} */
+
+.noUi-target {
+    border: 2px solid #efefef;
+    border-radius: 100px;
+    box-shadow: none;
+    background-color: #fff;
+    height: 12px;
+    width: 100%;
+}
+
+.noUi-connect {
+    background-color: #0099cc;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+    display: none;
+}
+
+.noUi-handle {
+    box-shadow: none;
+    background-color: #fff;
+    border: 3px solid #0099cc;
+    border-radius: 50%;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 24px;
+    height: 24px;
+    top: -8px;
+}
+
+.filter-price__slider {
+    margin-top: 10px;
+    margin-left: -4px;
 }
 
 /*CATALOG*/
@@ -1507,7 +1525,6 @@ hr {
     margin: 10px 0;
 }
 
-
 .selects {
     display: flex;
 }
@@ -1530,7 +1547,7 @@ hr {
     line-height: 100%;
     color: #666666;
     background-color: #fff;
-    border: 1px solid #EFEFEF;
+    border: 1px solid #efefef;
     border-radius: 8px;
     width: 170px;
     padding: 10px 0 10px 20px;
@@ -1543,14 +1560,13 @@ hr {
 /*catalog__items*/
 
 .catalog__items--catalog {
-    display: flex;
     margin-top: 22px;
 }
 
 .catalog__item--catalog {
     background-color: #fff;
     display: flex;
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     border-radius: 14px;
     padding: 18px 23px 30px 23px;
     height: 100%;
@@ -1570,13 +1586,13 @@ hr {
     font-size: 16px;
     line-height: 1.3;
     color: #666666;
-    background-color: #ECECEC;
+    background-color: #ececec;
     border-radius: 8px;
     height: 40px;
     width: 80px;
     margin-left: 8px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding: 0;
 }
 
@@ -1588,7 +1604,7 @@ hr {
     display: flex;
     margin-top: 5px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .card__describe--catalog {
@@ -1599,7 +1615,7 @@ hr {
     display: flex;
     margin-top: 12px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
@@ -1612,8 +1628,8 @@ hr {
     font-size: 30px;
     line-height: 64px;
     justify-content: center;
-    color: #0099CC;
-    align-items: baseline;  
+    color: #0099cc;
+    align-items: baseline;
 }
 
 .price__value--catalog {
@@ -1634,7 +1650,7 @@ hr {
     font-size: 14px;
     line-height: 21px;
     color: #fff;
-    background-color: #0099CC;
+    background-color: #0099cc;
     padding: 10px 80px;
     border-radius: 8px;
     transition: opacity 0.15s linear;
@@ -1647,17 +1663,16 @@ hr {
     color: #fff;
 }
 
-
 /*PAGINATION*/
 
 .previous-page .page-link img {
     transform: rotate(180deg);
 }
 
-.pagination{
+.pagination {
     text-align: center;
-  }
-  
+}
+
 .pagination ol {
     font-size: 0;
     padding: 0;
@@ -1668,7 +1683,7 @@ hr {
     margin-left: 10px;
 }
 
-.page__item:first-child{
+.page__item:first-child {
     margin-left: 0;
 }
 
@@ -1693,7 +1708,7 @@ hr {
     font-weight: 700;
     line-height: 100%;
     color: #fff;
-    background-color: #0099CC;
+    background-color: #0099cc;
 }
 
 .page-link:hover {
@@ -1709,29 +1724,16 @@ hr {
     background-color: #0099cc90;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 991px) {
-	
-	/*Navigation*/
-	.header__top,
+    /*Navigation*/
+    .header__top,
     .header__bottom,
     hr {
-		display: none; /*меню навигации не показывается (в дальнейшем сделаем бургер-меню)*/
-	}
-	.burger-box {
-		display: block;
-	}
+        display: none; /*меню навигации не показывается (в дальнейшем сделаем бургер-меню)*/
+    }
+    .burger-box {
+        display: block;
+    }
 
     /*INTRO*/
     .intro {
@@ -1743,29 +1745,26 @@ hr {
     }
 
     /*CATALOG*/
-    /* Стрелка влево */ 
-    .catalog__slider .slick-arrow.slick-prev{
+    /* Стрелка влево */
+    .catalog__slider .slick-arrow.slick-prev {
         right: 7%;
-    } 
+    }
 
-    /* Стрелка вправо */ 
-    .catalog__slider .slick-arrow.slick-next{
+    /* Стрелка вправо */
+    .catalog__slider .slick-arrow.slick-next {
         right: 0;
-    } 
-
+    }
 }
 
 @media (max-width: 767px) {
-	
-	/*Intro*/
-	.intro {
-		height: auto; /*убираем заданную высоту*/
-		padding-top: 130px;
-		padding-bottom: 30px;
-	}
-	
-	.intro__title {
-		font-size: 30px;
-	}
+    /*Intro*/
+    .intro {
+        height: auto; /*убираем заданную высоту*/
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
 
+    .intro__title {
+        font-size: 30px;
+    }
 }
