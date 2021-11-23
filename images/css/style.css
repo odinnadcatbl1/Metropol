@@ -433,7 +433,6 @@ hr {
     cursor: pointer;
 }
 
-
 .catalog__item {
     display: flex;
     border: 1px solid #D8D8D8;
@@ -444,8 +443,6 @@ hr {
     height: calc(100% - 30px);
     flex-direction: column;
 }
-
-
 
 .card__options {
     display: flex;
@@ -493,6 +490,20 @@ hr {
     padding-bottom: 5px;
     border-bottom: 1px solid #C4C4C4;
     margin-bottom: 20px;
+}
+
+.describe__link {
+    color: #333333;
+    text-decoration: none;
+}
+
+.describe__link:hover {
+    text-decoration: none;
+    color: #33333380;
+}
+
+.image__link:hover {
+    opacity: 0.8;
 }
 
 .price-button {
@@ -1154,6 +1165,10 @@ hr {
     content: "";
 }
 
+.breadcrumb-box ul li a:hover {
+    text-decoration: none;
+}
+
 /*content*/
 
 .filter__title {
@@ -1180,6 +1195,7 @@ hr {
     background-color: #fff;
     border-bottom: 1.5px solid rgba(196,196,196,0.3);
     cursor: pointer;
+    transform: none;
 }
 
 .filter__name {
@@ -1192,7 +1208,6 @@ hr {
 .filter__item-box {
     display: flex;
     flex-direction: column;
-    display: none;
 }
 
 .filter__item {
@@ -1222,14 +1237,13 @@ hr {
     cursor: pointer;
 }
 
-/* .filter__item-link-2 {
+.filter__item-link-2 {
     font-size: 12px;
     color: #666666;
     font-weight: 400;
     line-height: 100%;
     text-decoration: underline;
-    display: none;
-} */
+}
 
 .filter__subitem-box {
     padding: 5px 20px;
@@ -1245,14 +1259,23 @@ hr {
     margin: 7px 0;
 }
 
-.filter__type-box:hover .filter__item-box {
-    display: flex; 
+.filter__items {
+    display: none;
 }
 
-.filter__item-box:hover .filter__subitem-box {
-    display: block; /*не выходит при наведении ТОЛЬКО на ссылку*/
+.filter__items.active {
+    display: block;
 }
 
+.filter__subitem-box.active {
+    display: block;
+}
+
+.filter__type.active .filter__arrow{
+    transform: rotate(180deg);
+    transition: 0.2s ease;
+    
+}
 
 /*POPULAR DRINKS*/
 
@@ -1353,7 +1376,7 @@ hr {
     line-height: 100%;
     border-radius: 10px;
     text-align: center;
-    padding: 10px 15px;
+    padding: 13px 19px;
     margin-right: 8px;
     margin-bottom: 10px;
     transition: background-color 0.1s linear;
@@ -1364,6 +1387,7 @@ hr {
     background-color: #0099CC;
     color: #fff;
     font-weight: 700;
+    padding: 12px 20px;
 }
 
 /*drink__kind*/
@@ -1447,6 +1471,20 @@ hr {
     margin-top: 40px;
 }
 
+.filter__button-box {
+    margin-top: 40px;
+}
+
+.filter__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #fff;
+    background-color: #0099CC;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
 
 /*CATALOG*/
 
@@ -1462,6 +1500,7 @@ hr {
     line-height: 1.8;
     font-weight: 400;
     color: #666666;
+    margin-top: 20px;
 }
 
 .catalog__subtitle--catalog ol {
@@ -1518,7 +1557,7 @@ hr {
     height: calc(100% - 27px);
     flex-direction: column;
     margin-right: -10px;
-    margin-bottom: 15px;
+    margin-bottom: 27px;
 }
 
 .card__options--catalog {
@@ -1650,7 +1689,7 @@ hr {
     overflow: hidden;
 }
 
-.active .page-link {
+.active-page .page-link {
     font-weight: 700;
     line-height: 100%;
     color: #fff;
@@ -1663,7 +1702,7 @@ hr {
     color: #666666;
 }
 
-.active .page-link:hover {
+.active-page .page-link:hover {
     color: #fff;
     text-decoration: none;
     border: 2px #fff solid;

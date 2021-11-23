@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+    // SVG-IMG
     if($('.js-svg-img').length){
 		$('.js-svg-img').each(function(){
 			
@@ -33,7 +35,7 @@ $(document).ready(function(){
 		});
 	}
 
-
+    // закрепленная шапка
     let header = $(".jsHeader"); // селектор jsHeader
     let scrollPos = $(window).scrollTop(); // позиция скролла от верха окна
 
@@ -52,7 +54,7 @@ $(document).ready(function(){
 
     });
 
-
+    // слайдеры
     let catalogSlider = $(".js-catalog__slider");
 
     catalogSlider.slick({
@@ -74,7 +76,21 @@ $(document).ready(function(){
         dots: true,
     });
 
-
+    // выравнивание по высоте
 	$('.js-descr-height').matchHeight();
+
+
+    // выпадающие блоки
+    $(document).on('click', '.js-filter-btn', function(){
+        let filterParent = $(this).parents('.js-filter-parent[data-parent="' + $(this).data('btn') + '"]');
+        
+        $(this).toggleClass('active');
+        filterParent.find('.js-filter-content[data-child="' + $(this).data('btn') + '"]').slideToggle(function(){
+            $(this).toggleClass('active');
+        });
+        
+        
+        return false;
+    })
 
 });
