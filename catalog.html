@@ -140,8 +140,7 @@
                                         <div class="filter__item-box js-filter-parent" data-parent="smallfield_1">
                                             <div class="filter__item">
                                                 <div class="filter__item-name">Белое вино</div>
-                                                <a class="filter__item-link js-filter-btn" href="#" data-btn="smallfield_1">развернуть</a>
-                                                <!-- <a class="filter__item-link-2 js-filter-btn" href="#" data-btn="smallfield_1">свернуть</a> -->
+                                                <a class="filter__item-link js-filter-btn" href="#" data-btn="smallfield_1" data-opened="свернуть" data-closed="развернуть">развернуть</a>
                                             </div>
                                         
                                             <div class="filter__subitem-box js-filter-content" data-child="smallfield_1">
@@ -514,24 +513,39 @@
                             </div>
                             
                             <div class="selects">
-                                <div class="sort">
-                                    Сортировка: 
-                                    <select class="select">
-                                        <option class="option" value="1">Сначала дорогие</option>
-                                        <option class="option" value="2">Сначала недорогие</option>
-                                        <option class="option" value="3">Сначала популярные</option>
-                                    </select>
+                                <div class="select-box">
+                                    <div class="select__title">Сортировка:</div>                           
+                                    <div class="select js-select">
+                                        <div class="select__header">
+                                            <input class="js-catalog-input" type="hidden" value="" name="sort" data-input="sort">
+                                            <span class="select__current js-select__current" data-input="sort">Сначала дорогие</span>
+                                            <div class="select__icon"><img class="js-svg-img" src="/images/icons/arrow-down-catalog.svg" alt=""></div>
+                                        </div>
+                                        <div class="select__body">
+                                            <div class="select__item js-select__item" data-value="popular" data-input="sort">Сначала популярные</div>
+                                            <div class="select__item js-select__item" data-value="chip" data-input="sort">Сначала дешёвые</div>
+                                            <div class="select__item js-select__item" data-value="expensive" data-input="sort">Сначала дорогие</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="sort">
-                                    Товаров на странице: 
-                                    <select class="select">
-                                        <option class="option" value="3">18</option>
-                                        <option class="option" value="4">27</option>
-                                        <option class="option" value="5">36</option>
-                                    </select>
+
+                                <div class="select-box">
+                                    <div class="select__title">Товаров на странице:</div>                           
+                                    <div class="select js-select">
+                                        <div class="select__header">
+                                            <input class="js-catalog-input" type="hidden" value="" name="goods" data-input="goods">
+                                            <span class="select__current js-select__current" data-input="goods">9</span>
+                                            <div class="select__icon"><img class="js-svg-img" src="/images/icons/arrow-down-catalog.svg" alt=""></div>
+                                        </div>
+                                        <div class="select__body">
+                                            <div class="select__item js-select__item" data-value="9" data-input="goods">9</div>
+                                            <div class="select__item js-select__item" data-value="18" data-input="goods">18</div>
+                                            <div class="select__item js-select__item" data-value="27" data-input="goods">27</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+  
+                            </div> <!--/.selects-->
                             <div class="catalog__items--catalog">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -1009,7 +1023,7 @@
 
                             <div class="pagination">
                                 <ol>
-                                    <li class="page__item previous-page disable"><a class="page-link" href="#"><img src="/images/icons/arrow-right-catalog.svg" alt=""></a></li>
+                                    <li class="page__item previous-page disable"><a class="page-link" href="#"><img class="js-svg-img page-link__img" src="/images/icons/arrow-right-catalog.svg" alt=""></a></li>
                                     <li class="page__item current-page"><a class="page-link" href="#">1</a></li>
                                     <li class="page__item current-page active-page"><a class="page-link" href="#">2</a></li>
                                     <li class="page__item current-page"><a class="page-link" href="#">3</a></li>                   

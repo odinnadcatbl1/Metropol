@@ -7,14 +7,10 @@ $(document).ready(function () {
             const imgClass = $img.attr("class");
             const imgURL = $img.attr("src");
 
-            console.log(imgURL);
-
             $.get(
                 imgURL,
                 function (data) {
                     let $svg = $(data).find("svg");
-
-                    console.log($svg);
 
                     if (typeof imgID !== "undefined") {
                         $svg = $svg.attr("id", imgID);
@@ -90,6 +86,16 @@ $(document).ready(function () {
         const filterParent = $(this).parents(
             '.js-filter-parent[data-parent="' + $(this).data("btn") + '"]'
         );
+        if (
+            typeof $(this).data("opened") !== "undefined" &&
+            typeof $(this).data("closed") !== "undefined"
+        ) {
+            if ($(this).hasClass("active")) {
+                $(this).text($(this).data("closed"));
+            } else {
+                $(this).text($(this).data("opened"));
+            }
+        }
 
         $(this).toggleClass("active");
         filterParent
@@ -126,7 +132,7 @@ $(document).ready(function () {
                         "px";
                 });
             }
-            S;
+
             $(window).scroll(function () {
                 _parallax_run();
             });
@@ -135,38 +141,64 @@ $(document).ready(function () {
         }
     });
 
-    const rangeSlider = document.querySelector(".js-filter-price__slider");
-    const input1 = document.querySelector("#price-input-1");
-    const input2 = document.querySelector("#price-input-2");
-    const inputs = [input1, input2];
+    // noUiSlider (ползунок для цены)
+    if ($(".js-filter-price__slider").length) {
+        const rangeSlider = document.querySelector(".js-filter-price__slider");
+        const input1 = document.querySelector("#price-input-1");
+        const input2 = document.querySelector("#price-input-2");
+        const inputs = [input1, input2];
 
-    if (rangeSlider) {
-        noUiSlider.create(rangeSlider, {
-            start: [0, 999999],
-            connect: true,
-            step: 1,
-            range: {
-                min: 0,
-                max: 9999,
-            },
+        if (rangeSlider) {
+            noUiSlider.create(rangeSlider, {
+                start: [0, 999999],
+                connect: true,
+                step: 1,
+                range: {
+                    min: 0,
+                    max: 9999,
+                },
+            });
+        }
+
+        const setRangeSlider = (i, value) => {
+            let arr = [null, null]; // положим пустые элементы, чтобы их потом менять
+            arr[i] = value;
+            rangeSlider.noUiSlider.set(arr);
+        };
+
+        //values - от первого ползунка до второго ползунка
+        //handle - сам ползунок
+        rangeSlider.noUiSlider.on("update", function (values, handle) {
+            inputs[handle].value = Math.round(values[handle]);
+        });
+
+        inputs.forEach((el, index) => {
+            $(el).on("change", (e) => {
+                setRangeSlider(index, e.currentTarget.value);
+            });
         });
     }
 
-    const setRangeSlider = (i, value) => {
-        let arr = [null, null]; // положим пустые элементы, чтобы их потом менять
-        arr[i] = value;
-        rangeSlider.noUiSlider.set(arr);
+    // selects
+
+    let selectToggle = function () {
+        $(this).toggleClass("select-active");
     };
 
-    //values - от первого ползунка до второго ползунка
-    //handle - сам ползунок
-    rangeSlider.noUiSlider.on("update", function (values, handle) {
-        inputs[handle].value = Math.round(values[handle]);
+
+    $(document).on("click", ".js-select", selectToggle);
+    $(document).on("click", ".js-select__item", function() {
+        $('.js-select__current[data-input="'+ $(this).data('input') +'"]').text($(this).text());
+        $('.js-catalog-input[data-input="'+ $(this).data('input') +'"]').val($(this).data('value'));
     });
 
-    inputs.forEach((el, index) => {
-        $(el).on("change", (e) => {
-            setRangeSlider(index, e.currentTarget.value);
-        });
-    });
+
+    //нажатие вне div
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		const selectBody = $(".js-select"); // тут указываем элемент
+		if (!selectBody.is(e.target) // если клик был не по нашему блоку
+		    && selectBody.has(e.target).length === 0) { // и не по его дочерним элементам
+                selectBody.removeClass("select-active"); // скрываем его
+		}
+	});
 });
