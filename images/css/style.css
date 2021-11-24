@@ -847,6 +847,7 @@ hr {
 .footer {
     display: flex;
     padding: 30px 0;
+    background-color: #fff;
 }
 
 .footer__inner {
@@ -860,6 +861,12 @@ hr {
     font-weight: 400;
     color: #333333;
     line-height: 1.4;
+    padding-right: 10px;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
 }
 
 /*Burger ========*/
@@ -1588,6 +1595,10 @@ input[type="number"] {
     justify-content: center;
 }
 
+.select.select-active .select__icon {
+    transform: rotate(180deg);
+}
+
 .select__body {
     border: solid 1px #efefef;
     position: absolute;
@@ -1609,8 +1620,13 @@ input[type="number"] {
     padding: 10px 10px 10px 20px;
 }
 
-.select__item:hover {
-    background-color: #efefef;
+.select__item.active {
+    background-color: #0099CC;
+    color: #fff;
+}
+
+.select__item:not(.active):hover {
+    background-color: #eaeaea60;
 }
 
 /*catalog__items*/
@@ -1627,7 +1643,6 @@ input[type="number"] {
     height: 100%;
     height: calc(100% - 27px);
     flex-direction: column;
-    margin-right: -10px;
     margin-bottom: 27px;
 }
 
@@ -1720,12 +1735,13 @@ input[type="number"] {
 
 /*PAGINATION*/
 
-.previous-page .page-link img {
+.page-link__img {
     transform: rotate(180deg);
 }
 
 .pagination {
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .pagination ol {
@@ -1778,6 +1794,69 @@ input[type="number"] {
     border: 2px #fff solid;
     background-color: #0099cc90;
 }
+
+
+
+
+/*============CATALOG-MAIN.HTML===============*/
+
+.goods {
+    padding-bottom: 40px;
+}
+
+.goods__item {
+    background-color: #fff;
+    border: 1px #eeeeee solid;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 35px;
+    margin-bottom: 15px;
+    height: 100%;
+    height: calc(100% - 15px);
+}
+
+.goods__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333333;
+    text-decoration: none;
+    text-align: center;
+}
+
+.goods__item:hover {
+    text-decoration: none;
+    border-color: #666666;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.goods__link {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #0099CC;
+    text-decoration: underline;
+}
+
+.goods__item:hover .goods__link {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 991px) {
     /*Navigation*/

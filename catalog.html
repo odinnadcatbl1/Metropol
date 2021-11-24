@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="images/noui-slider/nouislider.min.css">
     <link rel="stylesheet" href="images/css/style.css">
     <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
-    <script src="images/slick/slick.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="/images/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+    <script src="images/slick/slick.min.js"></script>
     <script src="/images/noui-slider/nouislider.min.js"></script>
     <script src="/images/js/main.js"></script>
     <title>Каталог</title>
@@ -106,25 +106,22 @@
             </div>
         </header>
 
-    
-        <!--breadcrumb-->
-        <div class="breadcrumb">
-            <div class="container">
-                <nav aria-label="Breadcrumb" class="breadcrumb-box">
-                    <ul class="breadcrumb__list">
-                        <li><a href="/index.html">Главная</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><span aria-current="page">Виски</span></li>
-                    </ul>
-                </nav>
-            </div>
-        </div> <!--./breadcrumb-->
-
         <!--content-->
         <div class="content">
             <div class="container">
+                <!--breadcrumb-->
+                <div class="breadcrumb">
+                    <div class="container">
+                        <nav aria-label="Breadcrumb" class="breadcrumb-box">
+                            <ul class="breadcrumb__list">
+                                <li><a href="/index.html">Главная</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><span aria-current="page">Виски</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div> <!--./breadcrumb-->
                 <div class="row">
-
                     <div class="col-md-3">
                         <div class="filter">
                             <div class="filter__title">
@@ -518,11 +515,11 @@
                                     <div class="select js-select">
                                         <div class="select__header">
                                             <input class="js-catalog-input" type="hidden" value="" name="sort" data-input="sort">
-                                            <span class="select__current js-select__current" data-input="sort">Сначала дорогие</span>
+                                            <span class="select__current js-select__current" data-input="sort">Сначала популярные</span>
                                             <div class="select__icon"><img class="js-svg-img" src="/images/icons/arrow-down-catalog.svg" alt=""></div>
                                         </div>
-                                        <div class="select__body">
-                                            <div class="select__item js-select__item" data-value="popular" data-input="sort">Сначала популярные</div>
+                                        <div class="select__body js-select__body">
+                                            <div class="select__item js-select__item active" data-value="popular" data-input="sort">Сначала популярные</div>
                                             <div class="select__item js-select__item" data-value="chip" data-input="sort">Сначала дешёвые</div>
                                             <div class="select__item js-select__item" data-value="expensive" data-input="sort">Сначала дорогие</div>
                                         </div>
@@ -534,10 +531,10 @@
                                     <div class="select js-select">
                                         <div class="select__header">
                                             <input class="js-catalog-input" type="hidden" value="" name="goods" data-input="goods">
-                                            <span class="select__current js-select__current" data-input="goods">9</span>
+                                            <span class="select__current js-select__current active" data-input="goods">9</span>
                                             <div class="select__icon"><img class="js-svg-img" src="/images/icons/arrow-down-catalog.svg" alt=""></div>
                                         </div>
-                                        <div class="select__body">
+                                        <div class="select__body js-select__body">
                                             <div class="select__item js-select__item" data-value="9" data-input="goods">9</div>
                                             <div class="select__item js-select__item" data-value="18" data-input="goods">18</div>
                                             <div class="select__item js-select__item" data-value="27" data-input="goods">27</div>
@@ -1038,84 +1035,19 @@
             </div>
         </div> <!--/.content-->
 
-        <!--YANDEX_MAP-->
-        <div class="map-box">
-            <div id="map"></div>
-        </div>
-
-            <!--FOOTER-->
+        <!--FOOTER-->
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__text">© Copyright 2012 - 2021</div>
-                <div class="footer__img-box"><img class="footer__img js-svg-img" src="/images/footer-cards.jpg" alt=""></div>
+                    <div class="footer__logo">
+                        <div class="footer__text">Сделано в</div>
+                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                    </div>
                 </div>
             </div>
         </footer>
     </div> <!--./page__root-->
-
-<script type="text/javascript">
-        // Функция ymaps.ready() будет вызвана, когда
-        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-        ymaps.ready(init);
-    
-        function init() {
-            // Создание карты.
-            // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
-            var myMap = new ymaps.Map("map", {
-                // Координаты центра карты.
-                // Порядок по умолчнию: «широта, долгота».
-                center: [55.83, 49.108795],
-                // Уровень масштабирования. Допустимые значения:
-                // от 0 (весь мир) до 19.
-                zoom: 14,
-                // Элементы управления
-                // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
-                controls: [
-    
-                    'zoomControl', // Ползунок масштаба
-                    'rulerControl', // Линейка
-                    'routeButtonControl', // Панель маршрутизации
-                    'trafficControl', // Пробки
-                    'typeSelector', // Переключатель слоев карты
-                    'fullscreenControl', // Полноэкранный режим
-    
-                    // Поисковая строка
-                    new ymaps.control.SearchControl({
-                        options: {
-                            // вид - поисковая строка
-                            size: 'large',
-                            // Включим возможность искать не только топонимы, но и организации.
-                            provider: 'yandex#search'
-                        }
-                    })
-    
-                ]
-            });
-    
-            //отключаем зум колёсиком мышки
-            myMap.behaviors.disable('scrollZoom');
-            
-            //на мобильных устройствах... (проверяем по userAgent браузера)
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-                //... отключаем перетаскивание карты
-                myMap.behaviors.disable('drag');
-            }
-    
-            // Добавление метки
-            // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
-            var myPlacemark = new ymaps.Placemark([55.83, 49.090], {
-                // Хинт показывается при наведении мышкой на иконку метки.
-                hintContent: 'Содержимое всплывающей подсказки',
-                // Балун откроется при клике по метке.
-                balloonContent: 'Содержимое балуна'
-            });
-    
-            // После того как метка была создана, добавляем её на карту.
-            myMap.geoObjects.add(myPlacemark);
-    
-        }
-</script>
 
 </body>
 </html>

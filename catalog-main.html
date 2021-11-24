@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="images/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="images/noui-slider/nouislider.min.css">
+    <link rel="stylesheet" href="images/css/style.css">
+    <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/images/js/main.js"></script>
+    <title>Каталог</title>
+</head>
+<body>
+    <div class="page__root page__root--catalog">
+        <!--HEADER-->
+        <header class="header header--catalog jsHeader">
+            <div class="container">
+                <div class="header__top header__top--catalog">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="header__nav header__nav--catalog">
+                                                    
+                                <nav class="nav">
+                                    <div class="nav__link nav__link--catalog"><a href="#">Водка</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Виски</a></div>
+                                    <div class="nav__link nav__link--catalog menu__link"><a href="#">Коньяк <img class="js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                        <div class="nav__sub-box">
+                                            <div class="nav__sub nav__sub--catalog">
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Российский коньяк</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Французский коньяк</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Ром</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Текила</a></div>
+                                    <div class="nav__link nav__link--catalog menu__link"><a href="#">Вино <img class="js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                        <div class="nav__sub-box">
+                                            <div class="nav__sub nav__sub--catalog">
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Красное вино</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Розовое вино</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Шампанское</a></div>
+                                </nav>
+
+                            </div>
+                        </div>        
+                            
+                        <div class="col-md-4"> 
+                            <div class="header__info header__info--catalog">
+                                <nav class="nav">
+                                    <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Акции</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Контакты</a></div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--.header__top-->
+                
+                <hr>
+
+                <div class="row"> 
+                    <div class="col">
+                        <div class="header__bottom header__bottom--catalog">
+                            <div class="header__logo">
+                                <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img"></a>
+                            </div>
+                            
+                            <form class="search__form">
+                                <input class="search__txt search__txt--catalog" type="search" placeholder="Например: Водка холодная..">
+                                <button class="search__button">
+                                    <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
+                                </button>   
+                            </form>
+                            
+                            <div class="header__mail">
+                                <a class="contacts contacts--catalog" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                            </div>
+
+                            <div class="header__phone">
+                                <a class="contacts contacts--catalog" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
+                            </div>
+                            
+                            <div class="call">
+                                <a href="#" class="call__link call__link--catalog">Заказать звонок</a>
+                            </div>
+                        </div> <!--.header__bottom-->
+                    </div>
+                </div> <!--.header__bottom row-->
+            </div>
+
+            <div class="burger-box--catalog">
+                <button class="burger--catalog" type="button">
+                    <span class="burger__item--catalog">Menu</span>
+                </button>
+            </div>
+        </header>
+
+        <!--content-->
+        <div class="content">
+            <div class="container">
+                <!--breadcrumb-->
+                <div class="breadcrumb">           
+                        <nav aria-label="Breadcrumb" class="breadcrumb-box">
+                            <ul class="breadcrumb__list">
+                                <li><a href="/index.html">Главная</a></li>
+                                <li><span aria-current="page">Каталог товаров</span></li>
+                            </ul>
+                        </nav>
+                </div> <!--./breadcrumb-->
+                <div class="catalog__title--catalog">
+                    Лучшее виски в магазинах Метрополь
+                </div>
+
+                <div class="catalog__subtitle--catalog">
+                    <p>По исходному сырью различают несколько видов виски:
+                    <ol>
+                    <li>солодовый — приготовленный из ячменного солода без каких-либо добавок;</li>
+                    <li>зерновой — используемый для изготовления смешанного виски;</li>
+                    <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
+                    <li>Бурбон – особый кукурузный виски американского производства.</li>
+                    </ol>
+                    Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
+                    </p>
+                </div>
+
+
+                <div class="goods">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Абсент
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Вино
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Виски
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Водка
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Джин
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Коньяк
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Ликер
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Миньон
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Портвейн
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Ром
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Самогон
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Текила
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Чача
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                        <div class="col-md-3">
+                            <a href="#" class="goods__item">
+                                <div class="goods__title">
+                                    Шампанское
+                                </div>
+                                <div class="goods__link">Перейти</div>
+                            </a> <!--/.goods_item-->
+                        </div> <!--/.col-md3-->
+                     
+                    </div> <!--/.row-->
+                </div> <!--/.goods-->
+                            
+
+
+                </div>
+            </div> <!--container-->
+        </div> <!--/.content-->
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__text">© Copyright 2012 - 2021</div>
+                    <div class="footer__logo">
+                        <div class="footer__text">Сделано в</div>
+                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div> <!--./page__root-->
+
+</body>
+</html>

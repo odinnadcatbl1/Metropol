@@ -190,6 +190,9 @@ $(document).ready(function () {
     $(document).on("click", ".js-select__item", function() {
         $('.js-select__current[data-input="'+ $(this).data('input') +'"]').text($(this).text());
         $('.js-catalog-input[data-input="'+ $(this).data('input') +'"]').val($(this).data('value'));
+        let parent_body = $(this).parents('.js-select__body');
+        parent_body.find(".js-select__item").removeClass("active");
+        $(this).addClass("active");
     });
 
 
