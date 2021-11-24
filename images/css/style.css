@@ -491,7 +491,7 @@ hr {
 .card__price {
     display: flex;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 48px;
     line-height: 64px;
     justify-content: center;
@@ -1849,12 +1849,125 @@ input[type="number"] {
 
 
 
+/*=========CARD.HTML============*/
 
+.product__describe {
+    display: block;
+}
 
+.product__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    border: 1px #EEEEEE solid;
+    border-radius: 15px;
+    padding: 70px 200px;
+}
 
+.product__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100%;
+    color: #333333;
+}
 
+.product__price {
+    display: flex;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #0099cc;
+    align-items: baseline;
+    margin-top: 20px;
+}
 
+.price__valuta {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 5px;
+}
 
+.describe__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666666;
+    margin-top: 25px;
+}
+
+.product__capacity {
+    display: flex;
+    margin-top: 12px;
+}
+
+.capacity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #838383;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 15px;
+    border: 1px #E2E2E2 solid;
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 64px;
+}
+
+.capacity:first-child {
+    margin-left: 0;
+}
+
+.capacity.disabled {
+    background-color: #ECECEC;
+    cursor: text;
+}
+
+.capacity.active {
+    background-color: #0099cc;
+    color: #fff;
+    border: 1px #0099CC solid;
+}
+
+.describe__option {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #333333;
+    background-color: #ECECEC;
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.shop {
+    margin-top: 10px;
+    display: flex;
+    background-color: #ececec;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.shop:first-child {
+    margin-top: 20px;
+}
+
+.shop__name {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 5px;
+}
 
 
 

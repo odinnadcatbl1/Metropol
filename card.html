@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="images/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="images/noui-slider/nouislider.min.css">
+    <link rel="stylesheet" href="images/css/style.css">
+    <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/images/js/main.js"></script>
+    <title>Каталог</title>
+</head>
+<body>
+    <div class="page__root page__root--catalog">
+        <!--HEADER-->
+        <header class="header header--catalog jsHeader">
+            <div class="container">
+                <div class="header__top header__top--catalog">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="header__nav header__nav--catalog">
+                                                    
+                                <nav class="nav">
+                                    <div class="nav__link nav__link--catalog"><a href="#">Водка</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Виски</a></div>
+                                    <div class="nav__link nav__link--catalog menu__link"><a href="#">Коньяк <img class="js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                        <div class="nav__sub-box">
+                                            <div class="nav__sub nav__sub--catalog">
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Российский коньяк</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Французский коньяк</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Ром</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Текила</a></div>
+                                    <div class="nav__link nav__link--catalog menu__link"><a href="#">Вино <img class="js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                        <div class="nav__sub-box">
+                                            <div class="nav__sub nav__sub--catalog">
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Красное вино</a></div>
+                                                <div class="sub__link .sub__link--catalog"><a href="#">Розовое вино</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Шампанское</a></div>
+                                </nav>
+
+                            </div>
+                        </div>        
+                            
+                        <div class="col-md-4"> 
+                            <div class="header__info header__info--catalog">
+                                <nav class="nav">
+                                    <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Акции</a></div>
+                                    <div class="nav__link nav__link--catalog"><a href="#">Контакты</a></div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--.header__top-->
+                
+                <hr>
+
+                <div class="row"> 
+                    <div class="col">
+                        <div class="header__bottom header__bottom--catalog">
+                            <div class="header__logo">
+                                <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img"></a>
+                            </div>
+                            
+                            <form class="search__form">
+                                <input class="search__txt search__txt--catalog" type="search" placeholder="Например: Водка холодная..">
+                                <button class="search__button">
+                                    <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
+                                </button>   
+                            </form>
+                            
+                            <div class="header__mail">
+                                <a class="contacts contacts--catalog" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                            </div>
+
+                            <div class="header__phone">
+                                <a class="contacts contacts--catalog" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
+                            </div>
+                            
+                            <div class="call">
+                                <a href="#" class="call__link call__link--catalog">Заказать звонок</a>
+                            </div>
+                        </div> <!--.header__bottom-->
+                    </div>
+                </div> <!--.header__bottom row-->
+            </div>
+
+            <div class="burger-box--catalog">
+                <button class="burger--catalog" type="button">
+                    <span class="burger__item--catalog">Menu</span>
+                </button>
+            </div>
+        </header>
+
+        <!--content-->
+        <div class="content">
+            <div class="container">
+                <!--breadcrumb-->
+                <div class="breadcrumb">           
+                        <nav aria-label="Breadcrumb" class="breadcrumb-box">
+                            <ul class="breadcrumb__list">
+                                <li><a href="/index.html">Главная</a></li>
+                                <li><a href="/catalog-main.html">Главная</a></li>
+                                <li><span aria-current="page">Виски</span></li>
+                            </ul>
+                        </nav>
+                </div> <!--./breadcrumb-->
+                        
+                <div class="product">
+                    <div class="product__info">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="product__image">
+                                    <img src="/images/viski-card.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product__describe">
+                                    <div class="product__title">Виски Bushmills 500мл (Бушмилз)</div>
+                                    <div class="product__price">
+                                        999
+                                        <div class="price__valuta">руб.</div>
+                                    </div>
+                                    <div class="describe__title">Выбор литража:</div>
+                                    <div class="product__capacity">
+                                        <div class="capacity disabled">0,5л</div>
+                                        <div class="capacity active">1л</div>
+                                        <div class="capacity">1,5л</div>
+                                    </div>
+                                    <div class="describe__title">Категория:</div>
+                                    <div class="describe__option">Виски</div>
+                                    <div class="describe__title">Метки:</div>
+                                    <div class="describe__option">Ирландия</div>
+                                    <div class="describe__title">Наличие в магазинах:</div>
+                                    <div class="product__shops">
+                                        <div class="shop">
+                                            <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                            <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                        </div>
+                                        <div class="shop">
+                                            <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                            <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!--/.row-->
+                    </div> <!--/.product__info-->
+                </div> <!--/.product-->
+            
+            </div> <!--container-->
+        </div> <!--/.content-->
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__text">© Copyright 2012 - 2021</div>
+                    <div class="footer__logo">
+                        <div class="footer__text">Сделано в</div>
+                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div> <!--./page__root-->
+
+</body>
+</html>
