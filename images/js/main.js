@@ -165,12 +165,12 @@ $(document).ready(function () {
 
         if (rangeSlider) {
             noUiSlider.create(rangeSlider, {
-                start: [0, 999999],
+                start: [0, 99999],
                 connect: true,
                 step: 1,
                 range: {
                     min: 0,
-                    max: 9999,
+                    max: 10000,
                 },
             });
         }
@@ -184,14 +184,17 @@ $(document).ready(function () {
         //values - от первого ползунка до второго ползунка
         //handle - сам ползунок
         rangeSlider.noUiSlider.on("update", function (values, handle) {
-            inputs[handle].value = Math.round(values[handle]);
+            if (+input1.value <= +input2.value) {
+                inputs[handle].value = Math.round(values[handle]);
+            } 
         });
 
         inputs.forEach((el, index) => {
-            $(el).on("change", (e) => {
+            $(el).on("change keyup", (e) => {
                 setRangeSlider(index, e.currentTarget.value);
             });
         });
+
     }
 
     // selects

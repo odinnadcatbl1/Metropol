@@ -338,7 +338,7 @@ hr {
 }
 
 .intro__btn__text {
-    padding-bottom: 4px;
+    padding-bottom: 3px;
 }
 
 .arrow_rigth {
@@ -1345,7 +1345,7 @@ hr {
     line-height: 100%;
     border-radius: 10px;
     text-align: center;
-    padding: 11px 19px 15px 19px;
+    padding: 12px 19px 14px 19px;
     margin-right: 8px;
     margin-bottom: 10px;
     transition: background-color 0.1s linear;
@@ -1476,12 +1476,12 @@ input[type="number"] {
     font-size: 14px;
     font-weight: 400;
     color: #666666;
+    outline: none;
 }
 
-/* .filter-price__input:focus {
+.filter-price__input:focus {
     border: 1px solid #0099cc;
-    box-shadow: none;
-} */
+} 
 
 .noUi-target {
     border: 2px solid #efefef;
@@ -1728,7 +1728,7 @@ input[type="number"] {
     line-height: 21px;
     color: #fff;
     background-color: #0099cc;
-    padding: 8px 80px 12px 80px;
+    padding: 9px 80px 11px 80px;
     border-radius: 8px;
     transition: opacity 0.15s linear;
 }
@@ -1957,7 +1957,7 @@ input[type="number"] {
     color: #333333;
     background-color: #ECECEC;
     border-radius: 8px;
-    padding: 8px 15px 12px 15px;
+    padding: 9px 15px 11px 15px;
     display: inline-block;
 }
 
@@ -2050,7 +2050,7 @@ input[type="number"] {
 	cursor:pointer;
 	display:block;
 	float:left;
-	padding: 11px 24px 15px 24px;
+	padding: 12px 24px 14px 24px;
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
