@@ -40,6 +40,10 @@ $(document).ready(function () {
         });
     }
 
+
+
+    //INDEX.HTML
+
     // закрепленная шапка
     const header = $(".jsHeader"); // селектор jsHeader
     let scrollPos = $(window).scrollTop(); // позиция скролла от верха окна
@@ -57,29 +61,38 @@ $(document).ready(function () {
     });
 
     // слайдеры
-    const catalogSlider = $(".js-catalog__slider");
+    if ($(".js-catalog__slider").length) {
+        const catalogSlider = $(".js-catalog__slider");
 
-    catalogSlider.slick({
-        infinite: true, // если элементы заканчиваются - они повторяются заново
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        fade: false, // чтобы затемнялись отзывы
-        arrows: true,
-    });
+        catalogSlider.slick({
+            infinite: true, // если элементы заканчиваются - они повторяются заново
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            fade: false, // чтобы затемнялись отзывы
+            arrows: true,
+        });
+    }
+ 
 
-    const reviewsSlider = $(".js-reviews__slider");
+    if ($(".js-reviews_slider").length) {
+        const reviewsSlider = $(".js-reviews__slider");
 
-    reviewsSlider.slick({
-        infinite: true, // если элементы заканчиваются - они повторяются заново
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        fade: false, // чтобы затемнялись отзывы
-        arrows: true,
-        dots: true,
-    });
+        reviewsSlider.slick({
+            infinite: true, // если элементы заканчиваются - они повторяются заново
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            fade: false, // чтобы затемнялись отзывы
+            arrows: true,
+            dots: true,
+        });
+    }
+
 
     // выравнивание по высоте
-    $(".js-descr-height").matchHeight();
+    if ($(".js-descr-height").length) {
+        $(".js-descr-height").matchHeight();
+    }
+
 
     // выпадающие блоки
     $(document).on("click", ".js-filter-btn", function () {
@@ -141,6 +154,8 @@ $(document).ready(function () {
         }
     });
 
+    //CATALOG.HTML
+    
     // noUiSlider (ползунок для цены)
     if ($(".js-filter-price__slider").length) {
         const rangeSlider = document.querySelector(".js-filter-price__slider");
@@ -204,4 +219,76 @@ $(document).ready(function () {
                 selectBody.removeClass("select-active"); // скрываем его
 		}
 	});
+
+    // CARD.HTML
+    if ($("[data-fancybox]").length) {
+        $('[data-fancybox]').fancybox({
+            buttons: [
+                "close"
+            ]
+        });
+    }
+
+    $(document).on("click", ".js-fold__link", function () {
+        if (
+            typeof $(this).data("opened") !== "undefined" &&
+            typeof $(this).data("closed") !== "undefined"
+        ) {
+            if ($(this).hasClass("active")) {
+                $(this).text($(this).data("closed"));
+            } else {
+                $(this).text($(this).data("opened"));
+            }
+        }
+
+        $(this).toggleClass("active");
+
+        if ($(".js-hidden__shops").hasClass("active")) {
+            $(".js-hidden__shops").slideUp();
+        } else {
+            $(".js-hidden__shops").slideDown();
+        }
+
+        $(".js-hidden__shops").toggleClass("active");
+        
+
+        return false;
+    });
+
+
+    // TABS
+
+    (function($){				
+        jQuery.fn.easyTabs = function(options){
+    
+            const createTabs = function(){
+                tabs = this;
+                i = 0;
+                
+                showPage = function(i){
+                    $(tabs).children(".js-tabs__items").children(".js-tabs__item").hide();
+                    $(tabs).children(".js-tabs__items").children(".js-tabs__item").eq(i).show();
+                    $(tabs).children(".js-tabs__options").children(".js-tabs__option").removeClass("active");
+                    $(tabs).children(".js-tabs__options").children(".js-tabs__option").eq(i).addClass("active");
+                }
+                                    
+                showPage(0);				
+                
+                $(tabs).children(".js-tabs__options").children(".js-tabs__option").each(function(index, element){
+                    $(element).attr("data-page", i);
+                    i++;                        
+                });
+                
+                $(tabs).children(".js-tabs__options").children(".js-tabs__option").click(function(){
+                    showPage(parseInt($(this).attr("data-page")));
+                });				
+            };		
+            return this.each(createTabs);
+        };	
+    })(jQuery);
+    
+    if ($(".js-tabs").length) {
+        $(".tabs").easyTabs();
+    }
+    
 });
