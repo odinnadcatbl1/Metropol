@@ -47,7 +47,6 @@ $(document).ready(function () {
     // закрепленная шапка
     const header = $(".jsHeader"); // селектор jsHeader
     let scrollPos = $(window).scrollTop(); // позиция скролла от верха окна
-
     // чтобы следить за событием скролла, загрузки и изменения размеров окна страницы:
     $(window).on("scroll load resize", function () {
         headerHeight = header.innerHeight();
@@ -70,6 +69,15 @@ $(document).ready(function () {
             slidesToScroll: 1,
             fade: false, // чтобы затемнялись отзывы
             arrows: true,
+            responsive: [ 
+                {
+                breakpoint: 991,
+                settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                  },
+                },
+            ],
         });
     }
  
@@ -294,4 +302,34 @@ $(document).ready(function () {
         $(".tabs").easyTabs();
     }
     
+
+    /*burger-menu*/
+    $(document).on("click", ".js-burger", function () {
+        $(this).toggleClass("active");
+
+        if ($(".js-md-menu").hasClass("active")) {
+            $(".js-md-menu").slideUp();
+        } else {
+            $(".js-md-menu").slideDown();
+        }
+
+        $(".js-md-menu").toggleClass("active");
+    });
+
+
+    $(document).on("click", ".js-nav__img", function () {
+        $(this).toggleClass("active");
+
+        if ($(".js-nav__sub").hasClass("active")) {
+            $(".js-nav__sub").slideUp();
+        } else {
+            $(".js-nav__sub").slideDown();
+        }
+        
+        $('.js-nav__sub').toggleClass("active");
+        $(this).find('.menu__link').toggleClass("active");
+        
+    });
+
+
 });
