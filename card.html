@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="images/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="images/noui-slider/nouislider.min.css">
+    <link rel="stylesheet" href="images/jquery-fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="images/css/style.css">
+    <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
+    <script src="images/jquery-fancybox/jquery.fancybox.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/images/js/main.js"></script>
+    <title>Каталог</title>
+</head>
+<body>
+    <div class="page__root page__root--catalog">
+        <!--HEADER-->
+        <header class="header header--catalog jsHeader">
+            <div class="container">
+                <div class="header__top header__top--catalog">
+                    <div class="xs-menu">
+                        <div class="burger__logo">
+                            <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img"></a>
+                        </div>
+                        <div class="burger js-burger">
+                            <span class="burger__item burger__item--catalog">Menu</span>
+                        </div>       
+                    </div> <!--/.xs-menu-->
+                   
+                    <div class="md-menu js-md-menu">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="header__nav header__nav--catalog">
+                                                        
+                                    <nav class="nav">
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Водка</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Виски</a></div>
+                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#">Коньяк <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
+                                                <div class="nav__sub js-nav__sub nav__sub--catalog">
+                                                    <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a href="#">Российский коньяк</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a href="#">Французский коньяк</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Ром</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Текила</a></div>
+                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#">Вино <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
+                                                <div class="nav__sub js-nav__sub nav__sub--catalog">
+                                                    <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a href="#">Красное вино</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a href="#">Розовое вино</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Шампанское</a></div>
+                                    </nav>
+
+                                </div>
+                            </div>        
+                                
+                            <div class="col-md-4"> 
+                                <div class="header__info header__info--catalog">
+                                    <nav class="nav">
+                                        <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
+                                        <div class="nav__link nav__link--catalog"><a href="#">Акции</a></div>
+                                        <div class="nav__link nav__link--catalog"><a href="#">Контакты</a></div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--/.md-menu-->
+                </div> <!--.header__top-->
+                
+                <div class="row"> 
+                    <div class="col">
+                        <div class="header__bottom header__bottom--catalog">
+                            <div class="header__logo">
+                                <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo"></a>
+                            </div>
+                            
+                            <form class="search__form search__form--catalog">
+                                <input class="search__txt search__txt--catalog" type="search" placeholder="Например: Водка холодная..">
+                                <button class="search__button">
+                                    <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
+                                </button>   
+                            </form>
+                            
+                            <div class="header__mail">
+                                <a class="contacts contacts--catalog" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                            </div>
+
+                            <div class="header__phone">
+                                <a class="contacts contacts--catalog" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
+                            </div>
+                            
+                            <div class="call">
+                                <a href="#" class="call__link call__link--catalog">Заказать звонок</a>
+                            </div>
+                        </div> <!--.header__bottom-->
+                    </div>
+                </div> <!--.header__bottom row-->
+            </div>
+        </header>
+
+        <!--content-->
+        <div class="content">
+            <div class="container">
+                <!--breadcrumb-->
+                <div class="breadcrumb">           
+                        <nav aria-label="Breadcrumb" class="breadcrumb-box">
+                            <ul class="breadcrumb__list">
+                                <li><a href="/index.html">Главная</a></li>
+                                <li><a href="/catalog-main.html">Главная</a></li>
+                                <li><span aria-current="page">Виски</span></li>
+                            </ul>
+                        </nav>
+                </div> <!--./breadcrumb-->
+                        
+                <div class="product">
+                    <div class="product__info">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-6">
+                                <div class="product__image-box">
+                                    <a href="/images/viski-card.jpg" data-fancybox class="fancybox-img"><img class="product__image" src="/images/viski-card.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="product__describe">
+                                    <div class="product__title"><h1>Виски Bushmills 500мл (Бушмилз)</h1></div>
+                                    <div class="product__price">
+                                        999
+                                        <div class="price__valuta">руб.</div>
+                                    </div>
+                                    <div class="describe__title">Выбор литража:</div>
+                                    <div class="product__capacity">
+                                        <div class="capacity disabled">0,5л</div>
+                                        <div class="capacity active">1л</div>
+                                        <div class="capacity">1,5л</div>
+                                    </div>
+                                    <div class="describe__title">Категория:</div>
+                                    <div class="describe__option">Виски</div>
+                                    <div class="describe__title">Метки:</div>
+                                    <div class="describe__option">Ирландия</div>
+                                    <div class="describe__title">Наличие в магазинах:</div>
+                                    <div class="product__shops">
+                                        <div class="shop">
+                                            <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                            <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                        </div>
+                                        <div class="shop">
+                                            <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                            <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                        </div>
+                                        <div class="hidden__shops js-hidden__shops">
+                                            <div class="shop">
+                                                <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                                <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                            </div>
+                                            <div class="shop">
+                                                <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                                <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                            </div>
+                                            <div class="shop">
+                                                <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                                <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                            </div>
+                                            <div class="shop">
+                                                <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                                <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                            </div>
+                                            <div class="shop">
+                                                <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                                <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                            </div>
+                                            <div class="shop">
+                                                <div class="shops_icon"><img src="/images/icons/Location.svg" alt="" class="js-svg-img"></div>
+                                                <div class="shop__name">г. Москва, ул. Донецкая д.62 с.2</div>
+                                            </div>
+                                        </div> <!--/.hidden__shops-->
+                                        <a class="fold__link js-fold__link" href="#" data-opened="свернуть" data-closed="развернуть">развернуть</a>
+                                    </div> <!--/.product__shops-->
+                                </div> <!--/.product__describe-->
+                            </div>
+                        </div> <!--/.row-->
+
+                        <div class="tabs js-tabs">
+                            <ul class="tabs__options js-tabs__options">
+                                <li class="js-tabs__option tabs__option">Описание</li>
+                                <li class="js-tabs__option tabs__option">Раздел №2</li>
+                            </ul>
+                            <div class="tabs__items js-tabs__items">
+                                <div class="tabs__item js-tabs__item">
+                                    <div class="tabs__title">Виски Bushmill1</div>
+                                    <div class="tabs__text">
+                                        <p>По исходному сырью различают несколько видов виски:
+                                            <ol>
+                                            <li>солодовый — прsиготовленный из ячменного солода без каких-либо добавок;</li>
+                                            <li>зерновой — используемый для изготовления смешанного виски;</li>
+                                            <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
+                                            <li>Бурбон – особый кукурузный виски американского производства.</li>
+                                            </ol>
+                                            Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tabs__item js-tabs__item">
+                                    <div class="tabs__title">Виски Bushmills2</div>
+                                    <div class="tabs__text">
+                                        <p>По исходному сырью различают несколько видов виски:
+                                            <ol>
+                                            <li>солодовый — приготовленный из ячменного солода без каких-либо добавок;</li>
+                                            <li>зерновой — используемый для изготовления смешанного виски;</li>
+                                            <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
+                                            <li>Бурбон – особый кукурузный виски американского производства.</li>
+                                            </ol>
+                                        </p>             
+                                    </div>
+                                </div>
+                            </div>            
+                        </div> 
+                    </div> <!--/.product__info-->
+
+                    <div class="product__similar-box">
+                        <div class="product__title">Похожие товары</div>
+                        <div class="product__similar">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="catalog__item--catalog">
+                                        <div class="card__options--catalog">
+                                            <div class="card__option--catalog">Водка</div>
+                                            <div class="card__option--catalog">4500мл</div>
+                                        </div>
+                
+                                        <div class="card__image--catalog">
+                                            <a href="#" class="image__link"><img src="/images/vodka-catalog.jpg" alt=""></a>
+                                        </div>
+                                        
+                                        <div class="card__describe--catalog">
+                                            <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                                        </div>
+                                        <div class="price-button--catalog">
+                                            <div class="card__price--catalog">
+                                                <div class="price__num--catalog">6889</div>
+                                                <div class="price__value--catalog">руб.</div>
+                                            </div>
+                    
+                                            <div class="card__button-box--catalog">
+                                                <a class="card__button--catalog">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div> <!-- ./catalog__item-->                            
+                                </div> <!--/.col-md-3-->
+    
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="catalog__item--catalog">
+                                        <div class="card__options--catalog">
+                                            <div class="card__option--catalog">Водка</div>
+                                            <div class="card__option--catalog">4500мл</div>
+                                        </div>
+                
+                                        <div class="card__image--catalog">
+                                            <a href="#" class="image__link"><img src="/images/vodka-catalog.jpg" alt=""></a>
+                                        </div>
+                                        
+                                        <div class="card__describe--catalog">
+                                            <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                                        </div>
+                                        <div class="price-button--catalog">
+                                            <div class="card__price--catalog">
+                                                <div class="price__num--catalog">6889</div>
+                                                <div class="price__value--catalog">руб.</div>
+                                            </div>
+                    
+                                            <div class="card__button-box--catalog">
+                                                <a class="card__button--catalog">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div> <!-- ./catalog__item-->                            
+                                </div> <!--/.col-md-3-->
+    
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="catalog__item--catalog">
+                                        <div class="card__options--catalog">
+                                            <div class="card__option--catalog">Водка</div>
+                                            <div class="card__option--catalog">4500мл</div>
+                                        </div>
+                
+                                        <div class="card__image--catalog">
+                                            <a href="#" class="image__link"><img src="/images/vodka-catalog.jpg" alt=""></a>
+                                        </div>
+                                        
+                                        <div class="card__describe--catalog">
+                                            <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                                        </div>
+                                        <div class="price-button--catalog">
+                                            <div class="card__price--catalog">
+                                                <div class="price__num--catalog">6889</div>
+                                                <div class="price__value--catalog">руб.</div>
+                                            </div>
+                    
+                                            <div class="card__button-box--catalog">
+                                                <a class="card__button--catalog">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div> <!-- ./catalog__item-->                            
+                                </div> <!--/.col-md-3-->
+    
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="catalog__item--catalog">
+                                        <div class="card__options--catalog">
+                                            <div class="card__option--catalog">Водка</div>
+                                            <div class="card__option--catalog">4500мл</div>
+                                        </div>
+                
+                                        <div class="card__image--catalog">
+                                            <a href="#" class="image__link"><img src="/images/vodka-catalog.jpg" alt=""></a>
+                                        </div>
+                                        
+                                        <div class="card__describe--catalog">
+                                            <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                                        </div>
+                                        <div class="price-button--catalog">
+                                            <div class="card__price--catalog">
+                                                <div class="price__num--catalog">6889</div>
+                                                <div class="price__value--catalog">руб.</div>
+                                            </div>
+                    
+                                            <div class="card__button-box--catalog">
+                                                <a class="card__button--catalog">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div> <!-- ./catalog__item-->                            
+                                </div> <!--/.col-md-3-->
+                            </div>
+                        </div> <!--/.product__similar-->
+                    </div> <!--/.product__similar-box-->
+
+                    
+                </div> <!--/.product-->
+
+            </div> <!--container-->
+        </div> <!--/.content-->
+
+        <!--YANDEX_MAP-->
+        <div class="map-box">
+            <div id="map"></div>               
+        </div>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__text">© Copyright 2012 - 2021</div>
+                    <div class="footer__logo">
+                        <div class="footer__text">Сделано в</div>
+                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div> <!--./page__root-->
+
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+
+    function init() {
+        // Создание карты.
+        // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчнию: «широта, долгота».
+            center: [55.83, 49.108795],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 14,
+            // Элементы управления
+            // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
+            controls: [
+
+                'zoomControl', // Ползунок масштаба
+                'rulerControl', // Линейка
+                'routeButtonControl', // Панель маршрутизации
+                'trafficControl', // Пробки
+                'typeSelector', // Переключатель слоев карты
+                'fullscreenControl', // Полноэкранный режим
+
+                // Поисковая строка
+                new ymaps.control.SearchControl({
+                    options: {
+                        // вид - поисковая строка
+                        size: 'large',
+                        // Включим возможность искать не только топонимы, но и организации.
+                        provider: 'yandex#search'
+                    }
+                })
+
+            ]
+        });
+
+        //отключаем зум колёсиком мышки
+        myMap.behaviors.disable('scrollZoom');
+        
+        //на мобильных устройствах... (проверяем по userAgent браузера)
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            //... отключаем перетаскивание карты
+            myMap.behaviors.disable('drag');
+        }
+
+        // Добавление метки
+        // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
+        var myPlacemark = new ymaps.Placemark([55.83, 49.090], {
+            // Хинт показывается при наведении мышкой на иконку метки.
+            hintContent: 'Содержимое всплывающей подсказки',
+            // Балун откроется при клике по метке.
+            balloonContent: 'Содержимое балуна'
+        });
+
+        // После того как метка была создана, добавляем её на карту.
+        myMap.geoObjects.add(myPlacemark);
+
+    }
+</script>
+
+</body>
+</html>

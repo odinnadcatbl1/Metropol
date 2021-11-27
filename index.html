@@ -8,81 +8,102 @@
     <link rel="stylesheet" href="images/css/style.css">
     <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
     <script src="images/slick/slick.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/images/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
     <script src="/images/js/main.js"></script>
     <title>Метрополь</title>
 </head>
 <body>
     <div class="page__root">
         <!--HEADER-->
-        <header class="header">
+        <header class="header jsHeader">
             <div class="container">
                 <div class="header__top">
-                    <div class="row">
 
-                        <div class="col-md-8">
-                            <div class="header__nav">
-                                                    
-                                <nav class="nav">
-                                    <div class="nav__link"><a href="#">Водка</a></div>
-                                    <div class="nav__link"><a href="#">Виски</a></div>
-                                    <div class="nav__link menu__link">Коньяк <img src="/images/icons/arrow-down.svg" alt="">
-                                        <div class="nav__sub" href="#">
-                                            <div class="sub__link"><a href="#">Армянский коньяк</a></div>
-                                            <div class="sub__link"><a href="#">Российский коньяк</a></div>
-                                            <div class="sub__link"><a href="#">Французский коньяк</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="nav__link"><a href="#">Ром</a></div>
-                                    <div class="nav__link"><a href="#">Текила</a></div>
-                                    <div class="nav__link menu__link">Вино <img src="/images/icons/arrow-down.svg" alt="">
-                                        <div class="nav__sub" href="#">
-                                            <div class="sub__link"><a href="#">Белое вино</a></div>
-                                            <div class="sub__link"><a href="#">Красное вино</a></div>
-                                            <div class="sub__link"><a href="#">Розовое вино</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="nav__link"><a href="#">Шампанское</a></div>
-                                </nav>
+                    <div class="xs-menu">
+                        <div class="burger__logo">
+                            <a href="/index.html"><img src="/images/metropol-logo.svg" alt="" class="metropol__logo js-svg-img"></a>
+                        </div>
+                        <div class="burger js-burger" type="button">
+                            <span class="burger__item">Menu</span>
+                        </div>       
+                    </div> <!--/.xs-menu-->
 
-                            </div>
-                        </div>        
-                            
-                        <div class="col-md-4"> 
-                            <div class="header__info">
-                                <nav class="nav">
-                                    <div class="nav__link"><a href="#">Каталог</a></div>
-                                    <div class="nav__link"><a href="#">Акции</a></div>
-                                    <div class="nav__link"><a href="#">Контакты</a></div>
-                                </nav>
+                    <div class="md-menu md-menu-index js-md-menu">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="header__nav">                    
+                                    <nav class="nav">
+                                        <div class="nav__link "><a href="#">Водка</a></div>
+                                        <div class="nav__link js-nav__link"><a href="#">Виски</a></div>
+                                        <div class="nav__link menu__link js-nav__link"><a href="#">Коньяк <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down.svg" alt=""></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
+                                                <div class="nav__sub js-nav__sub">
+                                                    <div class="sub__link"><a href="#">Армянский коньяк</a></div>
+                                                    <div class="sub__link"><a href="#">Российский коньяк</a></div>
+                                                    <div class="sub__link"><a href="#">Французский коньяк</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav__link js-nav__link"><a href="#">Ром</a></div>
+                                        <div class="nav__link js-nav__link"><a href="#">Текила</a></div>
+                                        <div class="nav__link menu__link js-nav__link"><a href="#">Вино <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down.svg" alt=""></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
+                                                <div class="nav__sub js-nav__sub">
+                                                    <div class="sub__link"><a href="#">Белое вино</a></div>
+                                                    <div class="sub__link"><a href="#">Красное вино</a></div>
+                                                    <div class="sub__link"><a href="#">Розовое вино</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav__link js-nav__link"><a href="#">Шампанское</a></div>
+                                    </nav>
+    
+                                </div>
+                            </div>        
+                                
+                            <div class="col-md-4"> 
+                                <div class="header__info">
+                                    <nav class="nav">
+                                        <div class="nav__link"><a href="/catalog-main.html">Каталог</a></div>
+                                        <div class="nav__link"><a href="#">Акции</a></div>
+                                        <div class="nav__link"><a href="#">Контакты</a></div>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!--/.md-menu-->
+                    
                 </div> <!--.header__top-->
-                
-                <hr>
+            
 
                 <div class="row"> 
                     <div class="col">
                         <div class="header__bottom">
                             <div class="header__logo">
-                                <img src="/images/metropol-logo.svg" alt="" class="metropol__logo">
+                                <a href="/index.html"><img src="/images/metropol-logo.svg" alt="" class="metropol__logo"></a>
                             </div>
                             
                             <form class="search__form">
                                 <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
                                 <button class="search__button">
-                                    <img class="search__icon" src="/images/icons/search-icon.svg" alt="">
+                                    <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
                                 </button>   
                             </form>
                             
                             <div class="header__mail">
-                                <a class="contacts" href = "mailto:..."><img class="info__icons" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                                <a class="contacts" href = "mailto:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">
+                                    <div class=contacts__text>754467@mail.ru</div>
+                                </a>
                             </div>
 
                             <div class="header__phone">
-                                <a class="contacts" href = "tel:..."><img class="info__icons" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
-                            </div>
-                            
+                                <a class="contacts" href = "tel:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">
+                                    <div class=contacts__text>+7 (989) 702-54-81</div>
+                                </a>
+                            </div>                            
                             <div class="call">
                                 <a href="#" class="call__link">Заказать звонок</a>
                             </div>
@@ -91,1249 +112,1225 @@
                 </div> <!--.header__bottom row-->
             </div>
 
-            <div class="burger-box">
-                <button class="burger" type="button">
-                    <span class="burger__item">Menu</span>
-                </button>
-            </div>
+
 
         </header>
 
-
-
-        <!--INTRO-->
-        <div class="intro">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="intro__title">
-                            Добро пожаловать 
-                            <p>в магазины алкоголя Метрополь в Казани</p>
-                        </div>
-                        
-                        <div class="intro__subtitle">
-                            Купить настоящий алкоголь в Казани по низкой цене предлагает сеть магазинов Метрополь. У нас большой ассортимент алкогольной продукции — водка, вино, коньяк, виски, портвейн, текила, ром и конечно же херес. Наши магазины алкоголя — это место, где к спиртным напиткам относятся, как к искусству! Все предлагаемые товары от проверенных производителей, отличаются высоким качеством, соответствующим всем мировым стандартам, и являются на 100% оригинальным продуктом.
-                        </div>
-
-                        <div class="intro__btn__box">
-                            <a class="intro__btn" href="#">
-                                <div class="intro__btn__text">Перейти к каталогу</div>
-                                <div class="intro__btn__icon">
-                                <img src="/images/icons/arrow-right.svg" alt="" class="arrow__right">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- ./intro -->
-
-
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Каталог</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>    
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num green">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--green">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num green">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--green">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num green">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--green">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num green">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--green">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num green">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--green">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Вино</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>    
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num blue">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--blue">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num blue">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--blue">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num blue">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--blue">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num blue">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--blue">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num blue">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn--blue">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->       
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Шампанское</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>    
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->                   
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Коньяк</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>    
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->                      
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Ром</div>
-                                <div class="catalog__num">(711)</div>
-                            </a> 
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-        
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Текила</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>  
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-        
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Водка</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>    
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->              
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-        <!--CATALOG-->
-        <div class="catalog">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">   
-                        <div class="catalog__title">                   
-                            <a href="#" class="catalog__link">
-                                <div class="catalog__name">Пиво</div>
-                                <div class="catalog__num">(711)</div>
-                            </a>    
-                        </div> <!--./catalog-title-->
-                    </div> 
-                </div> <!--./row-->
-    
-
-                <div class="catalog__slider">
-        
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button btn">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-
-                    <div class="catalog__item">
-                        <div class="card__options">
-                            <div class="card__option">Водка</div>
-                            <div class="card__option">500мл</div>
-                        </div>
-
-                        <div class="card__image">
-                            <img src="/images/vodka.svg" alt="">
-                        </div>
-
-                        <div class="card__describe">
-                            <p>Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</p>
-                        </div>
-
-                        <div class="card__price">
-                            <div class="price__num">409</div>
-                            <div class="price__value">руб.</div>
-                        </div>
-
-                        <div class="card__button-box">
-                            <a class="card__button">Подробнее</a>
-                        </div>
-                    </div> <!-- ./catalog__item-->
-                </div> <!--./catalog__slider-->
-            </div> <!--./container-->
-        </div> <!--./catalog-->
-
-
-
-
-        <!--PROMOTIONS-->
-        <div class="promotions">
-            <div class="container">
-                <div class="title">
-                    Актуальные акции
-                </div>
-                
-                <div class="promotions__inner">
+        <!--CONTENT-->
+        <div class="content">
+            <!--INTRO-->
+            <div class="intro js-parallax">
+                <div class="container">
                     <div class="row">
+                        <div class="col-md-7">
+                            <div class="intro__title">
+                                Добро пожаловать <br>
+                                в магазины алкоголя <h1>Метрополь в Казани</h1> 
+                            </div>
+                            
+                            <div class="intro__subtitle">
+                                Купить настоящий алкоголь в Казани по низкой цене предлагает сеть магазинов Метрополь. У нас большой ассортимент алкогольной продукции — водка, вино, коньяк, виски, портвейн, текила, ром и конечно же херес. Наши магазины алкоголя — это место, где к спиртным напиткам относятся, как к искусству! Все предлагаемые товары от проверенных производителей, отличаются высоким качеством, соответствующим всем мировым стандартам, и являются на 100% оригинальным продуктом.
+                            </div>
 
-                        <div class="col-md-6">
-                            <div class="promotions__item">
-                                <div class="promotions__img"><img src="/images/promotions-1.jpg" alt=""></div>
-                                <div class="promotions__subtitle">Скидка 7% на свадьбу</div>
-                                <div class="promotions__text">
-                                    <p>Особое предложение для молодожёнов. Подробности по телефону +7 (966) 240-85-85</p>
-                                </div>
-                                <div class="promotions__button-box">
-                                    <a href="#" class="promotions__button">Подробнее</a>
-                                </div>
+                            <div class="intro__btn__box">
+                                <a class="intro__btn" href="/catalog-main.html">
+                                    <div class="intro__btn__text">Перейти к каталогу</div>
+                                    <div class="intro__btn__icon">
+                                    <img src="/images/icons/arrow-right.svg" alt="" class="arrow__right js-svg-img">
+                                    </div>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="col-md-6">
-                            <div class="promotions__item">
-                                <div class="promotions__img"><img src="/images/promotions-2.jpg" alt=""></div>
-                                <div class="promotions__subtitle">Акция “Вино для своих”</div>
-                                <div class="promotions__text">
-                                    <p>Особое предложение для покупок по промокоду
-                                        «вино для своих».
-                                         Подробности по телефону +7 (966) 240-85-85</p>
-                                </div>
-                                <div class="promotions__button-box">
-                                    <a href="#" class="promotions__button">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
-            </div>
-        </div> <!--./promotions-->
+            </div> <!-- ./intro -->
+
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Каталог</div>
+                            <div class="catalog__num">(711)</div>
+                        </a>    
+                    </div> <!--./catalog-title-->
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num green">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--green">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num green">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--green">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num green">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--green">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num green">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--green">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num green">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--green">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->                   
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Вино</div>
+                            <div class="catalog__num">(711)</div>
+                        </a>    
+                    </div> <!--./catalog-title-->
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num blue">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--blue">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num blue">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--blue">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num blue">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--blue">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num blue">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--blue">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num blue">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button btn--blue">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->                   
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Шампанское</div>
+                            <div class="catalog__num">(711)</div>
+                        </a>    
+                    </div> <!--./catalog-title-->
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->                   
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+    
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Коньяк</div>
+                            <div class="catalog__num">(711)</div>
+                        </a>    
+                    </div> <!--./catalog-title-->
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->                      
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Ром</div>
+                            <div class="catalog__num">(711)</div>
+                        </a> 
+                    </div> <!--./catalog-title-->  
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Текила</div>
+                            <div class="catalog__num">(711)</div>
+                        </a> 
+                    </div> <!--./catalog-title-->  
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+                
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Водка</div>
+                            <div class="catalog__num">(711)</div>
+                        </a> 
+                    </div> <!--./catalog-title-->  
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="container">
+
+                    <div class="catalog__title">                   
+                        <a href="#" class="catalog__link">
+                            <div class="catalog__name">Пиво</div>
+                            <div class="catalog__num">(711)</div>
+                        </a> 
+                    </div> <!--./catalog-title-->  
+
+                    <div class="js-catalog__slider catalog__slider">
+            
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+
+                        <div class="catalog__item">
+                            <div class="card__options">
+                                <div class="card__option">Водка</div>
+                                <div class="card__option">500мл</div>
+                            </div>
+
+                            <div class="card__image">
+                                <a href="#" class="image__link"><img src="/images/vodka.jpg" alt=""></a>
+                            </div>
+
+                            <div class="card__describe js-descr-height">
+                                <a href="#" class="describe__link">Ром Captain Morgan Spiced Gold 700мл (Капитан Морган Спайсед)</a>
+                            </div>
+                            <div class="price-button">
+                                <div class="card__price">
+                                    <div class="price__num">409</div>
+                                    <div class="price__value">руб.</div>
+                                </div>
+
+                                <div class="card__button-box">
+                                    <a class="card__button">Подробнее</a>
+                                </div>
+                            </div>    
+                        </div> <!-- ./catalog__item-->
+                    </div> <!--./catalog__slider-->
+                </div> <!--./container-->
+            </div> <!--./catalog-->
+
+            <!--PROMOTIONS-->
+            <div class="promotions">
+                <div class="container">
+                    <div class="title">
+                        Актуальные акции
+                    </div>
+                    
+                    <div class="promotions__inner">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="promotions__item">
+                                    <div class="promotions__img"><img src="/images/promotions-1.jpg" alt=""></div>
+                                    <div class="promotions__subtitle">Скидка 7% на свадьбу</div>
+                                    <div class="promotions__text">
+                                        Особое предложение для молодожёнов. Подробности по телефону +7 (966) 240-85-85
+                                    </div>
+                                    <div class="promotions__button-box">
+                                        <a href="#" class="promotions__button">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="promotions__item">
+                                    <div class="promotions__img"><img src="/images/promotions-2.jpg" alt=""></div>
+                                    <div class="promotions__subtitle">Акция “Вино для своих”</div>
+                                    <div class="promotions__text">
+                                        Особое предложение для покупок по промокоду
+                                            «вино для своих».
+                                            Подробности по телефону +7 (966) 240-85-85
+                                    </div>
+                                    <div class="promotions__button-box">
+                                        <a href="#" class="promotions__button">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!--./promotions-->
 
         
-        <div class="reviews">
+        <!-- <div class="reviews">
             <div class="container">
                 <div class="title">Отзывы о нашей работе</div>
 
-                <div class="reviews__slider">
+                <div class="js-reviews__slider reviews__slider">
                     <div class="reviews__item">
                         <div class="reviews__author">
                             <div class="reviews__img"><img src="/images/reviews-1.jpg" alt=""></div>
                             <div class="reviews__author-name">Ольга Шестакова</div>
                         </div>
                         <div class="reviews__text">
-                            <p>Так как я работаю в сфере организации праздников, очень удобно работать с Артёмом. Всегда хороший выбор. И скидку даёт хорошую. Рекомендую.</p>
+                            Так как я работаю в сфере организации праздников, очень удобно работать с Артёмом. Всегда хороший выбор. И скидку даёт хорошую. Рекомендую.
                         </div>
                     </div>
 
@@ -1343,7 +1340,7 @@
                             <div class="reviews__author-name">Игорь Мальцевич</div>
                         </div>
                         <div class="reviews__text">
-                            <p>Хороший магазин. Покупал вино на Чистопольской. Помогли с выбором, менеджер в теме. Побольше Вам точек продаж, особенно в Азино. Спасибо!</p>
+                            Хороший магазин. Покупал вино на Чистопольской. Помогли с выбором, менеджер в теме. Побольше Вам точек продаж, особенно в Азино. Спасибо!
                         </div>
                     </div>
 
@@ -1353,7 +1350,7 @@
                             <div class="reviews__author-name">Ольга Шестакова</div>
                         </div>
                         <div class="reviews__text">
-                            <p>Так как я работаю в сфере организации праздников, очень удобно работать с Артёмом. Всегда хороший выбор. И скидку даёт хорошую. Рекомендую.</p>
+                            Так как я работаю в сфере организации праздников, очень удобно работать с Артёмом. Всегда хороший выбор. И скидку даёт хорошую. Рекомендую.
                         </div>
                     </div>
 
@@ -1363,31 +1360,100 @@
                             <div class="reviews__author-name">Игорь Мальцевич</div>
                         </div>
                         <div class="reviews__text">
-                            <p>Хороший магазин. Покупал вино на Чистопольской. Помогли с выбором, менеджер в теме. Побольше Вам точек продаж, особенно в Азино. Спасибо!</p>
+                            Хороший магазин. Покупал вино на Чистопольской. Помогли с выбором, менеджер в теме. Побольше Вам точек продаж, особенно в Азино. Спасибо!
                         </div>
                     </div>
-                </div> <!--/.reviews__slider-->
-            </div> <!--/.container-->
-        </div> <!--/.reviews-->
+                </div> 
+            </div> 
+        </div> -->
 
 
         <!--YANDEX_MAP-->
 
-        <div class="map">
-            <div class="title">Адреса наших магазинов</div>
+        <div class="map-box">
+                <div class="title">Адреса наших магазинов</div>
+                
+                <div id="map"></div>
             
-            <div class="yandex__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/43/kazan/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Казань</a><a href="https://yandex.ru/maps/43/kazan/?ll=49.089822%2C55.832505&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Казань — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUuaCFclD?lang=en_RU" width="100%" height="600" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
         </div>
 
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__text">© Copyright 2012 - 2021</div>
+                    <div class="footer__logo">
+                        <div class="footer__text">Сделано в</div>
+                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
     
-</div> <!-- ./page__root -->
+    </div> <!-- ./page__root -->
 
-<div class="footer">
-    <div class="container">
-        <div class="footer__text">© Copyright 2012 - 2021</div>
-        <div class="footer__img-box"><img class="footer__img" src="/images/footer-cards.jpg" alt=""></div>
-    </div>
-</div>
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+
+    function init() {
+        // Создание карты.
+        // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчнию: «широта, долгота».
+            center: [55.83, 49.108795],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 14,
+            // Элементы управления
+            // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
+            controls: [
+
+                'zoomControl', // Ползунок масштаба
+                'rulerControl', // Линейка
+                'routeButtonControl', // Панель маршрутизации
+                'trafficControl', // Пробки
+                'typeSelector', // Переключатель слоев карты
+                'fullscreenControl', // Полноэкранный режим
+
+                // Поисковая строка
+                new ymaps.control.SearchControl({
+                    options: {
+                        // вид - поисковая строка
+                        size: 'large',
+                        // Включим возможность искать не только топонимы, но и организации.
+                        provider: 'yandex#search'
+                    }
+                })
+
+            ]
+        });
+
+        //отключаем зум колёсиком мышки
+        myMap.behaviors.disable('scrollZoom');
+        
+        //на мобильных устройствах... (проверяем по userAgent браузера)
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            //... отключаем перетаскивание карты
+            myMap.behaviors.disable('drag');
+        }
+
+        // Добавление метки
+        // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
+        var myPlacemark = new ymaps.Placemark([55.83, 49.090], {
+            // Хинт показывается при наведении мышкой на иконку метки.
+            hintContent: 'Содержимое всплывающей подсказки',
+            // Балун откроется при клике по метке.
+            balloonContent: 'Содержимое балуна'
+        });
+
+        // После того как метка была создана, добавляем её на карту.
+        myMap.geoObjects.add(myPlacemark);
+
+    }
+</script>
 
 </body>
 </html>
