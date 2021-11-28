@@ -2069,6 +2069,10 @@ input[type="number"] {
 	padding:0px;
 }
 
+.tabs__button {
+    display: none;
+}
+
 .tabs__option{
 	margin-left: 10px;
 	cursor:pointer;
@@ -2315,8 +2319,10 @@ input[type="number"] {
         padding-bottom: 3px;
     }
     
+    
     .header.fixed .header__top {
         border: none;
+        padding-bottom: 0;
     }
 
     .header.fixed .header__bottom {
@@ -2351,10 +2357,7 @@ input[type="number"] {
     .header--catalog.fixed .call {
         display: none;
     }
-    
-    .header.fixed .header__top {
-        padding-bottom: 0;
-    }
+
     .header__top {
         border: none;
         padding-bottom: 0;
@@ -2597,7 +2600,7 @@ input[type="number"] {
         width: 98%;
         padding: 0 10px;
         opacity: 1;
-        right: 6px;
+        right: 3px;
         background-color: #fff;
         justify-content: space-between;
     }
@@ -2811,11 +2814,20 @@ input[type="number"] {
     .fold__link {
         font-size: 10px;
     }
+
+    .tabs {
+        margin-top: 20px;
+        width: 100%;
+    }
     .tabs__option {
         font-size: 12px;
     }
     .tabs__items {
         padding: 15px 20px;
+        background-color: inherit;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .tabs__title {
@@ -2831,6 +2843,43 @@ input[type="number"] {
     }
     .product__similar-box .product__title {
         text-align: center;
+    }
+
+    .tabs__options {
+        display: none;
+    }
+
+
+    .tabs__inner {
+        display: none;
+        background-color: #fff;
+        border-radius: 14px;
+        padding: 10px 15px;
+    }
+
+    .tabs__item {
+        display: block;
+        width: 100%;
+    }
+    .tabs__button {
+        cursor: pointer;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: #ECECEC;
+        padding: 5px;
+        border-bottom: 1px solid #C4C4C4;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333333;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .tabs__button.active {
+        font-weight: 700;
+        color: #fff;
+        background-color: #0099CC;
     }
 }
 

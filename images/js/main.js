@@ -305,8 +305,24 @@ $(document).ready(function () {
         };	
     })(jQuery);
     
+    
     if ($(".js-tabs").length) {
-        $(".tabs").easyTabs();
+        if ($(window).width() > 767) {
+            $(".js-tabs").easyTabs();
+        }
+        
+        $(document).on("click", ".js-tabs__button", function () {
+            $(this).toggleClass("active");
+            const tabsParent = $(this).parents(".js-tabs__item");
+            if (tabsParent.hasClass("active")) {
+                tabsParent.children(".js-tabs__inner").slideUp();
+                
+            } else {
+                tabsParent.children(".js-tabs__inner").slideDown();
+            }
+    
+            tabsParent.toggleClass("active");
+        });
     }
     
 
@@ -322,7 +338,7 @@ $(document).ready(function () {
         }
 
         $(".js-md-menu").toggleClass("active");
-        $('.xs-menu').toggleClass('active');
+        $('.js-xs-menu').toggleClass('active');
     });
 
 
