@@ -90,7 +90,7 @@ h1 {
     top: 0;
     left: 0;
     z-index: 1000;
-    position: relative;
+    position: fixed;
     transition: all 0.3s ease;
     padding-bottom: 20px;
 }
@@ -213,7 +213,7 @@ h1 {
 }
 
 .search__form {
-    display: flex;
+    display: inherit;
     margin-left: 30px;
     background: none;
     height: 40px;
@@ -2205,13 +2205,12 @@ input[type="number"] {
 }
 
 .popular__drink-hidden {
-    display: hidden;
+    display: block;
 }
 
 .product__image-box-hidden {
-    display: hidden;
+    display: block;
 }
-
 @media screen and (max-width: 1199px) {
 
 	.header__mail,
@@ -2367,6 +2366,7 @@ input[type="number"] {
 
     .header--catalog.fixed {
         padding-bottom: 0px;
+        border-bottom: 1px solid #C4C4C4;
     }
 
     .md-menu {
@@ -2427,8 +2427,9 @@ input[type="number"] {
     }
 
     .search__form {
+        display: flex;
         position: fixed;
-        top: 18px;
+        top: 14px;
         right: 70px;
         z-index: 10000;
     }
@@ -2450,7 +2451,7 @@ input[type="number"] {
     }
 
     .menu-img-box.active {
-        margin: 8px 0 0 0;
+        margin: 4px 0 0 0;
         transform: rotate(180deg);
     }
 
@@ -2516,6 +2517,16 @@ input[type="number"] {
         font-size: 10px;
     }
 
+    .search__div {
+        display: none;
+    }
+
+    .search__div .search__close-icon {
+        width: 22px;
+        height: 22px;
+        display: none;
+        transition: all 0.2s ease;
+    }
 
 }
 
@@ -2526,6 +2537,29 @@ input[type="number"] {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    .search__div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .search__div .search__div-icon {
+        width: 22px;
+        height: 22px;
+        transition: all 0.2s ease
+    }
+
+    .search__div.active .search__div-icon {
+        display: none;
+    }
+   
+    .search__div.active .search__close-icon {
+        display: inherit;
     }
 
     .search__txt {
@@ -2553,21 +2587,31 @@ input[type="number"] {
     .call {
         order: 2;
         margin: 0;
+        display: none;
     }
 
     .search__form {
         display: flex;
-        position: relative;
-        order: 4;
-        top: 0;
-        left: 0;
-        width: 33%;
+        position: fixed;
+        top: 80px;
+        width: 98%;
         padding: 0 10px;
+        opacity: 1;
+        right: 6px;
+        background-color: #fff;
+        justify-content: space-between;
     }
 
+    .search__form.active {
+        display: flex;
+    }
 
+    .nav__link {
+        font-size: 12px
+    }
     .intro {
         padding-bottom: 50px;
+        padding-top: 170px;
     }
 
     .intro__title {
@@ -2658,7 +2702,7 @@ input[type="number"] {
     }
 
     .breadcrumb {
-        margin-top: 190px;
+        margin-top: 120px;
     }
 
     .breadcrumb__list li a,
@@ -2770,7 +2814,6 @@ input[type="number"] {
     .tabs__option {
         font-size: 12px;
     }
-
     .tabs__items {
         padding: 15px 20px;
     }

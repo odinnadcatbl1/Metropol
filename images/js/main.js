@@ -340,5 +340,18 @@ $(document).ready(function () {
 
     });
 
+    $('.search__form').css('display', 'none');
 
+    $(document).on("click", ".search__div", function () {
+        $(this).toggleClass("active"); 
+
+        if ($(".search__form").hasClass("active")) {
+            $(".search__form").slideUp();
+        } else {
+            $(".search__form").slideDown();
+        }
+
+        $(".search__form").toggleClass("active");
+    });
+    
 });

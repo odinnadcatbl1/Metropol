@@ -24,6 +24,10 @@
                         <div class="burger__logo">
                             <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img"></a>
                         </div>
+                        <div class="search__div">
+                            <img src="/images/icons/search-icon.svg" alt="" class="search__div-icon js-svg-img">
+                            <img src="/images/icons/search-close.svg" alt="" class="search__close-icon js-svg-img">
+                        </div>
                         <div class="burger js-burger">
                             <span class="burger__item burger__item--catalog">Menu</span>
                         </div>       
@@ -31,7 +35,7 @@
                    
                     <div class="md-menu js-md-menu">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-8 col-6">
                                 <div class="header__nav header__nav--catalog">
                                                         
                                     <nav class="nav">
@@ -63,7 +67,7 @@
                                 </div>
                             </div>        
                                 
-                            <div class="col-md-4"> 
+                            <div class="col-md-4 col-6"> 
                                 <div class="header__info header__info--catalog">
                                     <nav class="nav">
                                         <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
@@ -82,7 +86,6 @@
                             <div class="header__logo">
                                 <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo"></a>
                             </div>
-                            
                             <form class="search__form search__form--catalog">
                                 <input class="search__txt search__txt--catalog" type="search" placeholder="Например: Водка холодная..">
                                 <button class="search__button">
@@ -91,12 +94,18 @@
                             </form>
                             
                             <div class="header__mail">
-                                <a class="contacts contacts--catalog" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                                <a class="contacts contacts--catalog" href = "mailto:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">
+                                    <div class=contacts__text>754467@mail.ru</div>
+                                </a>
                             </div>
 
                             <div class="header__phone">
-                                <a class="contacts contacts--catalog" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
-                            </div>
+                                <a class="contacts contacts--catalog" href = "tel:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">
+                                    <div class=contacts__text>+7 (989) 702-54-81</div>
+                                </a>
+                            </div> 
                             
                             <div class="call">
                                 <a href="#" class="call__link call__link--catalog">Заказать звонок</a>
