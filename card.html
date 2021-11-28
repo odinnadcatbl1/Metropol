@@ -20,9 +20,13 @@
         <header class="header header--catalog jsHeader">
             <div class="container">
                 <div class="header__top header__top--catalog">
-                    <div class="xs-menu">
+                    <div class="xs-menu js-xs-menu">
                         <div class="burger__logo">
                             <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img"></a>
+                        </div>
+                        <div class="search__div">
+                            <img src="/images/icons/search-icon.svg" alt="" class="search__div-icon js-svg-img">
+                            <img src="/images/icons/search-close.svg" alt="" class="search__close-icon js-svg-img">
                         </div>
                         <div class="burger js-burger">
                             <span class="burger__item burger__item--catalog">Menu</span>
@@ -31,14 +35,14 @@
                    
                     <div class="md-menu js-md-menu">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-8 col-6">
                                 <div class="header__nav header__nav--catalog">
                                                         
                                     <nav class="nav">
-                                        <div class="nav__link nav__link--catalog"><a href="#">Водка</a></div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Виски</a></div>
-                                        <div class="nav__link nav__link--catalog menu__link"><a href="#">Коньяк <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
-                                            <div class="nav__sub-box">
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Водка</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Виски</a></div>
+                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#">Коньяк <div class="menu-img-box"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="nav__sub js-nav__sub nav__sub--catalog">
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Российский коньяк</a></div>
@@ -46,10 +50,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Ром</a></div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Текила</a></div>
-                                        <div class="nav__link nav__link--catalog menu__link"><a href="#">Вино <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
-                                            <div class="nav__sub-box">
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Ром</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Текила</a></div>
+                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#">Вино <div class="menu-img-box"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="nav__sub js-nav__sub nav__sub--catalog">
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Красное вино</a></div>
@@ -57,13 +61,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Шампанское</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Шампанское</a></div>
                                     </nav>
 
                                 </div>
                             </div>        
                                 
-                            <div class="col-md-4"> 
+                            <div class="col-md-4 col-6"> 
                                 <div class="header__info header__info--catalog">
                                     <nav class="nav">
                                         <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
@@ -82,7 +86,6 @@
                             <div class="header__logo">
                                 <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo"></a>
                             </div>
-                            
                             <form class="search__form search__form--catalog">
                                 <input class="search__txt search__txt--catalog" type="search" placeholder="Например: Водка холодная..">
                                 <button class="search__button">
@@ -91,12 +94,18 @@
                             </form>
                             
                             <div class="header__mail">
-                                <a class="contacts contacts--catalog" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                                <a class="contacts contacts--catalog" href = "mailto:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">
+                                    <div class=contacts__text>754467@mail.ru</div>
+                                </a>
                             </div>
 
                             <div class="header__phone">
-                                <a class="contacts contacts--catalog" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
-                            </div>
+                                <a class="contacts contacts--catalog" href = "tel:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">
+                                    <div class=contacts__text>+7 (989) 702-54-81</div>
+                                </a>
+                            </div> 
                             
                             <div class="call">
                                 <a href="#" class="call__link call__link--catalog">Заказать звонок</a>
@@ -135,6 +144,9 @@
                                     <div class="product__price">
                                         999
                                         <div class="price__valuta">руб.</div>
+                                    </div>
+                                    <div class="product__image-box-hidden">
+                                        <a href="/images/viski-card.jpg" data-fancybox class="fancybox-img"><img class="product__image" src="/images/viski-card.jpg" alt=""></a>
                                     </div>
                                     <div class="describe__title">Выбор литража:</div>
                                     <div class="product__capacity">
@@ -195,30 +207,35 @@
                             </ul>
                             <div class="tabs__items js-tabs__items">
                                 <div class="tabs__item js-tabs__item">
-                                    <div class="tabs__title">Виски Bushmill1</div>
-                                    <div class="tabs__text">
-                                        <p>По исходному сырью различают несколько видов виски:
-                                            <ol>
-                                            <li>солодовый — прsиготовленный из ячменного солода без каких-либо добавок;</li>
-                                            <li>зерновой — используемый для изготовления смешанного виски;</li>
-                                            <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
-                                            <li>Бурбон – особый кукурузный виски американского производства.</li>
-                                            </ol>
-                                            Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
-                                        </p>
+                                    <div class="tabs__button js-tabs__button">Описание</div>
+                                    <div class="tabs__inner js-tabs__inner">
+                                        <div class="tabs__title">Виски Bushmill1</div>
+                                        <div class="tabs__text">
+                                            <p>По исходному сырью различают несколько видов виски:
+                                                <ol>
+                                                <li>солодовый — прsиготовленный из ячменного солода без каких-либо добавок;</li>
+                                                <li>зерновой — используемый для изготовления смешанного виски;</li>
+                                                <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
+                                                <li>Бурбон – особый кукурузный виски американского производства.</li>
+                                                </ol>
+                                                Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tabs__item js-tabs__item">
-                                    <div class="tabs__title">Виски Bushmills2</div>
-                                    <div class="tabs__text">
-                                        <p>По исходному сырью различают несколько видов виски:
-                                            <ol>
-                                            <li>солодовый — приготовленный из ячменного солода без каких-либо добавок;</li>
-                                            <li>зерновой — используемый для изготовления смешанного виски;</li>
-                                            <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
-                                            <li>Бурбон – особый кукурузный виски американского производства.</li>
-                                            </ol>
-                                        </p>             
+                                    <div class="tabs__button js-tabs__button">Отзывы</div>
+                                    <div class="tabs__inner js-tabs__inner">
+                                        <div class="tabs__title">Виски Bushmill2</div>
+                                        <div class="tabs__text">
+                                            <p>По исходному сырью различают несколько видов виски:
+                                                <o>
+                                                <li>солодовый — прsиготовленный из ячменного солода без каких-либо добавок;</li>
+                                                <li>зерновой — используемый для изготовления смешанного виски;</li>
+                                                <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
+                                                </o>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>            

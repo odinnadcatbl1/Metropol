@@ -16,14 +16,18 @@
     <title>Каталог</title>
 </head>
 <body>
-    <div class="page__root page__root--catalog">
+    <div class="page__root page__root--catalog js-page__root">
         <!--HEADER-->
         <header class="header header--catalog jsHeader">
             <div class="container">
                 <div class="header__top header__top--catalog">
-                    <div class="xs-menu">
+                    <div class="xs-menu js-xs-menu">
                         <div class="burger__logo">
                             <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo"></a>
+                        </div>
+                        <div class="search__div">
+                            <img src="/images/icons/search-icon.svg" alt="" class="search__div-icon js-svg-img">
+                            <img src="/images/icons/search-close.svg" alt="" class="search__close-icon js-svg-img">
                         </div>
                         <div class="burger js-burger" type="button">
                             <span class="burger__item burger__item--catalog">Menu</span>
@@ -32,14 +36,14 @@
                    
                     <div class="md-menu js-md-menu">
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-8 col-6">
                                 <div class="header__nav header__nav--catalog">
                                                         
                                     <nav class="nav">
-                                        <div class="nav__link nav__link--catalog"><a href="#">Водка</a></div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Виски</a></div>
-                                        <div class="nav__link nav__link--catalog menu__link"><a href="#">Коньяк <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
-                                            <div class="nav__sub-box">
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Водка</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Виски</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link menu__link"><a href="#">Коньяк <div class="menu-img-box"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                            <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="nav__sub js-nav__sub nav__sub--catalog">
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Российский коньяк</a></div>
@@ -47,10 +51,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Ром</a></div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Текила</a></div>
-                                        <div class="nav__link nav__link--catalog menu__link"><a href="#">Вино <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></a>
-                                            <div class="nav__sub-box">
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Ром</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Текила</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link menu__link"><a href="#">Вино <div class="menu-img-box"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div</a>
+                                            <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="nav__sub js-nav__sub nav__sub--catalog">
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Красное вино</a></div>
@@ -58,13 +62,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Шампанское</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Шампанское</a></div>
                                     </nav>
 
                                 </div>
                             </div>        
                                 
-                            <div class="col-md-4"> 
+                            <div class="col-md-4 col-6"> 
                                 <div class="header__info header__info--catalog">
                                     <nav class="nav">
                                         <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
@@ -92,12 +96,18 @@
                             </form>
                             
                             <div class="header__mail">
-                                <a class="contacts contacts--catalog" href = "mailto:..."><img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">754467@mail.ru</a>
+                                <a class="contacts contacts--catalog" href = "mailto:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/mail-icon.svg" alt="">
+                                    <div class=contacts__text>754467@mail.ru</div>
+                                </a>
                             </div>
 
                             <div class="header__phone">
-                                <a class="contacts contacts--catalog" href = "tel:..."><img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">+7 (989) 702-54-81</a>
-                            </div>
+                                <a class="contacts contacts--catalog" href = "tel:...">
+                                    <img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">
+                                    <div class=contacts__text>+7 (989) 702-54-81</div>
+                                </a>
+                            </div> 
                             
                             <div class="call">
                                 <a href="#" class="call__link call__link--catalog">Заказать звонок</a>
@@ -123,6 +133,7 @@
                 </div> <!--./breadcrumb-->
                 <div class="row">
                     <div class="col-md-3">
+                        <div class="xs-filter__btn js-xs-filter__btn"><img src="/images/icons/filter-icon.svg" alt="" class="filter__btn-icon js-svg-img"></div>
                         <div class="filter">
                             <div class="filter__title">
                                 Каталог напитков
@@ -260,7 +271,7 @@
                                 </div>
                             </div>
                         </div> <!--./popular_drink-->
-                        <form class="filter__form">
+                        <form class="filter__form js-filter__form">
                             <div class="drink__country">
                                 <div class="filter__title">Страна происхождения</div>
 
@@ -507,6 +518,42 @@
                                 </p>
                             </div>
                             
+                            <div class="popular__drink-hidden">
+                                <div class="filter__title">Популярные напитки</div>
+                                <div class="drink">
+                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-1.jpg" alt=""></div>
+                                    <div class="drink__describe">
+                                        <div class="drink__name">Виски Bell's Original (Бэллс Ориджинал)</div>
+                                        <div class="drink__options">
+                                            <div class="drink__size">500 мл</div>
+                                            <div class="drink__price">749 руб</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="drink">
+                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-2.jpg" alt=""></div>
+                                    <div class="drink__describe">
+                                        <div class="drink__name">Виски Glen Eagles (Глен Иглс)</div>
+                                        <div class="drink__options">
+                                            <div class="drink__size">750 мл</div>
+                                            <div class="drink__price">949 руб</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="drink">
+                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-3.jpg" alt=""></div>
+                                    <div class="drink__describe">
+                                        <div class="drink__name">Виски Famous Grouse (Фэймос Граус)</div>
+                                        <div class="drink__options">
+                                            <div class="drink__size">500 мл</div>
+                                            <div class="drink__price">899 руб</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!--./popular_drink-hidden-->
+
                             <div class="selects">
                                 <div class="select-box">
                                     <div class="select__title">Сортировка:</div>                           
