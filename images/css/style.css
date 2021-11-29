@@ -182,6 +182,11 @@ h1 {
 
 .menu__link {
     color: #fff;
+    margin-right: -10px;
+}
+
+.menu-img-box-index {
+    padding: 0 5px;
 }
 
 .menu__link a {
@@ -2205,14 +2210,14 @@ input[type="number"] {
 }
 
 .popular__drink-hidden {
-    display: block;
+    display: none;
 }
 
 .product__image-box-hidden {
-    display: block;
+    display: none;
 }
 
-.filter__btn {
+.xs-filter__btn {
     display: none;
 }
 @media screen and (max-width: 1199px) {
@@ -2939,7 +2944,7 @@ input[type="number"] {
     }
 
     .xs-filter__btn:hover {
-        transform: translateY(-50%) translateX(20%);
+        background-color: #C4C4C4;
     }
 
     .xs-filter__btn.active {
@@ -2962,7 +2967,7 @@ input[type="number"] {
         height: 200px;
     } */
 
-    .page__root--catalog.active {
+    .js-xs-body.active {
         overflow: hidden;
     }
 
@@ -2973,12 +2978,44 @@ input[type="number"] {
         right: 0;
         bottom: 0;
         left: 0;
-        padding: 30px 20px;
+        padding: 30px 40px;
         transition: all 0.2s ease;
         transition-delay: 0s;
         z-index: 1500;
         overflow: auto;
         background-color: #FAFAFA;
+    }
+
+    .filter__title {
+        width: 100%;
+    }
+
+    .country__label {
+        font-size: 12px;
+    }
+
+    .drink__filter {
+        margin-top: 20px;
+    }
+
+    .filter__label {
+        font-size: 12px;
+    }
+
+    .filter-price-text {
+        font-size: 12px;
+    }
+
+    .filter-price__input {
+        font-size: 12px;
+    }
+
+    .filter-price__inputs {
+        justify-content: center;
+    }
+
+    .filter-price__label {
+        margin: 0 10px;
     }
 
 }
