@@ -1,46 +1,4 @@
 $(document).ready(function () {
-    // SVG-IMG
-    if ($(".js-svg-img").length) {
-        $(".js-svg-img").each(function () {
-            const $img = $(this);
-            const imgID = $img.attr("id");
-            const imgClass = $img.attr("class");
-            const imgURL = $img.attr("src");
-
-            $.get(
-                imgURL,
-                function (data) {
-                    let $svg = $(data).find("svg");
-
-                    if (typeof imgID !== "undefined") {
-                        $svg = $svg.attr("id", imgID);
-                    }
-                    if (typeof imgClass !== "undefined") {
-                        $svg = $svg.attr("class", imgClass + " replaced-svg");
-                    }
-                    $svg = $svg.removeAttr("xmlns:a");
-                    if (
-                        !$svg.attr("viewBox") &&
-                        $svg.attr("height") &&
-                        $svg.attr("width")
-                    ) {
-                        $svg.attr(
-                            "viewBox",
-                            "0 0 " +
-                                $svg.attr("height") +
-                                " " +
-                                $svg.attr("width")
-                        );
-                    }
-                    $img.replaceWith($svg);
-                    $svg.addClass("ready");
-                },
-                "xml"
-            );
-        });
-    }
-
-
 
     //INDEX.HTML
 
@@ -65,25 +23,30 @@ $(document).ready(function () {
 
         catalogSlider.slick({
             infinite: true, // если элементы заканчиваются - они повторяются заново
-            slidesToShow: 4,
-            slidesToScroll: 1,
             fade: false, // чтобы затемнялись отзывы
             arrows: true,
             responsive: [ 
                 {
-                breakpoint: 991,
-                settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                  },
-                },
-                {
-                breakpoint: 768,
-                settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                    breakpoint: 991,
+                    settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
                     },
                 },
+                {
+                    breakpoint: 768,
+                    settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    },
+                },
+                {
+                breakpoint: 1199,
+                settingd : {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    },
+                }
             ],
         });
     }
@@ -329,7 +292,6 @@ $(document).ready(function () {
     /*burger-menu*/
     $(document).on("click", ".js-burger", function () {
         $(this).toggleClass("active");
-
         if ($(".js-md-menu").hasClass("active")) {
             $(".js-md-menu").slideUp();
             
@@ -338,11 +300,16 @@ $(document).ready(function () {
         }
 
         $(".js-md-menu").toggleClass("active");
-        $('.js-xs-menu').toggleClass('active');
+        $(".js-xs-menu").toggleClass("active");
+        if ($(".js-search__div").hasClass("active")) {
+            $(".js-search__div").toggleClass("active");
+            $(".js-search__form").toggleClass("active");
+            $(".js-search__form").css('display', 'none');
+        }
     });
 
 
-    $(document).on("click", ".menu-img-box", function () {
+    $(document).on("click", ".js-nav__img", function () {
         const menuLinkParent = $(this).parents(".js-nav__link");
         $(this).toggleClass("active");
 
@@ -356,18 +323,22 @@ $(document).ready(function () {
 
     });
 
-    $('.search__form').css('display', 'none');
+    if ($(".js-search__form").length) {
+        if ($(window).width() < 768) {
+            $('.js-search__form').css('display', 'none');
+        }
+    }
 
-    $(document).on("click", ".search__div", function () {
+    $(document).on("click", ".js-search__div", function () {
         $(this).toggleClass("active"); 
 
-        if ($(".search__form").hasClass("active")) {
-            $(".search__form").slideUp();
+        if ($(".js-search__form").hasClass("active")) {
+            $(".js-search__form").slideUp();
         } else {
-            $(".search__form").slideDown();
+            $(".js-search__form").slideDown();
         }
 
-        $(".search__form").toggleClass("active");
+        $(".js-search__form").toggleClass("active");
     });
     
 
@@ -376,5 +347,47 @@ $(document).ready(function () {
         $(".js-filter__form").toggleClass("active");
         $(".js-xs-body").toggleClass("active");
     });
+
+
+    // SVG-IMG
+    if ($(".js-svg-img").length) {
+        $(".js-svg-img").each(function () {
+            const $img = $(this);
+            const imgID = $img.attr("id");
+            const imgClass = $img.attr("class");
+            const imgURL = $img.attr("src");
+
+            $.get(
+                imgURL,
+                function (data) {
+                    let $svg = $(data).find("svg");
+
+                    if (typeof imgID !== "undefined") {
+                        $svg = $svg.attr("id", imgID);
+                    }
+                    if (typeof imgClass !== "undefined") {
+                        $svg = $svg.attr("class", imgClass + " replaced-svg");
+                    }
+                    $svg = $svg.removeAttr("xmlns:a");
+                    if (
+                        !$svg.attr("viewBox") &&
+                        $svg.attr("height") &&
+                        $svg.attr("width")
+                    ) {
+                        $svg.attr(
+                            "viewBox",
+                            "0 0 " +
+                                $svg.attr("height") +
+                                " " +
+                                $svg.attr("width")
+                        );
+                    }
+                    $img.replaceWith($svg);
+                    $svg.addClass("ready");
+                },
+                "xml"
+            );
+        });
+    }
 
 });

@@ -24,11 +24,11 @@
                         <div class="burger__logo">
                             <a href="/index.html"><img src="/images/metropol-logo.svg" alt="" class="metropol__logo js-svg-img"></a>
                         </div>
-                        <div class="search__div">
+                        <div class="search__div js-search__div">
                             <img src="/images/icons/search-icon.svg" alt="" class="search__div-icon js-svg-img">
                             <img src="/images/icons/search-close.svg" alt="" class="search__close-icon js-svg-img">
                         </div>
-                        <div class="burger js-burger" type="button">
+                        <div class="burger js-burger">
                             <span class="burger__item">Menu</span>
                         </div>       
                     </div> <!--/.xs-menu-->
@@ -38,11 +38,12 @@
                             <div class="col-md-8 col-6">
                                 <div class="header__nav">                    
                                     <nav class="nav">
-                                        <div class="nav__link "><a href="#">Водка</a></div>
+                                        <div class="nav__link js-nav__link"><a href="#">Водка</a></div>
                                         <div class="nav__link js-nav__link"><a href="#">Виски</a></div>
-                                        <div class="nav__link menu__link js-nav__link"><a href="#">Коньяк <div class="menu-img-box menu-img-box-index"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down.svg" alt=""></div></a>
+                                        <div class="nav__link js-nav__link menu__link">
+                                            <a href="#"><div class="menu-img-box">Коньяк<img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down.svg" alt=""></div></a>
                                             <div class="nav__sub-box js-nav__sub-box">
-                                                <div class="nav__sub js-nav__sub">
+                                                <div class="js-nav__sub nav__sub">
                                                     <div class="sub__link"><a href="#">Армянский коньяк</a></div>
                                                     <div class="sub__link"><a href="#">Российский коньяк</a></div>
                                                     <div class="sub__link"><a href="#">Французский коньяк</a></div>
@@ -51,9 +52,9 @@
                                         </div>
                                         <div class="nav__link js-nav__link"><a href="#">Ром</a></div>
                                         <div class="nav__link js-nav__link"><a href="#">Текила</a></div>
-                                        <div class="nav__link menu__link js-nav__link"><a href="#">Вино <div class="menu-img-box menu-img-box-index"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down.svg" alt=""></div></a>
+                                        <div class="nav__link menu__link js-nav__link"><a href="#"><div class="menu-img-box">Вино<img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down.svg" alt=""></div></a>
                                             <div class="nav__sub-box js-nav__sub-box">
-                                                <div class="nav__sub js-nav__sub">
+                                                <div class="js-nav__sub nav__sub">
                                                     <div class="sub__link"><a href="#">Белое вино</a></div>
                                                     <div class="sub__link"><a href="#">Красное вино</a></div>
                                                     <div class="sub__link"><a href="#">Розовое вино</a></div>
@@ -88,7 +89,7 @@
                                 <a href="/index.html"><img src="/images/metropol-logo.svg" alt="" class="metropol__logo"></a>
                             </div>
                             
-                            <form class="search__form">
+                            <form class="search__form js-search__form">
                                 <input class="search__txt" type="search" placeholder="Например: Водка холодная..">
                                 <button class="search__button">
                                     <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
@@ -105,7 +106,7 @@
                             <div class="header__phone">
                                 <a class="contacts" href = "tel:...">
                                     <img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">
-                                    <div class=contacts__text>+7 (989) 702-54-81</div>
+                                    <div class=contacts__text>+79897025481</div>
                                 </a>
                             </div>                            
                             <div class="call">
@@ -1388,7 +1389,7 @@
                     <div class="footer__text">© Copyright 2012 - 2021</div>
                     <div class="footer__logo">
                         <div class="footer__text">Сделано в</div>
-                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                        <a href="https://www.devarto.ru/" target="_blank"><img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt=""></a>
                     </div>
                 </div>
             </div>

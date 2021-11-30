@@ -25,11 +25,11 @@
                         <div class="burger__logo">
                             <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo"></a>
                         </div>
-                        <div class="search__div">
+                        <div class="search__div js-search__div">
                             <img src="/images/icons/search-icon.svg" alt="" class="search__div-icon js-svg-img">
                             <img src="/images/icons/search-close.svg" alt="" class="search__close-icon js-svg-img">
                         </div>
-                        <div class="burger js-burger" type="button">
+                        <div class="burger js-burger">
                             <span class="burger__item burger__item--catalog">Menu</span>
                         </div>       
                     </div> <!--/.xs-menu-->
@@ -43,7 +43,7 @@
                                         <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Водка</a></div>
                                         <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Виски</a></div>
                                         <div class="nav__link nav__link--catalog js-nav__link menu__link">
-                                            <a href="#">Коньяк <div class="menu-img-box"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                            <a href="#"><div class="menu-img-box">Коньяк <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
                                             <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="js-nav__sub nav__sub nav__sub--catalog">
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
@@ -54,7 +54,7 @@
                                         </div>
                                         <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Ром</a></div>
                                         <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Текила</a></div>
-                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#">Вино <div class="menu-img-box"><img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#"><div class="menu-img-box">Вино <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
                                             <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="js-nav__sub nav__sub nav__sub--catalog">
                                                     <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
@@ -89,7 +89,7 @@
                                 <a href="/index.html"><img src="/images/metropol-logo-blue.svg" alt="" class="metropol__logo js-svg-img"></a>
                             </div>
                             
-                            <form class="search__form search__form--catalog">
+                            <form class="search__form search__form--catalog js-search__form">
                                 <input class="search__txt search__txt--catalog" type="search" placeholder="Например: Водка холодная..">
                                 <button class="search__button">
                                     <img class="search__icon js-svg-img" src="/images/icons/search-icon.svg" alt="">
@@ -106,7 +106,7 @@
                             <div class="header__phone">
                                 <a class="contacts contacts--catalog" href = "tel:...">
                                     <img class="info__icons js-svg-img" src="/images/icons/phone-icon.svg" alt="">
-                                    <div class=contacts__text>+7 (989) 702-54-81</div>
+                                    <div class=contacts__text>+79897025481</div>
                                 </a>
                             </div> 
                             
@@ -133,13 +133,17 @@
                     </nav>
                 </div> <!--./breadcrumb-->
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="xs-filter__btn js-xs-filter__btn"><img src="/images/icons/filter-icon.svg" alt="" class="filter__btn-icon js-svg-img"></div>
+                    <div class="col-md-3 xs-order-2">
+                        <div class="xs-filter__btn js-xs-filter__btn">
+                            <img src="/images/icons/filter-icon.svg" alt="" class="js-filter__btn-icon filter__btn-icon js-svg-img">
+                            <img src="/images/icons/filter-close.svg" alt="" class="js-filter__btn-icon filter__btn-close js-svg-img">
+                        </div>                                        
                         <div class="filter">
-                            <div class="filter__title">
-                                Каталог напитков
-                            </div>
+ 
                             <div class="filter__inner">
+                                <div class="filter__title">
+                                    Каталог напитков
+                                </div>
                                 <div class="filter__type-box js-filter-parent" data-parent="field_1">
                                     <a href="#" class="filter__type js-filter-btn" data-btn="field_1">
                                         <div class="filter__name">Вино</div>
@@ -232,46 +236,46 @@
                                         </div> <!--./filter__item-box-->
                                     </div> <!--/.filter__items-->
                                 </div> <!--/.filter__type box-->
-
-
                             </div> <!--./filter__inner-->
+
+                            <div class="popular__drink">
+                                <div class="filter__title">Популярные напитки</div>
+                                <div class="drink">
+                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-1.jpg" alt=""></div>
+                                    <div class="drink__describe">
+                                        <div class="drink__name">Виски Bell's Original (Бэллс Ориджинал)</div>
+                                        <div class="drink__options">
+                                            <div class="drink__size">500 мл</div>
+                                            <div class="drink__price">749 руб</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="drink">
+                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-2.jpg" alt=""></div>
+                                    <div class="drink__describe">
+                                        <div class="drink__name">Виски Glen Eagles (Глен Иглс)</div>
+                                        <div class="drink__options">
+                                            <div class="drink__size">750 мл</div>
+                                            <div class="drink__price">949 руб</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="drink">
+                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-3.jpg" alt=""></div>
+                                    <div class="drink__describe">
+                                        <div class="drink__name">Виски Famous Grouse (Фэймос Граус)</div>
+                                        <div class="drink__options">
+                                            <div class="drink__size">500 мл</div>
+                                            <div class="drink__price">899 руб</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!--./popular_drink-->
+
                         </div> <!--./filter-->
                         
-                        <div class="popular__drink">
-                            <div class="filter__title">Популярные напитки</div>
-                            <div class="drink">
-                                <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-1.jpg" alt=""></div>
-                                <div class="drink__describe">
-                                    <div class="drink__name">Виски Bell's Original (Бэллс Ориджинал)</div>
-                                    <div class="drink__options">
-                                        <div class="drink__size">500 мл</div>
-                                        <div class="drink__price">749 руб</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="drink">
-                                <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-2.jpg" alt=""></div>
-                                <div class="drink__describe">
-                                    <div class="drink__name">Виски Glen Eagles (Глен Иглс)</div>
-                                    <div class="drink__options">
-                                        <div class="drink__size">750 мл</div>
-                                        <div class="drink__price">949 руб</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="drink">
-                                <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-3.jpg" alt=""></div>
-                                <div class="drink__describe">
-                                    <div class="drink__name">Виски Famous Grouse (Фэймос Граус)</div>
-                                    <div class="drink__options">
-                                        <div class="drink__size">500 мл</div>
-                                        <div class="drink__price">899 руб</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!--./popular_drink-->
                         <form class="filter__form js-filter__form">
                             <div class="drink__country">
                                 <div class="filter__title">Страна происхождения</div>
@@ -501,7 +505,7 @@
 
                     </div> <!--.col-md-3-->
 
-                    <div class="col-md-9">
+                    <div class="col-md-9 xs-order-1">
                         <div class="main">
                             <div class="catalog__title--catalog">
                                 <h1>Лучшее виски в магазинах Метрополь</h1>
@@ -509,51 +513,15 @@
 
                             <div class="catalog__subtitle--catalog">
                                 <p>По исходному сырью различают несколько видов виски:
-                                <ol>
-                                <li>солодовый — приготовленный из ячменного солода без каких-либо добавок;</li>
-                                <li>зерновой — используемый для изготовления смешанного виски;</li>
-                                <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
-                                <li>Бурбон – особый кукурузный виски американского производства.</li>
-                                </ol>
-                                Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
+                                    <ol>
+                                    <li>солодовый — приготовленный из ячменного солода без каких-либо добавок;</li>
+                                    <li>зерновой — используемый для изготовления смешанного виски;</li>
+                                    <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
+                                    <li>Бурбон – особый кукурузный виски американского производства.</li>
+                                    </ol>
+                                    Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
                                 </p>
                             </div>
-                            
-                            <div class="popular__drink-hidden">
-                                <div class="filter__title">Популярные напитки</div>
-                                <div class="drink">
-                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-1.jpg" alt=""></div>
-                                    <div class="drink__describe">
-                                        <div class="drink__name">Виски Bell's Original (Бэллс Ориджинал)</div>
-                                        <div class="drink__options">
-                                            <div class="drink__size">500 мл</div>
-                                            <div class="drink__price">749 руб</div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="drink">
-                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-2.jpg" alt=""></div>
-                                    <div class="drink__describe">
-                                        <div class="drink__name">Виски Glen Eagles (Глен Иглс)</div>
-                                        <div class="drink__options">
-                                            <div class="drink__size">750 мл</div>
-                                            <div class="drink__price">949 руб</div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="drink">
-                                    <div class="drink__image-box"><img class="drink__image js-svg-img" src="/images/popular-drink-3.jpg" alt=""></div>
-                                    <div class="drink__describe">
-                                        <div class="drink__name">Виски Famous Grouse (Фэймос Граус)</div>
-                                        <div class="drink__options">
-                                            <div class="drink__size">500 мл</div>
-                                            <div class="drink__price">899 руб</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!--./popular_drink-hidden-->
 
                             <div class="selects">
                                 <div class="select-box">
@@ -575,7 +543,7 @@
                                 <div class="select-box">
                                     <div class="select__title">Товаров на странице:</div>                           
                                     <div class="select js-select">
-                                        <div class="select__header">
+                                        <div class="select__header select__header-num">
                                             <input class="js-catalog-input" type="hidden" value="" name="goods" data-input="goods">
                                             <span class="select__current js-select__current active" data-input="goods">9</span>
                                             <div class="select__icon"><img class="js-svg-img" src="/images/icons/arrow-down-catalog.svg" alt=""></div>
@@ -1088,7 +1056,7 @@
                     <div class="footer__text">© Copyright 2012 - 2021</div>
                     <div class="footer__logo">
                         <div class="footer__text">Сделано в</div>
-                        <img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt="">
+                        <a href="https://www.devarto.ru/" target="_blank"><img class="footer__img js-svg-img" src="/images/icons/devarto-logo.svg" alt=""></a>
                     </div>
                 </div>
             </div>
