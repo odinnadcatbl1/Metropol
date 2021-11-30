@@ -2821,11 +2821,6 @@ input[type="number"] {
         position: fixed;
     }
 
-    .popular__drink-hidden {
-        display: block;
-        margin-bottom: 20px;
-    }
-
     .product__image-box {
         display: none;
     }
@@ -3089,8 +3084,15 @@ input[type="number"] {
     }
 
     .pagination {
-    display: flex;
-    justify-content: center;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .drink {
+        background-color: #fff;
+        border-radius: 14px;
+        padding: 20px;
     }
 }
 
