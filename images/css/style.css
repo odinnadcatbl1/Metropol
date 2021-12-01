@@ -2153,6 +2153,11 @@ input[type="number"] {
     border-radius: 14px;
     padding: 9px 15px 11px 15px;
     width: 100%;
+    outline: none;
+}
+
+.modal__search-input:focus {
+    border: 1px solid #0099CC;
 }
 
 .shops {
@@ -3206,6 +3211,48 @@ input[type="number"] {
 
     .intro {
         background-attachment: unset;
+    }
+
+    .modal__title {
+        text-align: center;
+    }
+
+    .modal__inputs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .modal__tab-btn {
+        font-size: 14px;
+    }
+
+    .modal__search {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .modal__search-input {
+        font-size: 14px;
+    }
+
+    .shop__address,
+    .shop__time,
+    .shop__count {
+        font-size: 14px;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    .shops {
+        margin-left: -10px;
+    }
+
+    .shop__address:after {
+        display: none;
+    }
+
+    .shop__time:after {
+        display: none;
     }
 }
 
