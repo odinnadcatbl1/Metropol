@@ -2228,7 +2228,7 @@ input[type="number"] {
 }
 
 .modal__map {
-    height: 500px;
+    height: 300px;
 }
 .overlay {
     position: absolute;
@@ -2245,6 +2245,10 @@ input[type="number"] {
     margin-left: auto;
     margin-right: 15px;
     margin-top: 15px;
+}
+
+.shop.hide {
+    display: none;
 }
 /*MOBILE HEADER*/
 /*Burger ========*/

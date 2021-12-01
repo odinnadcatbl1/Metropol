@@ -46,7 +46,7 @@ $(document).ready(function () {
             ],
         });
     }
- 
+    
 
     if ($(".js-reviews_slider").length) {
         const reviewsSlider = $(".js-reviews__slider");
@@ -300,26 +300,6 @@ $(document).ready(function () {
             }; 
         })(jQuery);
 
-        // if ($(".js-modal__shops").length) {
-            
-        //     $(".js-modal__shops").iziModal({
-        //         zindex: 1000,
-        //         width: 770,
-        //         onOpened: function(){
-        //             $(".js-modal__window").modalTabs();
-        //             $('.js-modal__shops').iziModal('stopLoading');
-        //         }
-        //     });
-            
-        //     $(document).on("click", ".js-modal__open", function () {
-        //         $('.js-modal__shops').iziModal('startLoading');
-        //         $(".js-modal__shops").iziModal("open");
-        //     });
-
-        // }
-       
-
-
         
         $(document).on("click", ".js-tabs__button", function () {
             $(this).toggleClass("active");
@@ -434,6 +414,30 @@ $(document).ready(function () {
                 },
                 "xml"
             );
+        });
+    }
+
+    // Modal search  
+    if ($('.modal__search-input').length) {
+        $(document).on("input", '.modal__search-input', function () {
+            let searchValue = $(this).val();
+            let searchItems = document.querySelectorAll('.shop__address');
+            console.log(searchItems);
+            //console.log(searchValue.search(searchItems[0]));
+            if (searchValue != '') {
+                searchItems.forEach(function (elem) {
+                    if (elem.innerText.search(searchValue) == -1) {
+                        elem.parentNode.classList.add('hide');
+                    } else {
+                        elem.parentNode.classList.remove('hide');
+                    }
+                    
+                });
+            } else {
+                searchItems.forEach(function (elem) {
+                    elem.parentNode.classList.remove('hide');
+                });
+            }
         });
     }
 
