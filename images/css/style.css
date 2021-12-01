@@ -139,7 +139,7 @@ h1 {
     transition: color 0.1s linear;
 }
 
-.nav__link a {
+.header__links {
     color: #fff;
 }
 
@@ -148,7 +148,7 @@ h1 {
     margin-left: 0px;
 }
 
-.nav__link a:hover {
+.header__links:hover {
     text-decoration: none;
     color: #0099cc;
 }
@@ -329,6 +329,8 @@ h1 {
     background-repeat: no-repeat;
     color: #fff;
     padding-bottom: 140px;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .intro__title {
@@ -349,7 +351,7 @@ h1 {
 }
 
 .intro__btn {
-    padding: 0 17px;
+    padding: 17px 17px;
     border: none;
     border-radius: 12px;
     color: #fff;
@@ -364,11 +366,14 @@ h1 {
     justify-content: space-between;
     align-items: center;
     width: 260px;
-    height: 60px;
 }
 
+
+.intro__btn.intro__btn--catalog {
+    padding: 14px 17px;
+}
 .intro__btn__text {
-    padding-bottom: 3px;
+    padding-bottom: 5px;
 }
 
 .arrow_rigth {
@@ -379,8 +384,15 @@ h1 {
     text-decoration: none;
     background-color: #007ea8;
     color: #fff;
-    padding: 0 10px 0 17px;
-    border: 2px solid #fff;
+    padding: 17px 20px 17px 17px;
+    border: 1px solid #fff;
+}
+
+.intro__btn.intro__btn--catalog:hover {
+    text-decoration: none;
+    background-color: #007ea8;
+    color: #fff;
+    padding: 14px 20px 14px 17px;
 }
 
 /*CATALOG==============*/
@@ -583,8 +595,6 @@ h1 {
 /*SLIDER=========*/
 
 .catalog__slider {
-    min-width: none;
-    display: flex;
     position: relative;
 }
 
@@ -594,18 +604,6 @@ h1 {
 
 .catalog__slider .slick-list {
     margin: 0 -15px;
-}
-
-/* Слайдер */
-
-.slick-slider {
-}
-/* Слайдер запущен */
-.slick-slider.slick-initialized {
-}
-
-/* Слайдер с точками */
-.slick-slider.slick-dotted {
 }
 
 /* Ограничивающая оболочка */
@@ -647,12 +645,12 @@ h1 {
     z-index: 10;
     width: 50px;
     height: 50px;
-    top: -14%;
+    top: -90px;
 }
 
 /* Стрелка влево */
 .catalog__slider .slick-arrow.slick-prev {
-    right: 7%;
+    right: 65px;
     background: url(/images/icons/catalog__left.svg) no-repeat;
 }
 
@@ -983,18 +981,13 @@ h1 {
     transition: color 0.1s linear;
 }
 
-.nav__link--catalog a {
+.header__links--catalog {
     color: #333333;
 }
 
 .nav__link--catalog:first-child {
     /*псевдокласс - первый элемент*/
     margin-left: 0px;
-}
-
-.nav__link--catalog a:hover {
-    text-decoration: none;
-    color: #0099cc;
 }
 
 .nav__sub--catalog {
@@ -1354,6 +1347,7 @@ h1 {
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
+    opacity: 0;
 }
 
 .country__label {
@@ -1956,10 +1950,13 @@ input[type="number"] {
     border-radius: 8px;
     margin-left: 10px;
     background-color: #fff;
-    cursor: pointer;
     width: 64px;
 }
 
+.capacity:hover {
+    color: #838383;
+    text-decoration: none;
+}
 .capacity:first-child {
     margin-left: 0;
 }
@@ -1984,51 +1981,7 @@ input[type="number"] {
     display: inline-block;
 }
 
-.shop {
-    margin-top: 10px;
-    display: flex;
-    background-color: #ececec;
-    align-items: center;
-    padding: 0 15px;
-    border-radius: 8px;
-}
 
-.shop__icon {
-    padding: 10px;
-}
-
-.shop__name {
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #333333;
-    margin-left: 5px;
-    padding: 8px 0 12px 0;
-}
-
-.hidden__shops {
-    display: none;
-    transition: display 0.1s ease;
-}
-
-.fold__link {
-    display: flex;
-    margin-top: 15px;
-    font-size: 12px;
-    color: #0099CC;
-    font-weight: 400;
-    line-height: 100%;
-    text-decoration: underline;
-}
-
-.fold__link:hover {
-    text-decoration: none;
-    color: #0099cc;
-}
-
-.fold__link.active {
-    color: #666666;
-}
 
 .catalog__title--catalog {
     font-size: 40px;
@@ -2128,6 +2081,171 @@ input[type="number"] {
 }
 
 
+
+.modal__shops {
+    border-radius: 14px;
+    height: auto;
+}
+.modal__window {
+    z-index: 1050;
+    display: block;
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 5px 30px 30px 30px;
+}
+
+.modal__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+    color: #333333;
+}
+
+.modal__window .describe__title {
+    margin: 13px 0 0 0;
+}
+
+.modal__inputs {
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__btns {
+    display: flex;
+}
+
+.modal__tab-btn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #838383;
+    background-color: #ECECEC;
+    border-radius: 8px;
+    border: 1px solid #E2E2E2;
+    padding: 9px 15px 11px 15px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.modal__tab-btn:first-child {
+    margin-left: 0;
+}
+
+.modal__tab-btn.active {
+    background-color: #0099CC;
+    color: #fff;
+    border: none;
+}
+
+.modal__search {
+    width: 50%;
+}
+
+.modal__search-input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #838383;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    padding: 9px 15px 11px 15px;
+    width: 100%;
+}
+
+.shops {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal__map {
+    margin-top: 25px;
+}
+
+.shop {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+.shop::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #ECECEC;
+    left: -30px;
+    right: -30px;
+    top: 100%;
+}
+
+.shop__address, 
+.shop__time,
+.shop__count {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333333;
+    position: relative;
+}
+
+.shop__address {
+    padding-right: 110px;
+    flex: 0 0 45%;
+}
+
+.shop__address::after {
+    display: flex;
+    content: "";
+    background-color: #C4C4C4;
+    width: 80px;
+    height: 1px;
+    position: absolute;
+    right: 15px;
+    top: 60%;
+    justify-content: center;
+}
+
+.shop__time {
+    padding-right: 160px;
+    flex: 0 0 42%;
+}
+
+.shop__time::after {
+    display: flex;
+    content: "";
+    background-color: #C4C4C4;
+    width: 130px;
+    height: 1px;
+    position: absolute;
+    right: 15px;
+    top: 60%;
+    justify-content: center;
+}
+
+.modal__map {
+    height: 500px;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.modal__close {
+    display: flex;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 15px;
+}
 /*MOBILE HEADER*/
 /*Burger ========*/
 
@@ -2478,15 +2596,6 @@ input[type="number"] {
     .catalog__link {
         font-size: 30px;
     }
-    /* Стрелка влево */
-    .catalog__slider .slick-arrow.slick-prev {
-        right: 8%;
-    }
-
-    /* Стрелка вправо */
-    .catalog__slider .slick-arrow.slick-next {
-        right: 0;
-    }
 
     .title {
         font-size: 32px;
@@ -2565,6 +2674,10 @@ input[type="number"] {
         cursor: pointer;
         margin-left: auto;
         margin-right: 10px;
+    }
+
+    .catalog__slider .slick-arrow {
+        top: -61px;
     }
 
     .search__div .search__div-icon {
@@ -2656,12 +2769,13 @@ input[type="number"] {
     .intro__btn {
         font-size: 14px;
         padding: 10px 15px;
-        width: 60%;
+        width: 70%;
         height: auto;
     }
 
     .intro__btn:hover {
         padding: 10px 15px;
+        border: none;
     }
 
     .catalog {
@@ -2670,20 +2784,10 @@ input[type="number"] {
 
     .catalog__title {
         padding-bottom: 20px;
+        padding-right: 10px;
     }
     .catalog__link {
         font-size: 20px;
-    }
-    /* Стрелка влево */
-    .catalog__slider .slick-arrow.slick-prev {
-        top: -10%;
-        right: 18%;
-    }
-
-    /* Стрелка вправо */
-    .catalog__slider .slick-arrow.slick-next {
-        right: 0;
-        top: -10%;
     }
 
     .card__option {
@@ -2761,9 +2865,9 @@ input[type="number"] {
         justify-content: center;
         align-items: center;
     }
+
     .select-box {
-        display: flex;
-        align-items: center;
+        justify-content: start;
     }
 
     .select-box:last-child {
@@ -2972,22 +3076,22 @@ input[type="number"] {
         right: 0;
         top: 50%;
         border-radius: 50px;
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         z-index: 2000;
         overflow: hidden;
-        transform: translateY(-50%) translateX(40%);
+        transform: translateY(-50%) translateX(50%);
         background-color: #fff;
         transition: all 0.3s ease;
         max-width: 100%;
     }
 
     .xs-filter__btn.active {
-        transform: translateY(-50%) translateX(20%);
+        transform: translateY(-50%) translateX(30%);
     }
 
     .filter__btn-icon {
@@ -3001,8 +3105,8 @@ input[type="number"] {
         position: absolute;
         z-index: 10;
         display: flex;
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         visibility: hidden;
         transition: all 0.2s ease 0.3s;
     }
@@ -3012,7 +3116,7 @@ input[type="number"] {
         background-color: #fff;
         transform: rotate(180deg);     
         visibility: visible;  
-        transition: all 0.8s ease 0.1s;
+        transition: all 0.8s ease 0.2s;
     }
 
     .js-xs-body.active {
@@ -3021,11 +3125,7 @@ input[type="number"] {
 
     .filter__form {
         transform: translateY(-10%);
-       
-    }
-
-    .filter__form.active {
-        visibility: visible;
+        visibility: hidden;
         position: fixed;
         top: 0;
         right: 0;
@@ -3035,8 +3135,13 @@ input[type="number"] {
         z-index: 1500;
         overflow: auto;
         background-color: #fffffff3;
+        transition: all 0.4s ease 0.3s;     
+    }
+
+    .filter__form.active {
+        visibility: visible;
+        background-color: #fffffff3;
         transform: translateY(0%);
-        transition: all 0.4s ease 0.2s;
     }
 
     .filter__title {
@@ -3093,6 +3198,10 @@ input[type="number"] {
         background-color: #fff;
         border-radius: 14px;
         padding: 20px;
+    }
+
+    .intro {
+        background-attachment: unset;
     }
 }
 

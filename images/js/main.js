@@ -25,28 +25,24 @@ $(document).ready(function () {
             infinite: true, // если элементы заканчиваются - они повторяются заново
             fade: false, // чтобы затемнялись отзывы
             arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
             responsive: [ 
+
                 {
-                    breakpoint: 991,
+                    breakpoint: 992,
                     settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
                     },
                 },
                 {
                     breakpoint: 768,
                     settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                     },
                 },
-                {
-                breakpoint: 1199,
-                settingd : {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    },
-                }
             ],
         });
     }
@@ -273,6 +269,57 @@ $(document).ready(function () {
         if ($(window).width() > 767) {
             $(".js-tabs").easyTabs();
         }
+    
+    
+        (function($){				
+            jQuery.fn.modalTabs = function(options){
+        
+                const createModalTabs = function(){
+                    modal = this;
+                    i = 0;
+                    
+                    showModalPage = function(i){
+                        $(modal).children(".js-modal__content").hide();
+                        $(modal).children(".js-modal__content").eq(i).show();
+                        $(modal).find(".js-modal__btns").children(".js-modal__tab-btn").removeClass("active");
+                        $(modal).find(".js-modal__btns").children(".js-modal__tab-btn").eq(i).addClass("active");
+                    };
+                                        
+                    showModalPage(0);				
+                    
+                    $(modal).find(".js-modal__btns").children(".js-modal__tab-btn").each(function(index, element){
+                        $(element).attr("data-page", i);
+                        i++;                        
+                    });
+                    
+                    $(modal).find(".js-modal__btns").children(".js-modal__tab-btn").click(function(){
+                        showModalPage(parseInt($(this).attr("data-page")));
+                    });				
+                };		
+                return this.each(createModalTabs);
+            }; 
+        })(jQuery);
+
+        // if ($(".js-modal__shops").length) {
+            
+        //     $(".js-modal__shops").iziModal({
+        //         zindex: 1000,
+        //         width: 770,
+        //         onOpened: function(){
+        //             $(".js-modal__window").modalTabs();
+        //             $('.js-modal__shops').iziModal('stopLoading');
+        //         }
+        //     });
+            
+        //     $(document).on("click", ".js-modal__open", function () {
+        //         $('.js-modal__shops').iziModal('startLoading');
+        //         $(".js-modal__shops").iziModal("open");
+        //     });
+
+        // }
+       
+
+
         
         $(document).on("click", ".js-tabs__button", function () {
             $(this).toggleClass("active");

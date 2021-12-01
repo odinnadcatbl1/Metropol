@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="images/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="images/noui-slider/nouislider.min.css">
-    <link rel="stylesheet" href="images/css/style.css">
+    <link rel="stylesheet" href="/images/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/images/noui-slider/nouislider.min.css">
+    <link rel="stylesheet" href="/images/css/style.css">
     <script src="/images/jquery-ui/jquery-3.6.0.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="/images/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
-    <script src="images/slick/slick.min.js"></script>
+    <script src="/images/slick/slick.min.js"></script>
     <script src="/images/noui-slider/nouislider.min.js"></script>
     <script src="/images/js/main.js"></script>
     <title>Каталог</title>
@@ -40,30 +40,29 @@
                                 <div class="header__nav header__nav--catalog">
                                                         
                                     <nav class="nav">
-                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Водка</a></div>
-                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Виски</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a class="header__links header__links--catalog" href="#">Водка</a></div>
                                         <div class="nav__link nav__link--catalog js-nav__link menu__link">
-                                            <a href="#"><div class="menu-img-box">Коньяк <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                            <a class="header__links header__links--catalog" href="#"><div class="menu-img-box">Коньяк<img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
                                             <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="js-nav__sub nav__sub nav__sub--catalog">
-                                                    <div class="sub__link .sub__link--catalog"><a href="#">Армянский коньяк</a></div>
-                                                    <div class="sub__link .sub__link--catalog"><a href="#">Российский коньяк</a></div>
-                                                    <div class="sub__link .sub__link--catalog"><a href="#">Французский коньяк</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a class="header__links header__links--catalog" href="#">Армянский коньяк</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a class="header__links header__links--catalog" href="#">Российский коньяк</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a class="header__links header__links--catalog" href="#">Французский коньяк</a></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Ром</a></div>
-                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Текила</a></div>
-                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a href="#"><div class="menu-img-box">Вино <img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a class="header__links header__links--catalog" href="#">Ром</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a class="header__links header__links--catalog" href="#">Текила</a></div>
+                                        <div class="nav__link nav__link--catalog menu__link js-nav__link"><a class="header__links header__links--catalog" href="#"><div class="menu-img-box">Вино<img class="js-nav__img nav__img js-svg-img" src="/images/icons/arrow-down-catalog-nav.svg" alt=""></div></a>
                                             <div class="nav__sub-box js-nav__sub-box">
                                                 <div class="js-nav__sub nav__sub nav__sub--catalog">
-                                                    <div class="sub__link .sub__link--catalog"><a href="#">Белое вино</a></div>
-                                                    <div class="sub__link .sub__link--catalog"><a href="#">Красное вино</a></div>
-                                                    <div class="sub__link .sub__link--catalog"><a href="#">Розовое вино</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a class="header__links header__links--catalog" href="#">Белое вино</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a class="header__links header__links--catalog" href="#">Красное вино</a></div>
+                                                    <div class="sub__link .sub__link--catalog"><a class="header__links header__links--catalog" href="#">Розовое вино</a></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="nav__link nav__link--catalog js-nav__link"><a href="#">Шампанское</a></div>
+                                        <div class="nav__link nav__link--catalog js-nav__link"><a class="header__links header__links--catalog" href="#">Шампанское</a></div>
                                     </nav>
 
                                 </div>
@@ -72,14 +71,15 @@
                             <div class="col-md-4 col-6"> 
                                 <div class="header__info header__info--catalog">
                                     <nav class="nav">
-                                        <div class="nav__link nav__link--catalog"><a href="/catalog.html">Каталог</a></div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Акции</a></div>
-                                        <div class="nav__link nav__link--catalog"><a href="#">Контакты</a></div>
+                                        <div class="nav__link nav__link--catalog"><a class="header__links header__links--catalog" href="/catalog.html">Каталог</a></div>
+                                        <div class="nav__link nav__link--catalog"><a class="header__links header__links--catalog" href="#">Акции</a></div>
+                                        <div class="nav__link nav__link--catalog"><a class="header__links header__links--catalog" href="#">Контакты</a></div>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                     </div> <!--/.md-menu-->
+
                 </div> <!--.header__top-->
 
                 <div class="row"> 
@@ -512,13 +512,14 @@
                             </div>
 
                             <div class="catalog__subtitle--catalog">
-                                <p>По исходному сырью различают несколько видов виски:
-                                    <ol>
+                                <p>По исходному сырью различают несколько видов виски:</p>
+                                <ol>
                                     <li>солодовый — приготовленный из ячменного солода без каких-либо добавок;</li>
                                     <li>зерновой — используемый для изготовления смешанного виски;</li>
                                     <li>смешанный или купажированный — получается в результате смешивания первых двух видов напитка, это наиболее распространенный вид, который выпускают известные бренды;</li>
                                     <li>Бурбон – особый кукурузный виски американского производства.</li>
-                                    </ol>
+                                </ol>
+                                <p> 
                                     Вкус зависит от качества воды, бочек для хранения, и, конечно же, от сроков выдержки. Скотч, например, можно распознать по легкому дымному аромату, который он приобретает от сгорания торфа во время просушки солода — именно так поступают в Шотландии. Ирландцы, в свою очередь, гордятся мягкостью напитка, получаемого в результате трехкратной перегонки. Выдерживается в дубовых бочках от 3 до 21 года. От выдержки зависит не только его цвет, но и качество.
                                 </p>
                             </div>
