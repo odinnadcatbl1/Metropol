@@ -17,7 +17,7 @@
     <script src="/images/js/main.js"></script>
     <title>Каталог</title>
 </head>
-<body>
+<body class="js-modal__body">
     <div class="page__root page__root--catalog">
         <!--HEADER-->
         <header class="header header--catalog jsHeader">
@@ -178,11 +178,11 @@
                                                 <div class="modal__inputs">
                                                     <div class="modal__btns js-modal__btns">                                        
                                                         <div class="modal__tab-btn js-modal__tab-btn">Списком</div>
-                                                        <div class="modal__tab-btn js-modal__tab-btn">Карта</div>
+                                                        <div class="modal__tab-btn js-modal__tab-btn js-modal__map-btn">Карта</div>
                                                     </div>
-                                                    <div class="modal__search">
+                                                    <div class="modal__search js-modal__search">
                                                         <form class="modal__search-form">
-                                                            <input class="modal__search-input" type="text" placeholder="Введите адрес">
+                                                            <input class="modal__search-input js-modal__search-input" type="text" placeholder="Введите адрес">
                                                         </form>
                                                     </div>            
                                                 </div>
@@ -239,14 +239,18 @@
                                                             zindex: 10000,
                                                             width: 770,
                                                             radius: 14,
-                                                            onOpened: function(){
+                                                            onOpened: function () {
                                                                 $(".js-modal__window").modalTabs();
                                                                 $('.js-modal__shops').iziModal('stopLoading');
+                                                                $('.js-modal__body').css('overflow', 'hidden');
                                                                 if (!$("#modal__map").hasClass("active")) {
                                                                     ymaps.ready(init__modal);
                                                                     $("#modal__map").addClass("active");
                                                                     }                                                             
-                                                                }
+                                                                },
+                                                            onClosed: function () {
+                                                                $('.js-modal__body').css('overflow', 'auto');
+                                                            },
                                                         });
                                                         
                                                         $(document).on("click", ".js-modal__open", function () {

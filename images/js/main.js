@@ -418,15 +418,13 @@ $(document).ready(function () {
     }
 
     // Modal search  
-    if ($('.modal__search-input').length) {
-        $(document).on("input", '.modal__search-input', function () {
-            let searchValue = $(this).val();
+    if ($('.js-modal__search-input').length) {
+        $(document).on("input", '.js-modal__search-input', function () {
+            let searchValue = $(this).val().toLowerCase();
             let searchItems = document.querySelectorAll('.shop__address');
-            console.log(searchItems);
-            //console.log(searchValue.search(searchItems[0]));
             if (searchValue != '') {
                 searchItems.forEach(function (elem) {
-                    if (elem.innerText.search(searchValue) == -1) {
+                    if (elem.innerText.toLowerCase().search(searchValue) == -1) {
                         elem.parentNode.classList.add('hide');
                     } else {
                         elem.parentNode.classList.remove('hide');
@@ -441,4 +439,13 @@ $(document).ready(function () {
         });
     }
 
+    if (('.js-modal__map-btn').length) {
+        $(document).on('click', '.js-modal__tab-btn', function () {
+            if ($('.js-modal__map-btn').hasClass('active')) {
+                $('.js-modal__search').css('display', 'none');
+            } else {
+                $('.js-modal__search').css('display', 'block');
+            }
+        });
+    }
 });
