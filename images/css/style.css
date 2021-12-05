@@ -144,7 +144,6 @@ h1 {
 }
 
 .nav__link:first-child {
-    /*псевдокласс - первый элемент*/
     margin-left: 0px;
 }
 
