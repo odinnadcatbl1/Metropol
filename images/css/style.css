@@ -141,6 +141,7 @@ h1 {
 
 .header__links {
     color: #fff;
+    white-space: nowrap;
 }
 
 .nav__link:first-child {
